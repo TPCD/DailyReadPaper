@@ -1,5 +1,6 @@
 # DailyReadPaper
-
+This reading mainly refers to the first paper, namely **Salient Object Detection via High-to-Low Hierarchical Context Aggregation**, 
+and the others are the reference \[16], \[55], \[44], \[58], \[52], \[4] , \[57] and \[51] in it.
 ## Salient Object Detection via High-to-Low Hierarchical Context Aggregation
 1. arXiv:1812.10956 (Submitted on 28 Dec 2018)
 2. Yun Liu, Yu Qiu, Le Zhang, JiaWang Bian, Guang-Yu Nie, **Ming-Ming Cheng**
@@ -28,8 +29,7 @@ Title = {Salient Object Detection via High-to-Low Hierarchical Context Aggregati
 Year = {2018},
 Eprint = {arXiv:1812.10956}}
 
-- [x] Attachments are the reference \[16], \[55] and \[44] in Salient Object Detection via High-to-Low Hierarchical Context Aggregation
-## Deeply Supervised Salient Object Detection with Short Connections
+## \[16]Deeply Supervised Salient Object Detection with Short Connections 
 1. CVPR 2017
 2. Hou, Qibin and **Cheng, Ming-Ming** and Hu, Xiaowei and Borji, Ali and Tu, Zhuowen and Torr, Philip HS
 3. https://mmcheng.net/zh/code-data/
@@ -52,37 +52,7 @@ architecture.
   pages={3203--3212},
   year={2017}}
 
-
-## Detect globally, refine locally: A novel approach to saliency detection
-1. CVPR 2018
-2. Wang, Tiantian and Zhang, Lihe and Wang, Shuo and Lu, Huchuan and Yang, Gang and Ruan, Xiang and Borji, Ali
-3. https://github.com/TiantianWang/CVPR18_detect_globally_refine_locally
-
-- Effective integration of contextual information is crucial for salient object detection. To achieve this, most existing methods based on ’skip’ architecture mainly focus on how to integrate hierarchical features of Convolutional Neural Networks (CNNs). They simply apply concatenation or element-wise operation to incorporate high-level
-semantic cues and low-level detailed information. However, this can degrade the quality of predictions because cluttered and noisy information can also be passed through.
-    ![Ming-Ming Cheng2018 Salient Object Detection](Pictures/Selection_010.png)
-
-- To address this problem, we proposes a global Recurrent Localization Network (RLN) which exploits contextual information by the weighted response map in order to localize salient objects more accurately. 
-    ![Ming-Ming Cheng2018 Salient Object Detection](Pictures/Selection_011.png)
-
-- Particularly, a recurrent module is employed to progressively refine the inner structure of the CNN over multiple time steps. 
-    ![Ming-Ming Cheng2018 Salient Object Detection](Pictures/Selection_012.png)
- 
-- Moreover, to effectively recover object boundaries, we propose a local Boundary Refinement Network (BRN) to adaptively learn
-the local contextual information for each spatial position.
-    ![Ming-Ming Cheng2018 Salient Object Detection](Pictures/Selection_013.png)
-
-- The learned propagation coefficients can be used to optimally capture relations between each pixel and its neighbors. Experiments on five challenging datasets show that our approach performs favorably against all existing methods in terms of the popular evaluation metrics.
-
-
->@inproceedings{wang2018detect,
-  title={Detect globally, refine locally: A novel approach to saliency detection},
-  author={Wang, Tiantian and Zhang, Lihe and Wang, Shuo and Lu, Huchuan and Yang, Gang and Ruan, Xiang and Borji, Ali},
-  booktitle={Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition},
-  pages={3127--3135},
-  year={2018}}
-
-## Amulet: Aggregating multi-level convolutional features for salient object detection
+## \[55]Amulet: Aggregating multi-level convolutional features for salient object detection
 1. ICCV 2017
 2. Wang, Tiantian and Zhang, Lihe and Wang, Shuo and Lu, Huchuan and Yang, Gang and Ruan, Xiang and Borji, Ali
 3. https://github.com/Pchank/caffe-sal
@@ -123,7 +93,71 @@ terms of near all compared evaluation metrics.
   year={2017}}
   
   
-## Context Encoding for Semantic Segmentation
+## \[44]Detect globally, refine locally: A novel approach to saliency detection
+1. CVPR 2018
+2. Wang, Tiantian and Zhang, Lihe and Wang, Shuo and Lu, Huchuan and Yang, Gang and Ruan, Xiang and Borji, Ali
+3. https://github.com/TiantianWang/CVPR18_detect_globally_refine_locally
+
+- Effective integration of contextual information is crucial for salient object detection. To achieve this, most existing methods based on ’skip’ architecture mainly focus on how to integrate hierarchical features of Convolutional Neural Networks (CNNs). They simply apply concatenation or element-wise operation to incorporate high-level
+semantic cues and low-level detailed information. However, this can degrade the quality of predictions because cluttered and noisy information can also be passed through.
+    ![Ming-Ming Cheng2018 Salient Object Detection](Pictures/Selection_010.png)
+
+- To address this problem, we proposes a global Recurrent Localization Network (RLN) which exploits contextual information by the weighted response map in order to localize salient objects more accurately. 
+    ![Ming-Ming Cheng2018 Salient Object Detection](Pictures/Selection_011.png)
+
+- Particularly, a recurrent module is employed to progressively refine the inner structure of the CNN over multiple time steps. 
+    ![Ming-Ming Cheng2018 Salient Object Detection](Pictures/Selection_012.png)
+ 
+- Moreover, to effectively recover object boundaries, we propose a local Boundary Refinement Network (BRN) to adaptively learn
+the local contextual information for each spatial position.
+    ![Ming-Ming Cheng2018 Salient Object Detection](Pictures/Selection_013.png)
+
+- The learned propagation coefficients can be used to optimally capture relations between each pixel and its neighbors. Experiments on five challenging datasets show that our approach performs favorably against all existing methods in terms of the popular evaluation metrics.
+
+
+>@inproceedings{wang2018detect,
+  title={Detect globally, refine locally: A novel approach to saliency detection},
+  author={Wang, Tiantian and Zhang, Lihe and Wang, Shuo and Lu, Huchuan and Yang, Gang and Ruan, Xiang and Borji, Ali},
+  booktitle={Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition},
+  pages={3127--3135},
+  year={2018}}
+
+## \[58]Pyramid scene parsing network
+1. CVPR 2017
+2. Zhao, Hengshuang and Shi, Jianping and Qi, Xiaojuan and Wang, Xiaogang and Jia, Jiaya
+3. https://github.com/hszhao/PSPNet
+
+- Scene parsing is challenging for unrestricted open vo-
+cabulary and diverse scenes. In this paper, we exploit the
+capability of global context information by different-region-
+based context aggregation through our pyramid pooling
+module together with the proposed pyramid scene parsing
+network (PSPNet).
+    ![Ming-Ming Cheng2018 Salient Object Detection](Pictures/Selection_017.png)
+
+-  Our global prior representation is ef-
+fective to produce good quality results on the scene parsing
+task, while PSPNet provides a superior framework for pixel-
+level prediction. The proposed approach achieves state-of-
+the-art performance on various datasets. It came first in Im-
+ageNet scene parsing challenge 2016, PASCAL VOC 2012
+benchmark and Cityscapes benchmark. A single PSPNet
+yields the new record of mIoU accuracy 85.4% on PASCAL
+VOC 2012 and accuracy 80.2% on Cityscapes.
+   ![Ming-Ming Cheng2018 Salient Object Detection](Pictures/Selection_018.png)
+
+
+
+>@inproceedings{zhao2017pyramid,
+  title={Pyramid scene parsing network},
+  author={Zhao, Hengshuang and Shi, Jianping and Qi, Xiaojuan and Wang, Xiaogang and Jia, Jiaya},
+  booktitle={IEEE Conf. on Computer Vision and Pattern Recognition (CVPR)},
+  pages={2881--2890},
+  year={2017}
+}
+
+
+## \[52]Context Encoding for Semantic Segmentation
 1. CVPR 2018
 2. Zhang, Hang and Dana, Kristin and Shi, Jianping and Zhang, Zhongyue and Wang, Xiaogang and Tyagi, Ambrish and Agrawal, Amit
 3. https://github.com/zhanghang1989/PyTorch-Encoding
@@ -163,42 +197,7 @@ year = {2018}
 
 
 
-## Pyramid scene parsing network
-1. CVPR 2017
-2. Zhao, Hengshuang and Shi, Jianping and Qi, Xiaojuan and Wang, Xiaogang and Jia, Jiaya
-3. https://github.com/hszhao/PSPNet
-
-- Scene parsing is challenging for unrestricted open vo-
-cabulary and diverse scenes. In this paper, we exploit the
-capability of global context information by different-region-
-based context aggregation through our pyramid pooling
-module together with the proposed pyramid scene parsing
-network (PSPNet).
-    ![Ming-Ming Cheng2018 Salient Object Detection](Pictures/Selection_017.png)
-
--  Our global prior representation is ef-
-fective to produce good quality results on the scene parsing
-task, while PSPNet provides a superior framework for pixel-
-level prediction. The proposed approach achieves state-of-
-the-art performance on various datasets. It came first in Im-
-ageNet scene parsing challenge 2016, PASCAL VOC 2012
-benchmark and Cityscapes benchmark. A single PSPNet
-yields the new record of mIoU accuracy 85.4% on PASCAL
-VOC 2012 and accuracy 80.2% on Cityscapes.
-   ![Ming-Ming Cheng2018 Salient Object Detection](Pictures/Selection_018.png)
-
-
-
->@inproceedings{zhao2017pyramid,
-  title={Pyramid scene parsing network},
-  author={Zhao, Hengshuang and Shi, Jianping and Qi, Xiaojuan and Wang, Xiaogang and Jia, Jiaya},
-  booktitle={IEEE Conf. on Computer Vision and Pattern Recognition (CVPR)},
-  pages={2881--2890},
-  year={2017}
-}
-
-
-## Progressive Attention Guided Recurrent Network for Salient Object Detection
+## \[4]Progressive Attention Guided Recurrent Network for Salient Object Detection
 1. CVPR 2018
 2. Zhang, Xiaoning and Wang, Tiantian and Qi, Jinqing and Lu, Huchuan and Wang, Gang
 3. https://github.com/zhangxiaoning666/PAGR
@@ -243,7 +242,48 @@ against the state-of-the-art approaches.
 
 
 
-## Learning to Promote Saliency Detectors
+
+## \[57]Reverse Attention for Salient Object Detection
+1. ECCV 2018
+2. Chen, Shuhan and Tan, Xiuli and Wang, Ben and Hu, Xuelong
+3. https://github.com/ShuhanChen/RAS_ECCV18
+
+- Benefit from the quick development of deep learning techniques,
+salient object detection has achieved remarkable progresses recently.
+    ![Ming-Ming Cheng2018 Salient Object Detection](Pictures/Selection_025.png)
+
+- However, there still exists following two major challenges that hinder
+its application in embedded devices, low resolution output and heavy
+model weight. To this end, this paper presents an accurate yet compact
+deep network for efficient salient object detection. 
+    ![Ming-Ming Cheng2018 Salient Object Detection](Pictures/Selection_026.png)
+
+- More specifically, given a coarse saliency prediction in the deepest layer, we first employ residual
+learning to learn side-output residual features for saliency refinement,
+which can be achieved with very limited convolutional parameters while
+keep accuracy. Secondly, we further propose reverse attention to guide
+such side-output residual learning in a top-down manner. 
+    ![Ming-Ming Cheng2018 Salient Object Detection](Pictures/Selection_027.png)
+    
+- By erasing the current predicted salient regions from side-output features, the network
+can eventually explore the missing object parts and details which
+results in high resolution and accuracy. 
+    ![Ming-Ming Cheng2018 Salient Object Detection](Pictures/Selection_028.png)
+
+- Experiments on six benchmark datasets demonstrate that the proposed approach compares favorably
+against state-of-the-art methods, and with advantages in terms of simplicity,
+efficiency (45 FPS) and model size (81 MB).
+
+>@inproceedings{chen2018reverse,
+  title={Reverse attention for salient object detection},
+  author={Chen, Shuhan and Tan, Xiuli and Wang, Ben and Hu, Xuelong},
+  booktitle={European Conference on Computer Vision},
+  pages={236--252},
+  year={2018},
+  organization={Springer}
+}
+
+## \[51]Learning to Promote Saliency Detectors
 1. CVPR 2018
 2. Zeng, Yu and Lu, Huchuan and Zhang, Lihe and Feng, Mengyang and Borji, Ali
 3. https://github.com/zengxianyu/lps
@@ -284,45 +324,3 @@ month = {June},
 year = {2018}}
 
 
-
-
-
-## Reverse Attention for Salient Object Detection
-1. ECCV 2018
-2. Chen, Shuhan and Tan, Xiuli and Wang, Ben and Hu, Xuelong
-3. https://github.com/ShuhanChen/RAS_ECCV18
-
-- Benefit from the quick development of deep learning techniques,
-salient object detection has achieved remarkable progresses recently.
-    ![Ming-Ming Cheng2018 Salient Object Detection](Pictures/Selection_025.png)
-
-- However, there still exists following two major challenges that hinder
-its application in embedded devices, low resolution output and heavy
-model weight. To this end, this paper presents an accurate yet compact
-deep network for efficient salient object detection. 
-    ![Ming-Ming Cheng2018 Salient Object Detection](Pictures/Selection_026.png)
-
-- More specifically, given a coarse saliency prediction in the deepest layer, we first employ residual
-learning to learn side-output residual features for saliency refinement,
-which can be achieved with very limited convolutional parameters while
-keep accuracy. Secondly, we further propose reverse attention to guide
-such side-output residual learning in a top-down manner. 
-    ![Ming-Ming Cheng2018 Salient Object Detection](Pictures/Selection_027.png)
-    
-- By erasing the current predicted salient regions from side-output features, the network
-can eventually explore the missing object parts and details which
-results in high resolution and accuracy. 
-    ![Ming-Ming Cheng2018 Salient Object Detection](Pictures/Selection_028.png)
-
-- Experiments on six benchmark datasets demonstrate that the proposed approach compares favorably
-against state-of-the-art methods, and with advantages in terms of simplicity,
-efficiency (45 FPS) and model size (81 MB).
-
->@inproceedings{chen2018reverse,
-  title={Reverse attention for salient object detection},
-  author={Chen, Shuhan and Tan, Xiuli and Wang, Ben and Hu, Xuelong},
-  booktitle={European Conference on Computer Vision},
-  pages={236--252},
-  year={2018},
-  organization={Springer}
-}

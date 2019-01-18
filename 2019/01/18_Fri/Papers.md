@@ -43,14 +43,12 @@ Eprint = {arXiv:1812.10956}}
 that do not explicitly deal with the scale-space problem. Holistically-Nested Edge Detector (HED) provides a 
 skip-layer structure with deep supervision for edge and boundary detection, but the performance gain of HED
 on saliency detection is not obvious. 
-
-
-
+![Ming-Ming Cheng2018 Salient Object Detection](Pictures/Selection_007.png)
 
 - They propose a new salient object detection method 
 by introducing short connections to the skip-layer structures within the HED
 architecture. 
-
+![Ming-Ming Cheng2018 Salient Object Detection](Pictures/Selection_006.png)
 
 >@inproceedings{hou2017deeply,
   title={Deeply supervised salient object detection with short connections},

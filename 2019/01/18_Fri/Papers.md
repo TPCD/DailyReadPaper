@@ -10,23 +10,18 @@ more **complex** for accurate salient object detection.
 Thus, they design an Mirror-linked Hourglass Network with intermediate supervision to learn
  contextual features in a **high-to-low** manner. The architecture of HCA is illuminated as follows,
 
-<div align=center>
 ![Ming-Ming Cheng2018 Salient Object Detection](Pictures/Selection_003.png)
-</div>
+
 
 The contexts of a natural image can be well expressed by a **high-to-low self-learning of side-output
 convolutional features** as follows,
 
-<div align=center>
 ![Ming-Ming Cheng2018 Salient Object Detection](Pictures/Selection_005.png)
-</div>
 
 Through a Hierarchical Context Aggregation (HCA) module, the learned hierarchical contexts are aggregated to generate the hybrid 
 contextual expression for an input image.
 
-<div align=center>
 ![Ming-Ming Cheng2018 Salient Object Detection](Pictures/Selection_004.png)
-</div>
 
 Their **simple** method achieves state-of-the-art 
 performance under various evaluation metrics.

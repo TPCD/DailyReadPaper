@@ -1,2 +1,2 @@
 # DailyReadPaper
-Alchemy Furnace
+Academic Alchemy Furnace

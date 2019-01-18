@@ -28,6 +28,7 @@ Title = {Salient Object Detection via High-to-Low Hierarchical Context Aggregati
 Year = {2018},
 Eprint = {arXiv:1812.10956}}
 
+- [x] Attachments are the reference \[16], \[55] and \[44] in Salient Object Detection via High-to-Low Hierarchical Context Aggregation
 ## Deeply Supervised Salient Object Detection with Short Connections
 1. CVPR 2017
 2. Hou, Qibin and **Cheng, Ming-Ming** and Hu, Xiaowei and Borji, Ali and Tu, Zhuowen and Torr, Philip HS
@@ -65,7 +66,7 @@ semantic cues and low-level detailed information. However, this can degrade the 
     ![Ming-Ming Cheng2018 Salient Object Detection](Pictures/Selection_011.png)
 
 - Particularly, a recurrent module is employed to progressively refine the inner structure of the CNN over multiple time steps. 
-   ![Ming-Ming Cheng2018 Salient Object Detection](Pictures/Selection_012.png)
+    ![Ming-Ming Cheng2018 Salient Object Detection](Pictures/Selection_012.png)
  
 - Moreover, to effectively recover object boundaries, we propose a local Boundary Refinement Network (BRN) to adaptively learn
 the local contextual information for each spatial position.

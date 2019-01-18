@@ -46,7 +46,7 @@ Here is the content of our project.
         2. Zeng, Yu and Lu, Huchuan and Zhang, Lihe and Feng, Mengyang and Borji, Ali
         3. https://github.com/zengxianyu/lps
 
-    9 .Reverse Attention for Salient Object Detection
+    9. Reverse Attention for Salient Object Detection
         1. ECCV 2018
         2. Chen, Shuhan and Tan, Xiuli and Wang, Ben and Hu, Xuelong
         3. https://github.com/ShuhanChen/RAS_ECCV18

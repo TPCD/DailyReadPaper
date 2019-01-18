@@ -27,7 +27,6 @@ contextual expression for an input image.
 - Their **simple** method achieves state-of-the-art 
 performance under various evaluation metrics.
 
-
 >@misc{1812.10956,
 Author = {Yun Liu and Yu Qiu and Le Zhang and JiaWang Bian and Guang-Yu Nie and Ming-Ming Cheng},
 Title = {Salient Object Detection via High-to-Low Hierarchical Context Aggregation},

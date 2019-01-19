@@ -53,3 +53,25 @@ Here is the content of our project.
 
 
 
+- [2019-01-19](2019/01/19_Sat/Papers.md):  
+    1. Optimal Fine Grained Retrieval via Decorrelated Centralized Loss with Normalize-Scale layer
+        1. AAAI 2019
+        2. Xiawu Zheng, Rongrong Ji*, Xiaoshuai Sun, Baochang Zhang, Yongjian Wu, Feiyue Huang
+        3. http://mac.xmu.edu.cn/rrji/paper.html
+
+    2. Hypergraph Neural Networks
+        1. AAAI 2019
+        2. Yifan Feng, Haoxuan You, Zizhao Zhang, Rongrong Ji, Yue Gao
+        3. http://mac.xmu.edu.cn/rrji/paper.html
+
+    3. Learning Neural Bag-of-Matrix-Summarization with Riemannian Network
+        1. AAAI 2019
+        2. Hong Liu, Jie Li, Yongjian Wu, Rongrong Ji*
+        3. http://mac.xmu.edu.cn/rrji/paper.html
+
+    4. A Riemannian Network for SPD Matrix Learning
+        1. AAAI 2017
+        2. Zhiwu Huang, Luc Van Gool
+        3. https://github.com/zzhiwu/SPDNet
+        4. This is a reference in 3.
+

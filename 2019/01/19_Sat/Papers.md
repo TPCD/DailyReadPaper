@@ -23,12 +23,14 @@ but does not directly optimize the distance metric as well as
 the inter/intra class distance. They tackle this issue through a
 hypersphere layer and a global centralized ranking loss with a
 pairwise decorrelated learning. 
+
     ![decorrelated](Pictures/2.png)
     
 - In particular, they first propose a Normalize-Scale Layer to eliminate the gap between metric
 distance (for measuring distance in retrieval) and dot product (for dimension reduction in classification). Second, the
 relationship between features is encoded under a global centralized ranking loss, which targets at optimizing metric distance globally and accelerating learning procedure. Finally,
 the centers are further decorrelated by Gram-Schmidt process, leading to extreme efficiency (with 20 epochs in training procedure) and discriminability in feature learning. 
+
     ![Ming-Ming Cheng2018 Salient Object Detection](Pictures/1.png)
     
 >@inproceedings{AAAI: 19, Author={Xiawu Zheng, Rongrong Ji*, Xiaoshuai Sun, Baochang Zhang, Yongjian Wu, Feiyue Huang},
@@ -45,21 +47,25 @@ Year={2019}, Accept}
 can encode high-order data correlation in a hypergraph structure. Confronting the challenges of learning representation
 for complex data in real practice, they propose to **incorporate such data structure in a hypergraph**, which is more **flexible** on data modeling, especially when dealing with complex
 data. 
+
     ![Ming-Ming Cheng2018 Salient Object Detection](Pictures/3.png)
     
 - In this method, a **hyperedge convolution operation** is designed to handle the data correlation during representation
 learning. 
+
     ![Ming-Ming Cheng2018 Salient Object Detection](Pictures/4.png)
     
 - In this way, traditional hypergraph learning procedure can be conducted using 
 hyperedge convolution operations efficiently. 
 HGNN is able to learn the hidden layer representation considering the high-order data structure, which
 is a general framework considering the complex data correlations.
+
     ![Ming-Ming Cheng2018 Salient Object Detection](Pictures/5.png)
     
 - They have conducted experiments on citation network classification and visual 
 object recognition tasks and compared HGNN with graph convolutional networks and other
 traditional methods. 
+
     ![Ming-Ming Cheng2018 Salient Object Detection](Pictures/6.png)
     
 >@inproceedings{AAAI: 19,
@@ -76,7 +82,9 @@ Year={2019}, Accept}
 - Symmetric positive defined (SPD) matrix has attracted increasing research focus in image/video analysis, which merits in capturing the Riemannian geometry in its structured 2D
 feature representation. However, computation in the vector
 space on SPD matrices cannot capture the **geometric properties**, which corrupts the classification performance. 
+
     ![Ming-Ming Cheng2018 Salient Object Detection](Pictures/9.png)
+    
 - To this end, Riemannian based deep network has become a promising solution for SPD matrix classification, 
 because of its **excellence in performing non-linear learning over SPD matrix**.
 Besides, Riemannian metric learning **typically adopts a
@@ -85,6 +93,7 @@ which limits its application in many time-efficient scenarios.
 - In this paper, we propose a Bag-of-Matrix-Summarization (BoMS) method to be combined with Riemannian network,
 which handles the above issues towards highly efficient and
 scalable SPD feature representation. 
+
     ![Ming-Ming Cheng2018 Salient Object Detection](Pictures/8.png)
 
 - They key innovation lies in the idea of summarizing data 
@@ -95,6 +104,7 @@ set, a constant-length vector representation is extracted by
 efficiently measuring the distribution variations between the
 summarized data and the latent feature of the Riemannian
 network. 
+
     ![Ming-Ming Cheng2018 Salient Object Detection](Pictures/10.png)
     
 - Finally, the proposed BoMS descriptor is integrated
@@ -115,14 +125,17 @@ Year={2019}, Accept}
 have become popular in many image and video processing
 tasks, thanks to their ability to learn appropriate statistical
 representations while respecting Riemannian geometry of underlying SPD manifolds. 
+
     ![Ming-Ming Cheng2018 Salient Object Detection](Pictures/13.png)
     
 - In this paper, author build a Riemannian network architecture to open up a new direction of SPD matrix non-linear learning in a deep model.
+
     ![Ming-Ming Cheng2018 Salient Object Detection](Pictures/11.png)
     
 - In particular, they devise bilinear mapping layers to transform input SPD matrices
 to more desirable SPD matrices, exploit eigenvalue rectification layers to apply a non-linear activation function to the
 new SPD matrices.
+
     ![Ming-Ming Cheng2018 Salient Object Detection](Pictures/14.png)
 
 - And design an eigenvalue logarithm layer
@@ -132,12 +145,14 @@ to perform Riemannian computing on the resulting SPD matrices for regular output
 - For training the proposed deep network, they exploit a new 
 **backpropagation with a variant of stochastic gradient descent on Stiefel manifolds** to update the
 structured connection weights and the involved SPD matrix data. 
+
     ![Ming-Ming Cheng2018 Salient Object Detection](Pictures/15.png)
 
 - By mainly employing Eqn.7–Eqn.9 and Eqn.15–Eqn.20, 
 the Riemannian matrix backprop for training the SPDNet
 can be realized. The convergence analysis of the used SGD
 algorithm on Riemannian manifolds follows the developments in (Bottou 2010; Bonnabel 2013).   
+
     ![Ming-Ming Cheng2018 Salient Object Detection](Pictures/16.png)
     
 >@inproceedings{huang2017riemannian,

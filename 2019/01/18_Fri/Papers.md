@@ -11,14 +11,17 @@ Ii is worth to say that the Architectural Analyses in this paper can inspire a l
 more **complex** for accurate salient object detection.
 Thus, they design an Mirror-linked Hourglass Network with intermediate supervision to learn
  contextual features in a **high-to-low** manner. 
+
     ![Ming-Ming Cheng2018 Salient Object Detection](Pictures/Selection_003.png)
 
 - The contexts of a natural image can be well expressed by a **high-to-low self-learning of side-output
 convolutional features** as follows, 
+
     ![Ming-Ming Cheng2018 Salient Object Detection](Pictures/Selection_005.png)
 
 - Through a Hierarchical Context Aggregation (HCA) module, the learned hierarchical contexts are aggregated to generate the hybrid 
 contextual expression for an input image. 
+
     ![Ming-Ming Cheng2018 Salient Object Detection](Pictures/Selection_004.png)
 
 - Their **simple** method achieves state-of-the-art 
@@ -39,11 +42,13 @@ Eprint = {arXiv:1812.10956}}
 that do not explicitly deal with the scale-space problem. Holistically-Nested Edge Detector (HED) provides a 
 skip-layer structure with deep supervision for edge and boundary detection, but the performance gain of HED
 on saliency detection is not obvious. 
+
     ![Ming-Ming Cheng2018 Salient Object Detection](Pictures/Selection_007.png)
 
 - They propose a new salient object detection method 
 by introducing short connections to the skip-layer structures within the HED
 architecture. 
+
     ![Ming-Ming Cheng2018 Salient Object Detection](Pictures/Selection_006.png)
 
 >@inproceedings{hou2017deeply,
@@ -78,6 +83,7 @@ inference and semantic enhancement, edge-aware feature
 maps in low-level layers and the predicted results of low
 resolution features are recursively embedded into the learn-
 ing framework. 
+
     ![Ming-Ming Cheng2018 Salient Object Detection](Pictures/Selection_008.png)
 
 - By aggregating multi-level convolutional
@@ -101,16 +107,20 @@ terms of near all compared evaluation metrics.
 
 - Effective integration of contextual information is crucial for salient object detection. To achieve this, most existing methods based on ’skip’ architecture mainly focus on how to integrate hierarchical features of Convolutional Neural Networks (CNNs). They simply apply concatenation or element-wise operation to incorporate high-level
 semantic cues and low-level detailed information. However, this can degrade the quality of predictions because cluttered and noisy information can also be passed through.
+
     ![Ming-Ming Cheng2018 Salient Object Detection](Pictures/Selection_010.png)
 
 - To address this problem, we proposes a global Recurrent Localization Network (RLN) which exploits contextual information by the weighted response map in order to localize salient objects more accurately. 
+
     ![Ming-Ming Cheng2018 Salient Object Detection](Pictures/Selection_011.png)
 
 - Particularly, a recurrent module is employed to progressively refine the inner structure of the CNN over multiple time steps. 
+
     ![Ming-Ming Cheng2018 Salient Object Detection](Pictures/Selection_012.png)
  
 - Moreover, to effectively recover object boundaries, we propose a local Boundary Refinement Network (BRN) to adaptively learn
 the local contextual information for each spatial position.
+
     ![Ming-Ming Cheng2018 Salient Object Detection](Pictures/Selection_013.png)
 
 - The learned propagation coefficients can be used to optimally capture relations between each pixel and its neighbors. Experiments on five challenging datasets show that our approach performs favorably against all existing methods in terms of the popular evaluation metrics.
@@ -134,6 +144,7 @@ capability of global context information by different-region-
 based context aggregation through our pyramid pooling
 module together with the proposed pyramid scene parsing
 network (PSPNet).
+
     ![Ming-Ming Cheng2018 Salient Object Detection](Pictures/Selection_017.png)
 
 -  Our global prior representation is ef-
@@ -145,7 +156,8 @@ ageNet scene parsing challenge 2016, PASCAL VOC 2012
 benchmark and Cityscapes benchmark. A single PSPNet
 yields the new record of mIoU accuracy 85.4% on PASCAL
 VOC 2012 and accuracy 80.2% on Cityscapes.
-   ![Ming-Ming Cheng2018 Salient Object Detection](Pictures/Selection_018.png)
+
+    ![Ming-Ming Cheng2018 Salient Object Detection](Pictures/Selection_018.png)
 
 
 
@@ -172,6 +184,7 @@ of global contextual information in semantic segmentation
 by introducing the Context Encoding Module, which captures
 the semantic context of scenes and selectively highlights
 class-dependent feature maps.  
+
     ![Ming-Ming Cheng2018 Salient Object Detection](Pictures/Selection_014.png)
 
 - The proposed Context Encoding Module significantly improves semantic segmentation
@@ -186,7 +199,8 @@ networks for the image classification on CIFAR-10 dataset.
 Our 14 layer network has achieved an error rate of 3.45%,
 which is comparable with state-of-the-art approaches with
 over 10× more layers. 
-   ![Ming-Ming Cheng2018 Salient Object Detection](Pictures/Selection_016.png)
+
+    ![Ming-Ming Cheng2018 Salient Object Detection](Pictures/Selection_016.png)
 
 >@InProceedings{Zhang_2018_CVPR,
 author = {Zhang, Hang and Dana, Kristin and Shi, Jianping and Zhang, Zhongyue and Wang, Xiaogang and Tyagi, Ambrish and Agrawal, Amit},
@@ -213,6 +227,7 @@ the distraction from redundant details.
 - In this paper, we propose a novel attention guided network which selectively
 integrates multi-level contextual information in a progressive
 manner. 
+
     ![Ming-Ming Cheng2018 Salient Object Detection](Pictures/Selection_019.png)
 
 - Attentive features generated by our network can alleviate distraction of background thus achieve better
@@ -222,6 +237,7 @@ exploiting side-output features of the backbone feature extraction
 network. However, shallower layers of backbone
 network lack the ability to obtain global semantic information,
 which limits the effective feature learning. 
+
     ![Ming-Ming Cheng2018 Salient Object Detection](Pictures/Selection_020.png)
 
 - To address the problem, we introduce multi-path recurrent feedback to
@@ -232,6 +248,7 @@ transferred to shallower layers, which intrinsically refines
 the entire network. Experimental results on six benchmark
 datasets demonstrate that our algorithm performs favorably
 against the state-of-the-art approaches.
+
     ![Ming-Ming Cheng2018 Salient Object Detection](Pictures/Selection_021.png)
 
 >@inproceedings{zhang2018progressive,
@@ -251,12 +268,14 @@ against the state-of-the-art approaches.
 
 - Benefit from the quick development of deep learning techniques,
 salient object detection has achieved remarkable progresses recently.
+
     ![Ming-Ming Cheng2018 Salient Object Detection](Pictures/Selection_025.png)
 
 - However, there still exists following two major challenges that hinder
 its application in embedded devices, low resolution output and heavy
 model weight. To this end, this paper presents an accurate yet compact
 deep network for efficient salient object detection. 
+
     ![Ming-Ming Cheng2018 Salient Object Detection](Pictures/Selection_026.png)
 
 - More specifically, given a coarse saliency prediction in the deepest layer, we first employ residual
@@ -264,11 +283,13 @@ learning to learn side-output residual features for saliency refinement,
 which can be achieved with very limited convolutional parameters while
 keep accuracy. Secondly, we further propose reverse attention to guide
 such side-output residual learning in a top-down manner. 
+
     ![Ming-Ming Cheng2018 Salient Object Detection](Pictures/Selection_027.png)
     
 - By erasing the current predicted salient regions from side-output features, the network
 can eventually explore the missing object parts and details which
 results in high resolution and accuracy. 
+
     ![Ming-Ming Cheng2018 Salient Object Detection](Pictures/Selection_028.png)
 
 - Experiments on six benchmark datasets demonstrate that the proposed approach compares favorably
@@ -295,27 +316,28 @@ image-specific task. Due to lack of large-scale saliency
 training data, using deep neural networks (DNNs) with pretraining
 is difficult to precisely capture the image-specific
 saliency cues. 
+
     ![Ming-Ming Cheng2018 Salient Object Detection](Pictures/Selection_022.png)
 
-To solve this issue, we formulate a zero-shot
+- To solve this issue, we formulate a zero-shot
 learning problem to promote existing saliency detectors.
 Concretely, a DNN is trained as an embedding function
 to map pixels and the attributes of the salient/background
 regions of an image into the same metric space, in which
 an image-specific classifier is learned to classify the pixels.
+
     ![Ming-Ming Cheng2018 Salient Object Detection](Pictures/Selection_023.png)
     
-Since the image-specific task is performed by the classifier,
+- Since the image-specific task is performed by the classifier, 
 the DNN embedding effectively plays the role of a
 general feature extractor.
+
     ![Ming-Ming Cheng2018 Salient Object Detection](Pictures/Selection_024.png)
 
-Compared with transferring the learning to a new recognition task using limited data, this
-formulation makes the DNN learn more effectively from
-small data. Extensive experiments on five data sets show
-that our method significantly improves accuracy of existing
-methods and compares favorably against state-of-theart
-approaches.
+- Compared with transferring the learning to a new recognition task using limited data, this
+formulation makes the DNN learn more effectively from small data. Extensive experiments on 
+five data sets show that our method significantly improves accuracy of 
+existing methods and compares favorably against state-of-theart approaches.
 
 >@InProceedings{Zeng_2018_CVPR,
 author = {Zeng, Yu and Lu, Huchuan and Zhang, Lihe and Feng, Mengyang and Borji, Ali},

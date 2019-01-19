@@ -73,5 +73,5 @@ Here is the content of our project.
         1. AAAI 2017
         2. Zhiwu Huang, Luc Van Gool
         3. https://github.com/zzhiwu/SPDNet
-        4. This is a reference in 3.
+        4. This is a reference in \[3], namely Learning Neural Bag-of-Matrix-Summarization with Riemannian Network.
 

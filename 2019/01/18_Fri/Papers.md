@@ -1,6 +1,7 @@
 # DailyReadPaper
 This reading mainly refers to the first paper, namely **Salient Object Detection via High-to-Low Hierarchical Context Aggregation**, 
 and the others are the reference \[16], \[55], \[44], \[58], \[52], \[4] , \[57] and \[51] in it.
+Ii is worth to say that the Architectural Analyses in this paper can inspire a lot of new ideas.
 ## Salient Object Detection via High-to-Low Hierarchical Context Aggregation
 1. arXiv:1812.10956 (Submitted on 28 Dec 2018)
 2. Yun Liu, Yu Qiu, Le Zhang, JiaWang Bian, Guang-Yu Nie, **Ming-Ming Cheng**

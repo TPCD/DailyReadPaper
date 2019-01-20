@@ -17,7 +17,9 @@ that has no training instance.
 - To synthesize training instances for
 novel classes and thus resolving GZSL as a common classifcation problem, we propose a Dissimilarity Representation Learning
 (DSS) method. 
+
     ![GZSL](Pictures/2.png)
+    
 - Dissimilarity representation is to represent a specifc instance in terms of its (dis)similarity to other instances in a
 visual or attribute based feature space. 
 

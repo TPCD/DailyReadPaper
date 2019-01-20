@@ -136,3 +136,12 @@ Here is the content of our project.
     15. Video-based Person Re-identification via Self Paced Weighting
         1. AAAI 2018
         2. Wenjun Huang*, Chao Liang, Yi Yu, Zheng Wang, Weijian Ruan, Ruimin Hu
+
+
+
+- [2019-01-21](2019/01/21_Mon/Papers.md):  
+    1. Dissimilarity Representation Learning for Generalized Zero-Shot Recognition
+        1. ACM MM 2018
+        2. Yang, Gang and Liu, Jinlu and Xu, Jieping and Li, Xirong
+
+

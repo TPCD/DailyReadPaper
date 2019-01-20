@@ -75,3 +75,64 @@ Here is the content of our project.
         3. https://github.com/zzhiwu/SPDNet
         4. This is a reference in \[3], namely Learning Neural Bag-of-Matrix-Summarization with Riemannian Network.
 
+- [2019-01-20](2019/01/20_Sun/Papers.md):  
+    1. FD-GAN: Pose-guided Feature Distilling GAN for Robust Person Re-identification
+        1. NIPS 2018
+        2. Ge, Yixiao and Li, Zhuowan and Zhao, Haiyu and Yin, Guojun and Yi, Shuai and Wang, Xiaogang and others
+        3. https://github.com/yxgeee/FD-GAN
+
+    2. Cascaded SR-GAN for Scale-Adaptive Low Resolution Person Re-identification
+        1. IJCAI 2018
+        2. Wang, Zheng and Ye, Mang and Yang, Fan and Bai, Xiang and Shin'ichi Satoh
+
+    3. Visible Thermal Person Re-Identification via Dual-Constrained Top-Ranking
+        1. IJCAI 2018
+        2. Ye, Mang and Wang, Zheng and Lan, Xiangyuan and Yuen, Pong C
+
+    4. Deep View-Aware Metric Learning for Person Re-Identification
+        1. IJCAI 2018
+        2. Pu Chen, Xinyi Xu and Cheng Deng∗
+
+    5. SafeNet: Scale-normalization and Anchor-based Feature Extraction Network for Person Re-identification
+        1. IJCAI 2018
+        2. Yuan, Kun and Zhang, Qian and Huang, Chang and Xiang, Shiming and Pan, Chunhong and Robotics, Horizon
+
+    6. Cross-Modality Person Re-Identification with Generative Adversarial Training
+        1. IJCAI 2018
+        2. Dai, Pingyang and Ji, Rongrong and Wang, Haibin and Wu, Qiong and Huang, Yuyu
+
+    7. Adversarial Attribute-Image Person Re-identification
+        1. IJCAI 2018
+        2. Yin, Zhou and Zheng, Wei-Shi and Wu, Ancong and Yu, Hong-Xing and Wan, Hai and Guo, Xiaowei and Huang, Feiyue and Lai, Jianhuang
+
+    8. Graph Correspondence Transfer for Person Re-identification
+        1. AAAI 2018
+        2. Qin Zhou, Heng Fan, Shibao Zheng, Hang Su, Xinzhe Li, Shuang Wu, Haibin Ling*
+
+    9. Hierarchical Discriminative Learning for Visible Thermal Person Re-Identification
+        1. AAAI 2018
+        2. Mang Ye, Xiangyuan Lan, Jiawei Li, Pong c Yuen*
+
+    10. Learning Coarse-to-fine Structured Feature Embedding for Vehicle Re-identification
+        1. AAAI 2018
+        2. Haiyun Guo*, Chaoyang Zhao, zhiwei liu, jinqiao wang, hanqing lu
+
+    11. Multi-Channel Pyramid Person Matching Network for Person Re-Identification
+        1. AAAI 2018
+        2. Chaojie Mao, Yingming Li*, zhongfei Zhang, yaqing Zhang, Xi Li
+
+    12. Region-based Quality Estimation Network for Large-scale Person Re-identification
+        1. AAAI 2018
+        2. Guanglu Song, Biao Leng*, Yu Liu, Congrui Hetang, Shaofan Cai
+
+    13. emi-supervised Bayesian Attribute Learning for Person Re-identification
+        1. AAAI 2018
+        2. Wenhe Liu*, Ling Chen, Xiaojun Chang, Yi Yang
+
+    14. STemporal-Enhanced Convolutional Network for Person Re-identification
+        1. AAAI 2018
+        2. Yang Wu*, Jie Qiu, Jun Takamatsu, Tsukasa Ogasawara
+
+    15. Video-based Person Re-identification via Self Paced Weighting
+        1. AAAI 2018
+        2. Wenjun Huang*, Chao Liang, Yi Yu, Zheng Wang, Weijian Ruan, Ruimin Hu

@@ -48,3 +48,17 @@ baseline for GZSL.
   year={2018},
   organization={ACM}
 }
+
+# A rethink about A Riemannian Network for SPD Matrix Learning
+The significant contributions in this paper include several point as follows,
+1. They propose a new way of updating the weights for the BiMap layers by
+exploiting an SGD setting **on Stiefel manifolds.** As
+merely computing their Euclidean gradients in the procedure of 
+backprop cannot valid orthogonal weights, they have to force the 
+weights to be on Stiefel manifolds. Subsequently, in order to obtain the Riemannian gradient, **the normal component of the Euclidean gradient is subtracted
+to generate the tangential component to the Stiefel manifold.** 
+2. Because computing those with EIG decomposition in the layers of ReEig and LogEig has not been
+well-solved by the traditional backprop. They exploit the matrix generalization of backprop studied in (Ionescu, Vantzos, and Sminchisescu 2015) to compute the gradients of the involved
+SPD matrices in the ReEig and LogEig layers. In particular, **let F be a function describing the variations of the upper
+layer variables with respect to the lower layer variables**. With the function F, a new version of
+the chain rule Eqn.6 for the matrix backprop.

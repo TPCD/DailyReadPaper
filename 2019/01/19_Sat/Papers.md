@@ -117,7 +117,7 @@ Booktitle={Thirty-Third AAAI Conference on Artificial Intelligence},
 Year={2019}, Accept}
 
 ## A Riemannian Network for SPD Matrix Learning
-1. AAAI 2019
+1. AAAI 2017
 2. Zhiwu Huang, Luc Van Gool
 3. https://github.com/zzhiwu/SPDNet
 

@@ -65,6 +65,10 @@ baseline for GZSL.
 
 # The reference in A Riemannian Network for SPD Matrix Learning
 ## Covariance Discriminative Learning: A Natural and Efficient Approach to Image Set Classification
+1. CVPR 2012
+2. **Wang, Ruiping** and Guo, Huimin and Davis, Larry S and Dai, Qionghai
+3. https://github.com/adavoudi/spdnet
+
 - We propose a novel discriminative learning approach to
 image set classification by **modeling the image set with its
 natural second-order statistic**, i.e. covariance matrix. Since
@@ -98,4 +102,173 @@ face recognition and object categorization.
   pages={2496--2503},
   year={2012},
   organization={IEEE}
-} 
+  
+  
+## Second-order Convolutional Neural Networks
+1. Clinical Immunology & Immunopathology
+2. Yu, Kaicheng and Salzmann, Mathieu
+3. https://github.com/adavoudi/spdnet
+
+- Convolutional Neural Networks (CNNs) have been successfully applied to many computer vision tasks, such as
+image classification. By performing linear combinations
+and element-wise nonlinear operations, these networks can
+be thought of as extracting solely first-order information
+from an input image. 
+
+    ![GZSL](Pictures/8.png)
+    
+- In the past, however, second-order
+statistics computed from handcrafted features, e.g., covariances, have proven highly effective in diverse recognition
+tasks. 
+
+    ![GZSL](Pictures/9.png)
+      
+- In this paper, we introduce a novel class of CNNs
+that exploit second-order statistics. To this end, we design a series of new layers that (i) extract a covariance
+matrix from convolutional activations, (ii) compute a parametric, second-order transformation of a matrix, and (iii)
+perform a parametric vectorization of a matrix. These operations can be assembled to form a Covariance Descriptor Unit (CDU), which replaces the fully-connected layers
+of standard CNNs. 
+
+    ![GZSL](Pictures/10.png)
+    
+>@article{Yu2017Second,
+  title={Second-order Convolutional Neural Networks},
+  author={Yu, Kaicheng and Salzmann, Mathieu},
+  journal={Clinical Immunology & Immunopathology},
+  volume={66},
+  number={3},
+  pages={230-8},
+  year={2017},
+}
+
+# The follows are related works from Dr.Huang about manifold-combined CNN learning method
+
+## Covariance Pooling for Facial Expression Recognition
+1. arXiv preprint arXiv:1805.04855
+2. Acharya, Dinesh and Huang, Zhiwu and Paudel, Danda Pani and Van Gool, Luc
+3. https://github.com/d-acharya/CovPoolFER
+- Classifying facial expressions into different categories
+requires capturing regional distortions of facial landmarks.
+We believe that second-order statistics such as covariance is
+better able to capture such distortions in regional facial features.
+
+    ![GZSL](Pictures/11.png)
+    
+- In this work, we explore the benefits of using a manifold network structure for covariance pooling to improve
+facial expression recognition. In particular, we first employ
+such kind of manifold networks in conjunction with traditional convolutional networks for spatial pooling within individual image feature maps in an end-to-end deep learning
+manner. By doing so, we are able to achieve a recognition
+accuracy of 58:14% on the validation set of Static Facial
+Expressions in the Wild (SFEW 2.0) and 87:0% on the validation set of Real-World Affective Faces (RAF) Database1.
+Both of these results are the best results we are aware of.
+
+    ![GZSL](Pictures/12.png)
+    
+- Besides, we leverage covariance pooling to capture the temporal evolution of per-frame features for video-based facial
+expression recognition. Our reported results demonstrate
+the advantage of pooling image-set features temporally by
+stacking the designed manifold network of covariance pooling on top of convolutional network layers.
+
+
+>@article{acharya2018covariance,
+  title={Covariance Pooling for Facial Expression Recognition},
+  author={Acharya, Dinesh and Huang, Zhiwu and Paudel, Danda Pani and Van Gool, Luc},
+  journal={arXiv preprint arXiv:1805.04855},
+  year={2018}
+}
+
+## Building Deep Networks on Grassmann Manifolds
+1. AAAI 2018
+2. Huang, Zhiwu and Wu, Jiqing and Van Gool, Luc
+3. https://github.com/zzhiwu/GrNet
+
+
+- Learning representations on Grassmann manifolds is popular
+in quite a few visual recognition tasks. 
+
+    ![GZSL](Pictures/12.png)
+    
+- In order to enable deep learning on Grassmann manifolds, this paper proposes a deep
+network architecture by generalizing the Euclidean network
+paradigm to Grassmann manifolds.
+
+    ![GZSL](Pictures/13.png)
+    
+- In particular, we design
+full rank mapping layers 
+
+    ![GZSL](Pictures/14.png)
+    
+- to transform input Grassmannian
+data to more desirable ones, exploit re-orthonormalization
+layers
+
+    ![GZSL](Pictures/15.png)
+    
+- to normalize the resulting matrices, study projection
+pooling layers 
+
+    ![GZSL](Pictures/16.png)
+    
+- to reduce the model complexity in the Grassmannian context, and devise projection mapping layers
+ 
+    ![GZSL](Pictures/17.png)
+    
+- to respect Grassmannian geometry and meanwhile achieve Euclidean forms for regular output layers. 
+
+    ![GZSL](Pictures/18.png)
+    
+- To train the Grassmann networks, we exploit a stochastic gradient descent setting on manifolds
+ of the connection weights, and study a matrix generalization of backpropagation 
+ to update the structured data. 
+ 
+    ![GZSL](Pictures/19.png)
+    
+- The evaluations on three visual recognition tasks
+show that our Grassmann networks have clear advantages
+over existing Grassmann learning methods, and achieve results comparable with state-of-the-art approaches.
+
+>@inproceedings{huang2018building,
+  title={Building deep networks on Grassmann manifolds},
+  author={Huang, Zhiwu and Wu, Jiqing and Van Gool, Luc},
+  booktitle={Thirty-Second AAAI Conference on Artificial Intelligence},
+  year={2018}
+}
+
+## Deep Learning on Lie Groups for Skeleton-based Action Recognition
+1. CVPR 2017 spotlight
+2. Huang, Zhiwu and Wan, Chengde and Probst, Thomas and Van Gool, Luc
+3. https://github.com/zzhiwu/LieNet
+
+- In recent years, skeleton-based action recognition has
+become a popular 3D classification problem. State-of-theart methods typically first represent each motion sequence
+as a high-dimensional trajectory on a Lie group with an
+additional dynamic time warping, and then shallowly learn
+favorable Lie group features. 
+ 
+    ![GZSL](Pictures/20.png)
+   
+- In this paper we incorporate
+the Lie group structure into a deep network architecture to
+learn more appropriate Lie group features for 3D action
+recognition. Within the network structure, we design rotation mapping layers to transform the input Lie group features into desirable ones, which are aligned better in the
+temporal domain. To reduce the high feature dimensionality, the architecture is equipped with rotation pooling layers
+for the elements on the Lie group. 
+ 
+    ![GZSL](Pictures/21.png)
+   
+- Furthermore, we propose
+a logarithm mapping layer to map the resulting manifold
+data into a tangent space that facilitates the application of
+regular output layers for the final classification. Evaluations of the proposed network for standard 3D human action recognition datasets clearly demonstrate its superiority
+over existing shallow Lie group feature learning methods as
+well as most conventional deep learning methods
+
+>@inproceedings{huang2017deep,
+  title={Deep learning on lie groups for skeleton-based action recognition},
+  author={Huang, Zhiwu and Wan, Chengde and Probst, Thomas and Van Gool, Luc},
+  booktitle={Proceedings of the 2017 IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
+  pages={1243--1252},
+  year={2017},
+  organization={IEEE computer Society}
+}

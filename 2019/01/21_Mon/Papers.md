@@ -84,7 +84,8 @@ method devoted to vector space can be exploited in either
 its linear or kernel formulation. Linear Discriminant
 Analysis (LDA) and Partial Least Squares (PLS) are
 considered in this paper for their feasibility for our specific
-problem. We further investigate the conventional linear
+problem.
+- We further investigate the conventional linear
 subspace based set modeling technique and cast it in a
 unified framework with our covariance matrix based
 modeling. The proposed method is evaluated on two tasks:

@@ -129,3 +129,9 @@ Here is the content of our project.
         
     3. Look closer to see better: Recurrent attention convolutional neural network for fine-grained image recognition
         1. CVPR 2017
+        
+- [2019-01-23](2019/01/23_Wed/Papers.md): 
+    1. A rethink for Learning Neural Bag-of-Matrix-Summarization with Riemannian Network
+    
+    2. Stochastic neighbor compression
+        1. ICML 2014

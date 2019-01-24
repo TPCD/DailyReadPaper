@@ -170,3 +170,62 @@ several future directions are highlighted.
   journal={arXiv preprint arXiv:1804.06655},
   year={2018}
 }
+
+## Ring loss: Convex Feature Normalization for Face Recognition
+1. CVPR 2018
+2. Zheng, Yutong and Pal, Dipan K and Savvides, Marios
+
+- We motivate and present Ring loss, a simple and elegant
+feature normalization approach for deep networks designed
+to augment standard loss functions such as Softmax. We
+argue that deep feature normalization is an important aspect of supervised classification problems where we require
+the model to represent each class in a multi-class problem
+equally well. 
+
+    ![loss](Pictures/13.png)
+
+- The direct approach to feature normalization through the hard normalization operation results in a
+non-convex formulation. Instead, Ring loss applies soft normalization, where it gradually learns to constrain the norm
+to the scaled unit circle while preserving convexity leading
+to more robust features. We apply Ring loss to large-scale
+face recognition problems and present results on LFW, the
+challenging protocols of IJB-A Janus, Janus CS3 (a superset of IJB-A Janus), Celebrity Frontal-Profile (CFP) and
+MegaFace with 1 million distractors. 
+
+    ![loss](Pictures/14.png)
+    
+- Ring loss outperforms
+strong baselines, matches state-of-the-art performance on
+IJB-A Janus and outperforms all other results on the challenging Janus CS3 thereby achieving state-of-the-art. We
+also outperform strong baselines in handling extremely low
+resolution face matchin
+
+>@inproceedings{zheng2018ring,
+  title={Ring loss: Convex feature normalization for face recognition},
+  author={Zheng, Yutong and Pal, Dipan K and Savvides, Marios},
+  booktitle={Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition},
+  pages={5089--5097},
+  year={2018}
+}
+
+## Deep feature embedding learning for person re-identification using lifted structured loss
+1. ICASSP 2018
+2. Zhangping He , Zhendong Zhang† and Cheolkon Jung
+
+- In this paper, we propose deep feature embedding learning
+for person re-identification (re-id) using lifted structured loss.
+
+    ![loss](Pictures/15.png)
+   
+- Although triplet loss has been commonly used in deep neural
+networks for person re-id, the triplet loss-based framework
+is not effective in fully using the batch information.
+
+    ![loss](Pictures/16.png)
+   
+- Thus,
+it needs to choose hard negative samples manually that is
+very time-consuming. To address this problem, we adopt
+lifted structured loss for deep neural networks that makes
+the network learn better feature embedding by minimizing
+intra-class variation and maximizing inter-class variation.

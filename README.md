@@ -161,3 +161,18 @@ Here is the content of our project.
     6. Deep feature embedding learning for person re-identification using lifted structured loss
         1. ICASSP 2018
         2. Zhangping He , Zhendong Zhang and Cheolkon Jung
+
+- [2019-01-25](2019/01/25_Fri/Papers.md): 
+    1. Global Second-order Pooling Convolutional Networks
+        1. Arxiv 2018
+        2. Zilin Gao, Jiangtao Xie, Qilong Wang, Peihua Li
+
+    2. Is second-order information helpful for large-scale visual recognition},
+        1. ICCV 2017
+        2. http://www.peihuali.org/MPN-COV.
+        3. https://github.com/jiangtaoxie/MPN-COV
+
+    3. Statistically Motivated Second Order Pooling
+        1. ECCV 2018
+        2. https://github.com/kcyu2014/smsop
+  

@@ -173,7 +173,6 @@ Here is the content of our project.
         1. ICLR 2017
         
 - [2019-01-27](2019/01/27_Sun/Papers.md): 
-
     1. Pedestrian Attribute Recognition: A Survey
         1. Arxiv 2019
         

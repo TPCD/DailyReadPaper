@@ -193,5 +193,22 @@ Here is the content of our project.
         
     7. A Comprehensive Survey on Graph Neural Networks
         1. Arxiv 2019
+        
+- [2019-01-28](2019/01/28_Mon/Papers.md): 
 
-  
+    1.Revisiting Self-Supervised Visual Representation Learning
+        1. Arxiv 2019
+        2. **Google Brain**
+        
+    2.Deep Multimodality Model for Multi-task Multi-view Learning
+        1. Arxiv 2019
+        2. **Microsoft AI & Research**
+        
+    3.One-Class Convolutional Neural Network
+        1. Arxiv 2019
+        2. github.com/otkupjnoz/oc-cnn.
+        3. Department of Electrical and Computer Engineering, **Johns Hopkins University**, Baltimore, MD, USA. This work was supported by the NSF grant 1801435.
+
+    4.In Defense of the Triplet Loss for Visual Recognition
+        1. Arxiv 2019
+        2. **Honda Research**

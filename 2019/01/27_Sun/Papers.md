@@ -11,7 +11,7 @@ due to it plays an important role in video surveillance. Many algorithms has bee
 to handle this task. The goal of this paper is to review existing works using traditional 
 methods or based on deep learning networks. 
 
-    ![Arxiv](1.png)
+    ![Arxiv](Pictures/1.png)
 
 - **Firstly**, we introduce the background of pedestrian
  attributes recognition (PAR, for short), including the fundamental concepts of pedestrian 
@@ -30,7 +30,7 @@ methods or based on deep learning networks.
 - **Finally**, we summarized this paper and give several possible research directions 
   for pedestrian attributes recognition.
 
-    ![Arxiv](2.png)
+    ![Arxiv](Pictures/2.png)
 
 >@@article{wang2019PARSurvey,
 title={Pedestrian Attribute Recognition: A Survey},
@@ -54,14 +54,14 @@ done in the last 10 years in this field. Since the underlying
 building block of a typical anomaly detection is learning, we
 emphasize more on learning methods applied on video scenes.
 
-    ![Arxiv](3.png)
+    ![Arxiv](Pictures/3.png)
 
 - We then summarize the important contributions made during last
 six years on anomaly detection primarily focusing on features,
 underlying techniques, applied scenarios and types of anomalies
 using single static camera. 
 
-    ![Arxiv](4.png)
+    ![Arxiv](Pictures/4.png)
 
 - Finally, we discuss the challenges in
 the computer vision related anomaly detection techniques and
@@ -103,7 +103,7 @@ have shown state-of-the-art results on various competitive benchmarks. The power
 ability of deep CNN is largely achieved with the use of multiple non-linear feature extraction
 stages that can automatically learn hierarchical representation from the data. 
 
-    ![Arxiv](5.png)
+    ![Arxiv](Pictures/5.png)
 
 - Availability of a
 large amount of data and improvements in the hardware processing units have accelerated the
@@ -118,7 +118,7 @@ improvement in representational capacity is achieved by the restructuring of the
 Especially, the idea of using a block as a structural unit instead of a layer is gaining substantial
 appreciation. 
 
-    ![Arxiv](6.png)
+    ![Arxiv](Pictures/6.png)
 
 - This survey thus focuses on the intrinsic taxonomy present in the recently reported
 CNN architectures and consequently, classifies the recent innovations in CNN architectures into
@@ -143,13 +143,13 @@ machine learning as optimization models. Such models can benefit
 from the advancement of numerical optimization techniques which
 have already played a distinctive role in several machine learning settings. 
 
-    ![Arxiv](7.png)
+    ![Arxiv](Pictures/7.png)
     
 - Particularly, mathematical optimization models are presented
 for commonly used machine learning approaches for regression, classification, clustering, and deep neural networks as well new emerging
 applications in machine teaching and empirical model learning. 
 
-    ![Arxiv](8.png)
+    ![Arxiv](Pictures/8.png)
 
 - The strengths and the shortcomings of these models are discussed and potential 
 research directions are highlighted
@@ -169,14 +169,14 @@ and application domains. The aim of this survey is two-fold, firstly we present 
 we review the adoption of these methods for anomaly across various application domains and assess
 their effectiveness. 
 
-    ![Arxiv](9.png)
+    ![Arxiv](Pictures/9.png)
 
 - We have grouped state-of-the-art deep anomaly detection research techniques
 into different categories based on the underlying assumptions and approach adopted. Within each
 category, we outline the basic anomaly detection technique, along with its variants and present key
 assumptions, to differentiate between normal and anomalous behavior. 
 
-    ![Arxiv](10.png)
+    ![Arxiv](Pictures/10.png)
     
 - Besides, for each category,
 we also present the advantages and limitations and discuss the computational complexity of the techniques in real application domains. Finally, we outline open issues in research and challenges faced
@@ -200,7 +200,7 @@ are represented as graphs with complex relationships and interdependency between
 imposed significant challenges on existing machine learning algorithms. Recently, many studies on extending deep learning
 approaches for graph data have emerged. 
 
-    ![Arxiv](11.png)
+    ![Arxiv](Pictures/11.png)
     
 - In this survey, we provide a comprehensive overview of graph neural networks (GNNs) in
 data mining and machine learning fields. We propose a new taxonomy to divide the state-of-the-art graph neural networks into different
@@ -208,13 +208,13 @@ categories. With a focus on graph convolutional networks, we review alternative 
 learning paradigms include graph attention networks, graph autoencoders, graph generative networks, and graph spatial-temporal
 networks. 
 
-    ![Arxiv](12.png)
+    ![Arxiv](Pictures/12.png)
     
 - We further discuss the applications of graph neural networks across various domains and summarize the open source codes
 and benchmarks of the existing algorithms on different learning tasks. Finally, we propose potential research directions in this
 fast-growing field.
 
-    ![Arxiv](13.png)
+    ![Arxiv](Pictures/13.png)
     
 >@misc{1901.00596,
 Author = {Zonghan Wu and Shirui Pan and Fengwen Chen and Guodong Long and Chengqi Zhang and Philip S. Yu},

@@ -2,6 +2,7 @@
 A rethink about decorrelating representation learning.
 
 ## A rethink about All you need is beyond a good init: Exploring better solution for training extremely deep convolutional neural networks with orthonormality and modulation
+1. http://www.erogol.com/need-good-init/
 
 - Recently we find that [21] has proposed similar ideas.
 They unify three types of kernel normalization methods in-
@@ -117,4 +118,25 @@ a general, quantitative theory of deep learning.
 }
 
 
-##
+### ALL YOU NEED IS A GOOD INIT
+1. Center for Machine Perception
+Czech Technical University in Prague
+Czech Republic {mishkdmy,matas}@cmp.felk.cvut.cz
+2. ICLR 2016
+
+- Layer-sequential unit-variance (LSUV) initialization – a simple method for weight
+initialization for deep net learning – is proposed. The method consists of the two
+steps. First, pre-initialize weights of each convolution or inner-product layer with
+orthonormal matrices. Second, proceed from the first to the final layer, normalizing
+the variance of the output of each layer to be equal to one.
+
+    ![Arxiv](Pictures/Selection_089.png)
+   
+- Experiment with different activation functions (maxout, ReLU-family, tanh) show
+that the proposed initialization leads to learning of very deep nets that (i) produces
+networks with test accuracy better or equal to standard methods and (ii) is at least
+as fast as the complex schemes proposed specifically for very deep nets such as
+FitNets (Romero et al. (2015)) and Highway (Srivastava et al. (2015)).
+Performance is evaluated on GoogLeNet, CaffeNet, FitNets and Residual nets and
+the state-of-the-art, or very close to it, is achieved on the MNIST, CIFAR-10/100
+and ImageNet datasets.

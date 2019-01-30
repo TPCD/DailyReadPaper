@@ -226,3 +226,12 @@ Here is the content of our project.
         1. ICML 2017
 
 
+- [2019-01-30](2019/01/30_Wed/Papers.md): 
+    1. A rethink about All you need is beyond a good init: Exploring better solution for training extremely deep convolutional neural networks with orthonormality and modulation
+        1. http://www.erogol.com/need-good-init/
+
+    2. \[30]Exact solutions to the nonlinear dynamics of learning in deep linear neural networks
+        1. Andrew M. Saxe (asaxe@stanford.edu)
+        
+    3. ALL YOU NEED IS A GOOD INIT
+        1. Center for Machine Perception 

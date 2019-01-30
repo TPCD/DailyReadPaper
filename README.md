@@ -212,3 +212,18 @@ Here is the content of our project.
     4.In Defense of the Triplet Loss for Visual Recognition
         1. Arxiv 2019
         2. **Honda Research**
+
+- [2019-01-29](2019/01/29_Tue/Papers.md): 
+    1. SVDNet for Pedestrian Retrieval
+        1. ICCV 2017
+    
+    2. Reducing overfitting in deep networks by decorrelating representations
+        1. ICLR 2016
+        
+    3. All you need is beyond a good init: Exploring better solution for training extremely deep convolutional neural networks with orthonormality and modulation
+        1. CVPR 2017
+        
+    4. Learning deep architectures via generalized whitened neural networks
+        1. ICML 2017
+
+

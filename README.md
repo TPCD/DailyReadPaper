@@ -239,3 +239,31 @@ Here is the content of our project.
     4. \[32]Understanding and improving convolutional neural networks via concatenated rectified linear units
         1. ICML 2016
 
+- [2019-01-31](2019/01/31_Thu/Papers.md): 
+    1. A Unified Generative Adversarial Framework for Image Generation and Person Re-Identification
+        1. ACM MM 2018
+        
+    2. CA3Net: Contextual-Attentional Attribute-Appearance Network for Re-Identification
+        1. ACM MM 2018
+        
+    3. Learning Discriminative Features with Multiple Granularities for Re-Identification
+        1. ACM MM 2018
+        
+    4. Local Convolutional Neural Networks for Person Re-Identification
+        1. ACM MM 2018
+        
+    5. Online Inter-Camera Trajectory Association Exploiting Person Re-Identification and Camera Topology
+        1. ACM MM 2018
+        
+    6. Person Re-identification with Hierarchical Deep Learning Feature and efficient XQDA Metric
+        1. ACM MM 2018
+        
+    7. Support Neighbor Loss for Person Re-Identification
+        1. ACM MM 2018
+        
+    8. Video-based Person Re-identification via Self-Paced Learning and Deep Reinforcement Learning Framework
+        1. ACM MM 2018
+    
+    9. List of accepted papers in ACM MM
+    
+- [2019-02-01](2019/02/01_Fri/Papers.md): 

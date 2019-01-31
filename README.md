@@ -235,3 +235,7 @@ Here is the content of our project.
         
     3. ALL YOU NEED IS A GOOD INIT
         1. Center for Machine Perception 
+        
+    4. \[32]Understanding and improving convolutional neural networks via concatenated rectified linear units
+        1. ICML 2016
+

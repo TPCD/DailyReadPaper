@@ -1,142 +1,421 @@
 # DailyReadPaper
-A rethink about decorrelating representation learning.
+Today I deliver a list of ACM MM Papers.
+I will choose and interpret some of them with new idea from the list for the next several days.
 
-## A rethink about All you need is beyond a good init: Exploring better solution for training extremely deep convolutional neural networks with orthonormality and modulation
-1. http://www.erogol.com/need-good-init/
+## A list of ACM MM 2018 accepted papers.
+Understanding Humans in Crowded Scenes: Deep Nested Adversarial Learning and A New Benchmark for Multi-Human Parsing
 
-- Recently we find that [21] has proposed similar ideas.
-They unify three types of kernel normalization methods in-
-to a geometric framework called kernel submanifolds, in
-which sphere, oblique and compact Stiefel manifolds (or-
-thonormal kernels) are considered. 
+Incremental Deep Hidden Attribute Learning
 
-    ![Arxiv](Pictures/Selection_083.png)
-    
-- The differences exist-
-s in three aspects: 1) The intrinsic explanations about the
-performance improvement is different, of which they main-
-ly focus on regularization of models with data augmentation
-and learning of models endowed with geometric invariants;
+Step-by-step Erasion, One-by-one Collection: A Weakly Supervised Temporal Action Detector
 
-    ![Arxiv](Pictures/Selection_084.png)
-    
-- 2) The orthogonalization is different, of which they orthog-
-onalize convolutional kernels within a channel while we do
-this among channel; 3) As the second statement tells, we
-believe that their proposed method still cannot handle the
-extremely deep plain networks. Besides, all the details and
-key steps to implement their methods are ambiguous that
-prevents from understanding and verifying it further.
+Visual Domain Adaptation with Manifold Embedded Distribution Alignment
 
-    ![Arxiv](Pictures/Selection_085.png)
-    
-- Intrinsically, one can regard our proposed modulation as
-assigning each parametric layer an individual and adaptive
-learning rate. 
+Object-Difference Attention: A simple relational attention for Visual Question Answering
 
-    ![Arxiv](Pictures/Selection_086.png)
-    
-- This kind of modulation can be more practi-
-cal than local methods, e.g. second-order methods, while be
-more flexible than global ones, e.g. SGD. 
+Robust Billboard-based, Free-viewpoint Video Synthesis Algorithm to Overcome Occlusions under Challenging Outdoor Sport Scenes
 
-    ![Arxiv](Pictures/Selection_087.png)
-    
-- Besides, if we can
-approach some strategies to compensate the evanescent or-
-thonomality as learning progresses, we believe that training
-a genuinely deep network will be available.
+Multi-Human Parsing Machines
 
->@article{xie2017all,
-  title={All you need is beyond a good init: Exploring better solution for training extremely deep convolutional neural networks with orthonormality and modulation},
-  author={Xie, Di and Xiong, Jiang and Pu, Shiliang},
-  journal={arXiv preprint arXiv:1703.01827},
-  year={2017}
-}
+Deep Priority Hashing
 
-### \[30]Exact solutions to the nonlinear dynamics of learning in deep linear neural networks
-1. Andrew M. Saxe (asaxe@stanford.edu)
-Department of Electrical Engineering
-James L. McClelland (mcclelland@stanford.edu)
-Department of Psychology
-Surya Ganguli (sganguli@stanford.edu)
-Department of Applied Physics
-**Stanford University**, Stanford, CA 94305 USA
+CropNet: Real-Time Thumbnailing
 
-- Despite the widespread practical success of deep learning methods, our theoretical understanding
-of the dynamics of learning in deep neural networks remains quite sparse. We
-attempt to bridge the gap between the theory and practice of deep learning by systematically
-analyzing learning dynamics for the restricted case of deep linear neural networks.
-Despite the linearity of their input-output map, such networks have nonlinear gradient descent
-dynamics on weights that change with the addition of each new hidden layer. We
-show that deep linear networks exhibit nonlinear learning phenomena similar to those seen
-in simulations of nonlinear networks, including long plateaus followed by rapid transitions
-to lower error solutions, and faster convergence from greedy unsupervised pretraining initial
-conditions than from random initial conditions. 
+Learning to Transfer: Generalizable Attribute Learning with Multitask Neural Model Search
 
-    ![Arxiv](Pictures/Selection_078.png)
-    
-- We provide an analytical description
-of these phenomena by finding new exact solutions to the nonlinear dynamics of deep
-learning. Our theoretical analysis also reveals the surprising finding that as the depth of
-a network approaches infinity, learning speed can nevertheless remain finite: for a special
-class of initial conditions on the weights, very deep networks incur only a finite, depth
-independent, delay in learning speed relative to shallow networks. We show that, under
-certain conditions on the training data, unsupervised pretraining can find this special class
-of initial conditions, while scaled random Gaussian initializations cannot. We further exhibit
-a new class of random orthogonal initial conditions on weights that, like unsupervised
-pre-training, enjoys depth independent learning times. We further show that these initial
-conditions also lead to faithful propagation of gradients even in deep nonlinear networks,
-as long as they operate in a special regime known as the edge of chao
+Supervised Online Hashing via Hadamard Codebook Learning
 
-    ![Arxiv](Pictures/Selection_079.png)
-    
-- In summary, despite the simplicity of their input-output map, the dynamics of learning in deep linear networks
-reveals a surprising amount of rich mathematical structure, including nonlinear hyperbolic dynamics,
-plateaus and sudden performance transitions, a proliferation of saddle points, symmetries and conserved
-quantities, invariant submanifolds of independently evolving connectivity modes subserving rapid learning,
-and most importantly, a sensitive but computable dependence of learning time scales on input statistics, initial
-weight conditions, and network depth. With the right initial conditions, deep linear networks can be only
-a finite amount slower than shallow networks, and unsupervised pretraining can find these initial conditions
-for tasks with the right structure. Moreover, we introduce a mathematical condition for faithful backpropagation
-of error signals, namely dynamical isometry, and show, surprisingly that random scaled Gaussian
-initializations cannot achieve this condition despite their norm-preserving nature, while greedy pre-training
-and random orthogonal initialization can, thereby achieving depth independent learning times. Finally, we
-show that the property of dynamical isometry survives to good approximation even in extremely deep nonlinear
-random orthogonal networks operating just beyond the edge of chaos. At the cost of expressivity, deep
-linear networks gain theoretical tractability and may prove fertile for addressing other phenomena in deep
-learning, such as the impact of carefully-scaled initializations [13, 23], momentum [23], dropout regularization
-[1], and sparsity constraints [2]. While a full analytical treatment of learning in deep nonlinear networks
-currently remains open, one cannot reasonably hope to move towards such a theory without first completely
-understanding the linear case. In this sense, our work fulfills an essential pre-requisite for progress towards
-a general, quantitative theory of deep learning.
->@article{saxe2013exact,
-  title={Exact solutions to the nonlinear dynamics of learning in deep linear neural networks},
-  author={Saxe, Andrew M and McClelland, James L and Ganguli, Surya},
-  journal={arXiv preprint arXiv:1312.6120},
-  year={2013}
-}
+Shared Linear Encoder-based Gaussian Process Latent Variable Model for Visual Classification
 
+Learning Semantic Structure-preserved Embeddings for Cross-modal Retrieval
 
-### ALL YOU NEED IS A GOOD INIT
-1. Center for Machine Perception
-Czech Technical University in Prague
-Czech Republic {mishkdmy,matas}@cmp.felk.cvut.cz
-2. ICLR 2016
+Fine-grained Grocery Product Recognition by One-shot Learning
 
-- Layer-sequential unit-variance (LSUV) initialization – a simple method for weight
-initialization for deep net learning – is proposed. The method consists of the two
-steps. First, pre-initialize weights of each convolution or inner-product layer with
-orthonormal matrices. Second, proceed from the first to the final layer, normalizing
-the variance of the output of each layer to be equal to one.
+Fine-grained Representation Learning and Recognition by Exploiting Hierarchical Semantic Embedding
 
-    ![Arxiv](Pictures/Selection_089.png)
-   
-- Experiment with different activation functions (maxout, ReLU-family, tanh) show
-that the proposed initialization leads to learning of very deep nets that (i) produces
-networks with test accuracy better or equal to standard methods and (ii) is at least
-as fast as the complex schemes proposed specifically for very deep nets such as
-FitNets (Romero et al. (2015)) and Highway (Srivastava et al. (2015)).
-Performance is evaluated on GoogLeNet, CaffeNet, FitNets and Residual nets and
-the state-of-the-art, or very close to it, is achieved on the MNIST, CIFAR-10/100
-and ImageNet datasets.
+Style Separation and Synthesis via Generative Adversarial Networks
+
+Attention-based Pyramid Aggregation Network for Visual Place Recognition
+
+Dance with Melody : An LSTM-autoencoder Approach on Music-oriented Dance Synthesis
+
+Fast Parameter Adaptation for Few-shot Image Captioning and Visual Question Answering
+
+Semi-supervised Deep Generative Modelling of Incomplete Multi-Modality Emotional Data
+
+Post Tuned Hashing: A New Approach to Indexing High-dimensional Data
+
+Joint Sign Language Recognition and Education System with ST-Net
+
+Aesthetic-Driven Image Enhancement by Adversarial Learning
+
+Cascaded Feature Augmentation with Diffusion for Image Retrieval
+
+Twitter Sentiment Analysis via Bi-sense Emoji Embedding and Attention-based LSTM
+
+Temporal Sequence Distillation: Towards Few Frame Action Recognition
+
+Joint Global and Co-Attentive Representation Learning for Image-Sentence Retrieval
+
+Multi-View Image Generation from a Single-View
+
+Slackliner — An Interactive Slackline Training Assistant
+
+Hierarchical Memory Modelling for Video Captioning
+
+Group Re-Identification: Leveraging and Integrating Multi-Grain Information
+
+Collaborative Annotation of Semantic Objects in Images with Multi-granularity Supervisions
+
+Multi-modal Preference Modeling for Product Search
+
+GraphNet: Learning Image Pseudo Annotations for Weakly-Supervised Semantic Segmentation
+
+Deep Triplet Quantization
+
+Previewer for Multiple-Scale Object Detector
+
+QARC: Video Quality Aware Rate Control for Real-Time Video Streaming based on Deep Reinforcement Learning
+
+What dress fits me best? Fashion Recommendation on the Clothing Style for Personal Body Shape
+
+SCRATCH: A Scalable Discrete Matrix Factorization Hashing for Cross-Modal Retrieval
+
+OSMO: Online Specific Models for Occlusion in Multiple Object Tracking under Surveillance Scene
+
+Cross-modal Moment Localization in Videos
+
+Attribute-Aware Attention Model for Fine-grained Representation Learning
+
+Video Forecasting with Forward-Backward-Net: Delving Deeper into Spatiotemporal Consistency
+
+Learning Discriminative Features with Multiple Granularities for Person Re-Identification
+
+StripNet: Towards Topology Consistent Strip Structure Segmentation
+
+Attention-based Multi-Patch Aggregation for Image Aesthetic Assessment
+
+An End-to-End Quadrilateral Regression Network for Comic Panel Extraction
+
+CLS: A Cross-user Learning based System for Improving QoE in 360-degree Video Adaptive Streaming
+
+Only Learn One Sample: Fine-Grained Visual Categorization with One Sample Training
+
+Life-long Cross-media Correlation Learning
+
+Text-to-image Synthesis via Symmetrical Distillation Networks
+
+Multi-Scale Correlation for Sequential Cross-modal Hashing Learning
+
+Jaguar: Low Latency Mobile Augmented Reality with Flexible Tracking
+
+Feature Constrained by Pixel: Hierarchical Adversarial Deep Domain Adaptation
+
+Explore Multi-Step Reasoning in Video Question Answering
+
+Monocular Camera Based Real-Time Dense Mapping Using Generative Adversarial Network
+
+Learning Collaborative Generation Correction Modules for Blind Image Deblurring and Beyond
+
+Watch, Think and Attend: End-to-End Video Classification via Dynamic Knowledge Evolution Modeling
+
+Multi-Label Image Classification via Knowledge Distillation from Weakly-Supervised Detection
+
+Fast and Light Manifold CNN based 3D Facial Expression Recognition across Pose Variations
+
+Unregularized Auto-Encoder with Generative Adversarial Networks for Image Generation
+
+Real-time 3D Face-Eye Performance Capture of a Person Wearing VR Headset
+
+Attention and Language Ensemble for Scene Text Recognition with Convolutional Sequence Modeling
+
+Participation-Contributed Temporal Dynamic Model for Group Activity Recognition
+
+A Unified Generative Adversarial Framework for Image Generation and Person Re-identification
+
+Facial Expression Recognition in the Wild: A Cycle-Consistent Adversarial Attention Transfer Approach
+
+Inferring User Emotive State Changes in Realistic Human-Computer Conversational Dialogs
+
+Mining Semantics-Preserving Attention for Group Activity Recognition
+
+Causally Regularized Learning on Data with Agnostic Bias
+
+I read, I saw, I tell: Texts Assisted Fine-Grained Visual Classification
+
+Context-Aware Unsupervised Text Stylization
+
+Bridge The Gap Between VQA and Human Behavior on Omnidirectional Video: A Large-Scale Database and A Deep Learning Model
+
+When to Learn What: Deep Cognitive Subspace Clustering
+
+Look Deeper See Richer: Depth-aware Image Paragraph Captioning
+
+Depth Structure Preserving Scene Image Generation
+
+CA3Net: Contextual-Attentional Attribute-Appearance Network for Person Re-Identification
+
+Learning Multimodal Taxonomy via Variational Deep Graph Embedding and Clustering
+
+Beyond Narrative Description: Generating Poetry from Images by Multi-Adversarial Training
+
+GNAS: A Greedy Neural Architecture Search Method for Multi-Attribute Learning
+
+A Distributed Approach for Bitrate Selection in HTTP Adaptive Streaming
+
+Generative Adversarial Product Quantisation
+
+EmotionGAN: Unsupervised Domain Adaptation for Learning Discrete Probability Distributions of Image Emotions
+
+Few-Shot Adaptation for Video Semantic Indexing
+
+Historical Context-based Style Classification of Painting Images via Label Distribution Learning
+
+Sparsely Grouped Multi-task Generative Adversarial Networks for Facial Attribute Manipulation
+
+High-Quality Exposure Correction of Underexposed Photos
+
+Fashion Sensitive Clothing Recommendation using Hierarchical Collocation Model
+
+A Margin-based MLE for Crowdsourced Partial Ranking
+
+Personalized Serious Games for Cognitive Intervention with Lifelog Visual Analytics
+
+PHD-GIFs: Personalized Highlight Detection for Automatic GIF Creation
+
+iHuman3D: Intelligent Human Body 3D Reconstruction using a Single Flying Camera
+
+Face-Voice Matching using Cross-modal Embeddings
+
+Multi-Scale Context Attention Network for Image Retrieval
+
+When Deep Fool Meets Deep Prior: Adversarial Attack on Image Super-Resolution
+
+Musicality-Novelty Generative Adversarial Nets for Algorithmic Composition
+
+Knowledge-aware Multimodal Dialogue Systems
+
+Cross-Domain Adversarial Feature Learning for Sketch Re-identification
+
+Comprehensive Distance-Preserving Autoencoders for Cross-Modal Retrieval
+
+Facial Expression Recognition Enhanced by Thermal Images through Adversarial Learning
+
+CSAN: Contextual Self-Attention Network for User Sequential Recommendation 
+Semantic Human Matting
+
+Visual Spatial Attention Network for Relationship Detection
+
+Geometry Guided Adversarial Facial Expression Synthesis
+
+Personalized multiple facial action unit recognition through generative adversarial recognition network
+
+Learning Joint Multimodal Representation with Adversarial Attention Networks
+
+Detecting Abnormality without Knowing Normality: A Two-stage Approach for Unsupervised Video Abnormal Event Detection
+
+WildFish: A Large Benchmark for Fish Recognition in the Wild
+
+Temporal Hierarchical Attention at Category- and Item-Level for Micro-Video Click-Through Prediction
+
+BeautyGAN: Instance-level Facial Makeup Transfer with Deep Generative Adversarial Network
+
+Songle Sync: A Large-Scale Web-based Platform for Controlling Various Devices in Synchronization with Music
+
+CloudVR: Cloud Accelerated Interactive Mobile Virtual Reality
+
+RGCNN: Regularized Graph CNN for Point Cloud Segmentation
+
+Video-based Person Re-identification via Self-Paced Learning and Deep Reinforcement Learning Framework
+
+Photo Squarization by Deep Multi-Operator Retargeting
+
+Predicting Visual Context for Unsupervised Event Segmentation in Continuous Photo-streams
+
+Semantic Image Inpainting with Progressive Generative Networks
+
+Attentive Interactive Convolutional Matching for Community Question Answering in Social Multimedia
+
+Deep Understanding of Cooking Procedure for Cross-modal Recipe Retrieval
+
+LA-Net: Layout-Aware Dense Network for Monocular Depth Estimation
+
+Direction-aware Neural Style Transfer
+
+Reconfigurable Inverted Index
+
+Learning and Fusing Multimodal Deep Features for Acoustic Scene Categorization
+
+Context-Aware Visual Policy Network for Sequence-Level Image Captioning
+
+A Unified Framework for Multimodal Domain Adaptation
+
+Trusted Guidance Pyramid Network for Human Parsing
+
+USAR: an interactive user-specific aesthetic ranking framework for images
+
+Non-locally Enhanced Encoder-Decoder Network for Single Image De-raining
+
+Structure Guided Photorealistic Style Transfer
+
+Tracking-assisted Weakly Supervised Online Visual Object Segmentation in Unconstrained Videos
+
+An ADMM-Based Universal Framework for Adversarial Attacks on Deep Neural Networks
+
+Decoupled Novel Object Captioner
+
+ThoughtViz: Visualizing Human Thoughts Using Generative Adversarial Network
+
+Optimizing Personalized Interaction Experience in Crowd-Interactive Livecast: A Cloud-Edge Approach
+
+End-to-End Blind Quality Assessment of Compressed Video Using Deep Neural Networks
+
+Dynamic Sound Field Synthesis for Speech and Music Optimization
+
+Local Convolutional Neural Networks for Person Re-Identification
+
+Interpretable Multimodal Retrieval for Fashion Products
+
+Conditional Expression Synthesis with Face Parsing Transformation
+
+A Feature-Adaptive Semi-Supervised Framework for Co-Saliency Detection
+
+Attentive Recurrent Neural Network for Weak-supervised Multi-label Image Classification
+
+iSPA-Net: Iterative Semantic Pose Alignment Network
+
+Extractive Video Summarizer with Memory Augmented Neural Networks
+
+ModaNet: A Large-Scale Street Fashion Dataset with Polygon Annotations
+
+Fully Point-wise Convolutional Neural Network for Modeling Statistical Regularities in Natural Images
+
+From data to knowledge: deep learning model compression, transmission and communication
+
+ChipGAN: A Generative Adversarial Network for Chinese Ink Wash Painting Style Transfer
+
+Dest-ResNet: a Deep Spatiotemporal Residual Network for Hotspot Traffic Speed Prediction
+
+Boosting Scene Parsing Performance via Reliable Scale Prediction
+
+Deep Cross modal learning for Caricature Verification and Identification (CaVINet)
+
+Online Action Tube Detection via Resolving the Spatio-temporal Context Pattern
+
+Adaptive Temporal Encoding Network for Video Instance-level Human Parsing
+
+User-Guided Deep Anime Line Art Colorization with Conditional Adversarial Networks
+
+Enhancing Visual Question Answering Using Dropout
+
+Online Inter-Camera Trajectory Association Exploiting Person Re-Identification and Camera Topology
+
+Improving QoE of ABR Streaming Sessions through QUIC Retransmissions
+
+Temporal Cross-Media SubSpaces Learning with Soft-Constraints
+
+Learning Local Descriptors with Adversarial Enhancer from Volumetric Geometry Patches
+
+SibNet: Sibling Convolutional Encoder for Video Captioning
+
+Context-Dependent Diffusion Network for Visual Relationship Detection
+
+Your Attention is Unique: Detecting 360-Degree Video Saliency in Head-Mounted Display for Head Movement Prediction
+
+Generating Defensive Plays in Basketball Games
+
+Connectionist temporal fusion for Sign Language Translation
+
+JPEG Decompression in the Homomorphic Encryption Domain
+
+BitStream: Efficient Computing Architecture for Real-Time Low-Power Inference of Binary Neural Networks on CPUs
+
+Support Neighbor Loss for Person Re-Identification
+
+A Large Scale RGB-D Database for Arbitrary-view Human Action Recognition
+
+FlexStream: Towards Flexible Adaptive Video Streaming on End Devices using Extreme SDN
+
+Spotting and Aggregating Salient Regions for Video Captioning
+
+Structural inpainting
+
+Partial Multi-View Subspace Clustering
+
+FoV-Aware Edge Caching for Adaptive 360° Video Streaming
+
+Attentive LSTM Crowd Flow Machines
+
+Perceptual Temporal Incoherence Aware Stereo Video Retargeting
+
+Fast Discrete Cross-modal Hashing With Regressing From Semantic Labels
+
+Dense Auto-Encoder Hashing for Robust Cross-Modality Retrieval
+
+Investigation of Small Group Social Interactions using Deep Visual Activity-Based Nonverbal Features
+
+Dissimilarity Representation Learning for Generalized Zero-Shot Recognition
+
+Examine before You Answer: Multi-task Learning with Adaptive-attentions for Multiple-choice VQA
+
+Cumulative Nets for Edge Detection
+
+Beyond the Product: Discovering Image Posts for Brands in Social Media
+
+Robustness and Discrimination Oriented Hashing Combining Texture and Invariant Vector Distance
+
+SLIONS: A Karaoke Application to Enhance Foreign Language Learning
+
+Drawing in a Virtual 3D Space – Introducing VR Drawing in Elementary School Art Education
+
+Semi-Supervised DFF: Decoupling Detection and Feature Flow for Video Object Detectors
+
+Residual-Guide Feature Fusion Network for Single Image Deraining
+
+Paragraph generation network with visual relationship detection
+
+Hybrid Point Cloud Attribute Compression Using Slice-based Layered Structure and Block-based Intra Prediction
+
+CIRCE: Real-Time Caching for Instance Recognition on Cloud Environments and Multi-Core Architectures
+
+From Volcano to Toyshop: Adaptive Discriminative Region Discovery for Scene Recognition
+
+Unsupervised Learning of 3D Model Reconstruction from Hand-Drawn Sketches
+
+Learning to Synthesize 3D Indoor Scenes from Monocular Images
+
+DASH for 3D Networked Virtual Environment
+
+PVNet: A Joint Convolutional Network of Point Cloud and Multi-View for 3D Shape Recognition
+
+The Effect of Foveation on High Dynamic Range Video Perception
+
+GestureGAN for Hand Gesture-to-Gesture Translation in the Wild
+
+MiniView Layout for Bandwidth-Efficient 360-Degree Video
+
+An Efficient Deep Quantized Compressed Sensing Coding Framework of Natural Images
+
+Deep Multimodal Image-Repurposing Detection
+
+Video-to-Video Translation with Global Temporal Consistency
+
+Robust Correlation Filter Tracking with Shepherded Instance-Aware Proposals
+
+Cross-Species Learning: A Low-Cost Approach to Learning Human Fight from Animal Fight
+
+PoB: Toward Reasoning Patterns of Beauty in Image Data
+
+Webly Supervised Joint Embedding for Cross-Modal Image-Text Retrieval
+
+Deep Adaptive Temporal Pooling for Activity Recognition
+
+Human Conversation Analysis Using Attentive Multimodal Networks with Hierarchical Encoder-Decoder
+
+Pseudo Transfer with Marginalized Corrupted Attribute for Zero-shot Learning
+
+Crossing-Domain Generative Adversarial Networks for Unsupervised Multi-Domain Image-to-Image Translation
+
+Person Re-identification with Hierarchical Deep Learning Feature and efficient XQDA Metric
+
+EmoCeleb: Emotion recognition in speech using Cross-Modal Transfer in the wild

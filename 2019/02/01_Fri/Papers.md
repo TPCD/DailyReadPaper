@@ -134,6 +134,7 @@ In this page, we provide a list of related work which has been used and cited in
 
 ### Mathematical Foundations,  Theoretical Results and Challenges :
 1.       Adrià Garriga-Alonso, Laurence Aitchison and Carl Edward Rasmussen,  Deep Convolutional Networks as shallow Gaussian Processes, 2018.
+
 2.       Alexander G. de G. Matthews, Mark Rowland, Jiri Hron, Richard E. Turner, Zoubin Ghahramani, Gaussian Process Behaviour in Wide Deep Neural Networks, ICLR, 2018.
 
 3.       Jaehoon Lee, Yasaman Bahri, Roman Novak, Samuel S. Schoenholz, Jeffrey Pennington, Jascha Sohl-Dickstein, Deep Neural Networks as Gaussian Processes, ICLR, 2018.

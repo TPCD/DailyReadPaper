@@ -267,7 +267,6 @@ Here is the content of our project.
     9. List of accepted papers in ACM MM
     
 - [2019-02-01](2019/02/01_Fri/Papers.md): 
-
     1. Group normalization
         1. ECCV 2018
  
@@ -282,4 +281,8 @@ Here is the content of our project.
    
     5. Orthogonal weight normalization: Solution to optimization over multiple dependent stiefel manifolds in deep neural networks
         1. AAAI 2018
+    
+- [2019-02-01](2019/02/02_Sat/Papers.md): 
+    1. COSONet: Compact Second-Order Network for Video Face Recognition
+        1. ACCV 2018 oral
         

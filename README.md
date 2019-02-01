@@ -267,3 +267,19 @@ Here is the content of our project.
     9. List of accepted papers in ACM MM
     
 - [2019-02-01](2019/02/01_Fri/Papers.md): 
+
+    1. Group normalization
+        1. ECCV 2018
+ 
+    2. Towards Faster Training of Global Covariance Pooling Networks by Iterative Matrix Square Root Normalization
+        1. CVPR 2018
+       
+    3. RIEMANNIAN ADAPTIVE OPTIMIZATION METHODS
+        1. ICLR 2019 (open review)
+      
+    4. Decorrelated Batch Normalization
+        1. CVPR 2018
+   
+    5. Orthogonal weight normalization: Solution to optimization over multiple dependent stiefel manifolds in deep neural networks
+        1. AAAI 2018
+        

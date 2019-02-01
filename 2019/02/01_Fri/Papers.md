@@ -1,7 +1,206 @@
 # DailyReadPaper
-Rethinking.
+Rethinking Normalization Technique.
 
-In this page, we provide a list of related work which has been used and cited in the talks.
+The typically classical works are shown as follows,
+
+## Group normalization
+1. ECCV 2018
+2. Wu, Yuxin and **He, Kaiming**
+3. Pytorch has already implemented.
+
+- Batch Normalization (BN) is a milestone technique in the
+development of deep learning, enabling various networks
+to train. However, normalizing along the batch dimension
+introduces problems — BN’s error increases rapidly when
+the batch size becomes smaller, caused by inaccurate batch
+statistics estimation. 
+
+    ![normalization](Pictures/Selection_124.png)
+
+- This limits BN’s usage for training
+larger models and transferring features to computer vision
+tasks including detection, segmentation, and video, which
+require small batches constrained by memory consumption.
+In this paper, we present Group Normalization (GN) as
+a simple alternative to BN. GN divides the channels into
+groups and computes within each group the mean and variance
+for normalization. GN’s computation is independent
+of batch sizes, and its accuracy is stable in a wide range
+of batch sizes. On ResNet-50 trained in ImageNet, GN has
+10.6% lower error than its BN counterpart when using a
+batch size of 2; when using typical batch sizes, GN is comparably
+good with BN and outperforms other normalization
+variants. Moreover, GN can be naturally transferred
+from pre-training to fine-tuning. GN can outperform its BNbased
+counterparts for object detection and segmentation in
+COCO,1 and for video classification in Kinetics, showing
+that GN can effectively replace the powerful BN in a variety
+of tasks. GN can be easily implemented by a few lines of
+code in modern libraries.
+
+>@article{wu2018group,
+  title={Group normalization},
+  author={Wu, Yuxin and He, Kaiming},
+  journal={arXiv preprint arXiv:1803.08494},
+  year={2018}
+}
+## Towards Faster Training of Global Covariance Pooling Networks by Iterative Matrix Square Root Normalization
+1. CVPR 2018
+2. The source code and network models will be available at http://www.peihuali.org/iSQRT-COV.
+- Global covariance pooling in convolutional neural networks
+has achieved impressive improvement over the classical
+first-order pooling. Recent works have shown matrix
+square root normalization plays a central role in achieving
+state-of-the-art performance. However, existing methods
+depend heavily on eigendecomposition (EIG) or singular
+value decomposition (SVD), suffering from inefficient
+training due to limited support of EIG and SVD on GPU.
+Towards addressing this problem, we propose an iterative
+matrix square root normalization method for fast end-toend
+training of global covariance pooling networks. 
+
+    ![normalization](Pictures/Selection_121.png)
+
+- At the core of our method is a meta-layer designed with loopembedded
+directed graph structure. The meta-layer consists
+of three consecutive nonlinear structured layers, which
+perform pre-normalization, coupled matrix iteration and
+post-compensation, respectively. Our method is much faster
+than EIG or SVD based ones, since it involves only matrix
+multiplications, suitable for parallel implementation on
+GPU. 
+
+    ![normalization](Pictures/Selection_123.png)
+
+- Moreover, the proposed network with ResNet architecture
+can converge in much less epochs, further accelerating
+network training. On large-scale ImageNet, we achieve
+competitive performance superior to existing counterparts.
+By finetuning our models pre-trained on ImageNet, we establish
+state-of-the-art results on three challenging finegrained
+benchmarks. 
+>@inproceedings{li2018towards,
+  title={Towards faster training of global covariance pooling networks by iterative matrix square root normalization},
+  author={Li, Peihua and Xie, Jiangtao and Wang, Qilong and Gao, Zilin},
+  booktitle={Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition},
+  pages={947--955},
+  year={2018}
+}
+
+## RIEMANNIAN ADAPTIVE OPTIMIZATION METHODS
+1. ICLR 2019 (open review)
+2. unofficial https://github.com/ferrine/geoopt
+
+- Several first order stochastic optimization methods commonly used in the Euclidean
+domain such as stochastic gradient descent (SGD), accelerated gradient descent
+or variance reduced methods have already been adapted to certain Riemannian
+settings. However, some of the most popular of these optimization tools − namely
+ADAM, ADAGRAD and the more recent AMSGRAD − remain to be generalized
+to Riemannian manifolds. We discuss the difficulty of generalizing such adaptive
+schemes to the most agnostic Riemannian setting, and then provide algorithms
+and convergence proofs for geodesically convex objectives in the particular case
+of a product of Riemannian manifolds, in which adaptivity is implemented across
+manifolds in the cartesian product. Our generalization is tight in the sense that
+choosing the Euclidean space as Riemannian manifold yields the same algorithms
+and regret bounds as those that were already known for the standard algorithms.
+
+    ![normalization](Pictures/Selection_118.png)
+
+- Experimentally, we show faster convergence and to a lower train loss value for
+Riemannian adaptive methods over their corresponding baselines on the realistic
+task of embedding the WordNet taxonomy in the Poincare ball.
+
+
+
+
+## Decorrelated Batch Normalization
+1. CVPR 2018
+2. **Lei Huang**, Xianglong Liu, Bo Lang, Adams Wei Yu, Yongliang Wang, Bo Li
+3. https://github.com/princeton-vl/DecorrelatedBN
+
+
+
+- Batch Normalization (BN) is capable of accelerating the
+training of deep models by centering and scaling activations
+within mini-batches. In this work, we propose Decorre-
+lated Batch Normalization (DBN), which not just centers
+and scales activations but whitens them. 
+
+    ![normalization](Pictures/Selection_108.png)
+
+- We explore multiple
+whitening techniques, and find that PCA whitening causes a
+problem we call stochastic axis swapping, which is detrimen-
+tal to learning. We show that ZCA whitening does not suffer
+from this problem, permitting successful learning. DBN re-
+tains the desirable qualities of BN and further improves BN’s
+optimization efficiency and generalization ability. 
+
+    ![normalization](Pictures/Selection_109.png)
+   
+- We design
+comprehensive experiments to show that DBN can improve
+the performance of BN on multilayer perceptrons and con-
+volutional neural networks. Furthermore, we consistently
+improve the accuracy of residual networks on CIFAR-10,
+CIFAR-100, and ImageNet.
+
+
+>@misc{1804.08450,
+Author = {Lei Huang and Dawei Yang and Bo Lang and Jia Deng},
+Title = {Decorrelated Batch Normalization},
+Year = {2018},
+Eprint = {arXiv:1804.08450},
+}
+## Orthogonal weight normalization: Solution to optimization over multiple dependent stiefel manifolds in deep neural networks
+1. AAAI 2018
+2. **Huang, Lei** and Liu, Xianglong and Lang, Bo and Yu, Adams Wei and Wang, Yongliang and Li, Bo
+3. https://github.com/huangleiBuaa/OthogonalWN
+
+- Orthogonal matrix has shown advantages in training Recurrent Neural Networks (RNNs), but 
+such matrix is limited to be square for the hidden-to-hidden transformation in RNNs. 
+
+    ![normalization](Pictures/Selection_111.png)
+   
+- In this 
+paper, we generalize such square orthogonal matrix to orthogonal rectangular matrix and formulating 
+this problem in feed-forward Neural Networks (FNNs) as Optimization over Multiple Dependent Stiefel 
+Manifolds (OMDSM). 
+
+    ![normalization](Pictures/Selection_112.png)
+   
+- We show that the rectangular orthogonal matrix can stabilize the distribution of 
+network activations and regularize FNNs. We also propose a novel orthogonal weight normalization method
+to solve OMDSM. 
+
+    ![normalization](Pictures/Selection_114.png)
+    ![normalization](Pictures/Selection_115.png)
+    ![normalization](Pictures/Selection_116.png)
+   
+- Particularly, it constructs orthogonal transformation over proxy parameters to ensure 
+the weight matrix is orthogonal and back-propagates gradient information through the transformation during 
+training. 
+
+    ![normalization](Pictures/Selection_117.png)
+   
+- To guarantee stability, we minimize the distortions between proxy parameters and canonical 
+weights over all tractable orthogonal transformations. In addition, we design an orthogonal linear 
+module (OLM) to learn orthogonal filter banks in practice, which can be used as an alternative to 
+standard linear module. Extensive experiments demonstrate that by simply substituting OLM for 
+standard linear module without revising any experimental protocols, our method largely improves 
+the performance of the state-of-the-art networks, including Inception and residual networks on 
+CIFAR and ImageNet datasets.
+
+
+>@inproceedings{huang2018orthogonal,
+  title={Orthogonal weight normalization: Solution to optimization over multiple dependent stiefel manifolds in deep neural networks},
+  author={Huang, Lei and Liu, Xianglong and Lang, Bo and Yu, Adams Wei and Wang, Yongliang and Li, Bo},
+  booktitle={Thirty-Second AAAI Conference on Artificial Intelligence},
+  year={2018}
+}
+
+
+In this page, we provide a list of related work which has been used and cited in the ECCV2018 oral talk.
 ## List of Related Work: 
 ### Normalization Techniques: Motivation:
 1.      Yann LeCun, Ido Kanter, Sara A.Solla. Second order properties of Error Surfaces: Learning time and Generalization. NIPS, 1990
@@ -119,37 +318,37 @@ In this page, we provide a list of related work which has been used and cited in
 6.      Yijun Li, Chen Fang, Jimei Yang Zhaowen Wang, Xin Lu, Ming-Hsuan Yang. Universal Style Transfer via Feature Transforms. NIPS 2017
 
 ### Normalization for Training GANs:
-1.      Ian J. Goodfellow, Jean Pouget-Abadie, Mehdi Mirza, Bing Xu, David Warde-Farley, Sherjil Ozair, Aaron Courville, Yoshua Bengio. Generative adversarial networks.  NIPS 2014.
+1.    Ian J. Goodfellow, Jean Pouget-Abadie, Mehdi Mirza, Bing Xu, David Warde-Farley, Sherjil Ozair, Aaron Courville, Yoshua Bengio. Generative adversarial networks.  NIPS 2014.
 
-2.      Tim Salimans, Ian Goodfellow, Wojciech Zaremba, Vicki Cheung, Alec Radford, Xi Chen. Improved Techniques for Training GANs. NIPS 2016
+2.    Tim Salimans, Ian Goodfellow, Wojciech Zaremba, Vicki Cheung, Alec Radford, Xi Chen. Improved Techniques for Training GANs. NIPS 2016
 
-3.      Sitao Xiang and Hao Li. On the Effects of Batch and Weight Normalization in Generative Adversarial Networks. arXiv:1704.03971. 2017
+3.    Sitao Xiang and Hao Li. On the Effects of Batch and Weight Normalization in Generative Adversarial Networks. arXiv:1704.03971. 2017
 
-4.      Takeru Miyato, Toshiki Kataoka, Masanori Koyama, Yuichi Yoshida. Spectral Normalization for Generative Adversarial Networks. ICLR 2018
+4.    Takeru Miyato, Toshiki Kataoka, Masanori Koyama, Yuichi Yoshida. Spectral Normalization for Generative Adversarial Networks. ICLR 2018
 
-5.      Aliaksandr Siarohin, Enver Sangineto, Nicu Sebe. Whitening and Coloring transform for GANs. arXiv:1806.00420, 2018. 
+5.    Aliaksandr Siarohin, Enver Sangineto, Nicu Sebe. Whitening and Coloring transform for GANs. arXiv:1806.00420, 2018. 
 
 ### Normalization for Defending Adversarial Networks:
-1.      Moustapha Cisse, Piotr Bojanowski, Edouard Grave, Yann Dauphin, Nicolas Usunier. Parseval Networks: Improving Robustness to Adversarial Examples. ICML 2017
+1.    Moustapha Cisse, Piotr Bojanowski, Edouard Grave, Yann Dauphin, Nicolas Usunier. Parseval Networks: Improving Robustness to Adversarial Examples. ICML 2017
 
 ### Mathematical Foundations,  Theoretical Results and Challenges :
-1.       Adrià Garriga-Alonso, Laurence Aitchison and Carl Edward Rasmussen,  Deep Convolutional Networks as shallow Gaussian Processes, 2018.
+1.    Adrià Garriga-Alonso, Laurence Aitchison and Carl Edward Rasmussen,  Deep Convolutional Networks as shallow Gaussian Processes, 2018.
 
-2.       Alexander G. de G. Matthews, Mark Rowland, Jiri Hron, Richard E. Turner, Zoubin Ghahramani, Gaussian Process Behaviour in Wide Deep Neural Networks, ICLR, 2018.
+2.    Alexander G. de G. Matthews, Mark Rowland, Jiri Hron, Richard E. Turner, Zoubin Ghahramani, Gaussian Process Behaviour in Wide Deep Neural Networks, ICLR, 2018.
 
-3.       Jaehoon Lee, Yasaman Bahri, Roman Novak, Samuel S. Schoenholz, Jeffrey Pennington, Jascha Sohl-Dickstein, Deep Neural Networks as Gaussian Processes, ICLR, 2018.
+3.    Jaehoon Lee, Yasaman Bahri, Roman Novak, Samuel S. Schoenholz, Jeffrey Pennington, Jascha Sohl-Dickstein, Deep Neural Networks as Gaussian Processes, ICLR, 2018.
 
-4.       S. Oymak, ``Learning Compact Neural Networks with Regularization,'' to appear at ICML 2018.
+4.    S. Oymak, ``Learning Compact Neural Networks with Regularization,'' to appear at ICML 2018.
 
-5.       K. Zhong, Z. Song, P. Jain, P. L. Bartlett, I. S. Dhillon, Recovery Guarantees for One-hidden-layer Neural Networks, ICML 2017.
+5.    K. Zhong, Z. Song, P. Jain, P. L. Bartlett, I. S. Dhillon, Recovery Guarantees for One-hidden-layer Neural Networks, ICML 2017.
 
-6.       R. Ge, J. D. Lee, T. Ma, Learning One-hidden-layer Neural Networks with Landscape Design, ICLR 2018.
+6.    R. Ge, J. D. Lee, T. Ma, Learning One-hidden-layer Neural Networks with Landscape Design, ICLR 2018.
 
-7.       Shibani Santurkar, Dimitris Tsipras, Andrew Ilyas, Aleksander Madry, How Does Batch Normalization Help Optimization? (No, It Is Not About Internal Covariate Shift), CoRR abs/1805.11604, 2018.
+7.    Shibani Santurkar, Dimitris Tsipras, Andrew Ilyas, Aleksander Madry, How Does Batch Normalization Help Optimization? (No, It Is Not About Internal Covariate Shift), CoRR abs/1805.11604, 2018.
 
-8.       Yuxin Wu and Kaiming He, Group Normalization, Arxiv, abs/ 1803.08494, 2018.
+8.    Yuxin Wu and Kaiming He, Group Normalization, Arxiv, abs/ 1803.08494, 2018.
 
-9.       B.  Neyshabur, Z. Li, S. Bhojanapalli, Y. LeCun, N. Srebro Towards Understanding the Role of Over-Parametrization in Generalization of Neural Networks, CoRR abs/1805.12076, 2018.
+9.    B.  Neyshabur, Z. Li, S. Bhojanapalli, Y. LeCun, N. Srebro Towards Understanding the Role of Over-Parametrization in Generalization of Neural Networks, CoRR abs/1805.12076, 2018.
 
 10.   Peter L Bartlett and Shahar Mendelson,  Rademacher and gaussian complexities:  Risk bounds and structural results, Journal of Machine Learning Research, 3(Nov):463–482, 2002.
 

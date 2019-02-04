@@ -282,7 +282,13 @@ Here is the content of our project.
     5. Orthogonal weight normalization: Solution to optimization over multiple dependent stiefel manifolds in deep neural networks
         1. AAAI 2018
     
-- [2019-02-01](2019/02/02_Sat/Papers.md): 
+- [2019-02-02](2019/02/02_Sat/Papers.md): 
     1. COSONet: Compact Second-Order Network for Video Face Recognition
         1. ACCV 2018 oral
         
+- [2019-02-03](2019/02/03_Sun/Papers.md): 
+    1. Celebrating Spring Festival!
+        
+- [2019-02-04](2019/02/04_Mon/Papers.md): 
+    1. Celebrating Spring Festival!
+     

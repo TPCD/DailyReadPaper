@@ -212,6 +212,8 @@ Here is the content of our project.
     1. COSONet: Compact Second-Order Network for Video Face Recognition
         1. ACCV 2018 oral
         
+---
+        
 - [2019-02-01](2019/02/01_Fri/Papers.md): 
     
     
@@ -224,7 +226,7 @@ Here is the content of our project.
 - [2019-02-04](2019/02/04_Mon/Papers.md): 
   
      
-- [2019-02-05](2019/02/05_Tue/Papers.md):  
+- [2019-02-05](2019/02/05_Tue/Papers.md): ===> Reid<NIPS(2018) + IJCAI(2018) + AAAI(2018)>
     1. FD-GAN: Pose-guided Feature Distilling GAN for Robust Person Re-identification
         1. NIPS 2018
 

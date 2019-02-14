@@ -225,10 +225,8 @@ Here is the content of our project.
           
 - [2019-02-04](2019/02/04_Mon/Papers.md): 
   
-     
-- [2019-02-05](2019/02/05_Tue/Papers.md):  <font color="#dd0000">Reid <NIPS(2018) + IJCAI(2018) + AAAI(2018)></font><br /> 
-==> "Reid <NIPS(2018) + IJCAI(2018) + AAAI(2018)>" <==
 
+- [2019-02-05](2019/02/05_Tue/Papers.md): _Reid <NIPS(2018) + IJCAI(2018) + AAAI(2018)>_
     1. FD-GAN: Pose-guided Feature Distilling GAN for Robust Person Re-identification
         1. NIPS 2018
 
@@ -274,7 +272,7 @@ Here is the content of our project.
     15. Video-based Person Re-identification via Self Paced Weighting
         1. AAAI 2018
         
-- [2019-02-06](2019/02/06_Wed/Papers.md):  
+- [2019-02-06](2019/02/06_Wed/Papers.md): _Reid <ACM MM(2018)>_
     1. A Unified Generative Adversarial Framework for Image Generation and Person Re-Identification
         1. ACM MM 2018
         

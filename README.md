@@ -226,7 +226,7 @@ Here is the content of our project.
 - [2019-02-04](2019/02/04_Mon/Papers.md): 
   
      
-- [2019-02-05](2019/02/05_Tue/Papers.md): <font color="#dd0000">Reid <NIPS(2018) + IJCAI(2018) + AAAI(2018)></font><br /> 
+- [2019-02-05](2019/02/05_Tue/Papers.md):  <font color="#dd0000">Reid <NIPS(2018) + IJCAI(2018) + AAAI(2018)></font><br /> 
 ==> "Reid <NIPS(2018) + IJCAI(2018) + AAAI(2018)>" <==
 
     1. FD-GAN: Pose-guided Feature Distilling GAN for Robust Person Re-identification

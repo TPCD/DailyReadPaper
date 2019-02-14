@@ -296,3 +296,5 @@ Here is the content of our project.
         
     8. Video-based Person Re-identification via Self-Paced Learning and Deep Reinforcement Learning Framework
         1. ACM MM 2018
+        
+        

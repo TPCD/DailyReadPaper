@@ -1,556 +1,397 @@
 # DailyReadPaper
-These Re-ID related papers are collected from AAAI 2018, IJCAI 2018 and NIPS 2018, containing more theoretical meaning.
-## FD-GAN: Pose-guided Feature Distilling GAN for Robust Person Re-identification
-1. NIPS 2018
-2. Ge, Yixiao and Li, Zhuowan and Zhao, Haiyu and Yin, Guojun and Yi, Shuai and Wang, Xiaogang and others
-3. https://github.com/yxgeee/FD-GAN
+Rethinking Normalization Technique.
 
-- Person re-identification (reID) is an important task that requires to retrieve a 
-person's images from an image dataset, given one image of the person of 
-interest. For learning robust person features, the pose variation of person 
-images is one of the key challenges. Existing works targeting the problem either 
-perform human alignment, or learn human-region-based representations. 
+The typically classical works are shown as follows,
 
-    ![reid](Pictures/1.png)
+## Group normalization
+1. ECCV 2018
+2. Wu, Yuxin and **He, Kaiming**
+3. Pytorch has already implemented.
 
-- Extra pose information and computational cost is generally required for inference. To 
-solve this issue, a Feature Distilling Generative Adversarial Network (FD-GAN) is 
-proposed for **learning identity-related and pose-unrelated representations**. 
+- Batch Normalization (BN) is a milestone technique in the
+development of deep learning, enabling various networks
+to train. However, normalizing along the batch dimension
+introduces problems — BN’s error increases rapidly when
+the batch size becomes smaller, caused by inaccurate batch
+statistics estimation. 
 
-    ![Ming-Ming Cheng2018 Salient Object Detection](Pictures/2.png)
-    
-- It is a novel framework based on a Siamese structure with multiple novel discriminators on 
-human poses and identities. In addition to the discriminators, a novel same-pose loss 
-is also integrated, which requires appearance of a same person's generated images 
-to be similar.
+    ![normalization](Pictures/Selection_124.png)
 
-    ![Ming-Ming Cheng2018 Salient Object Detection](Pictures/3.png)
-    
-- After learning pose-unrelated person features with pose guidance, 
-no auxiliary pose information and additional computational cost is required during testing. 
-Our proposed FD-GAN achieves state-of-the-art performance on three person reID 
-datasets, which demonstrates that the effectiveness and 
-robust **feature distilling** capability of the proposed FD-GAN.
+- This limits BN’s usage for training
+larger models and transferring features to computer vision
+tasks including detection, segmentation, and video, which
+require small batches constrained by memory consumption.
+In this paper, we present Group Normalization (GN) as
+a simple alternative to BN. GN divides the channels into
+groups and computes within each group the mean and variance
+for normalization. GN’s computation is independent
+of batch sizes, and its accuracy is stable in a wide range
+of batch sizes. On ResNet-50 trained in ImageNet, GN has
+10.6% lower error than its BN counterpart when using a
+batch size of 2; when using typical batch sizes, GN is comparably
+good with BN and outperforms other normalization
+variants. Moreover, GN can be naturally transferred
+from pre-training to fine-tuning. GN can outperform its BNbased
+counterparts for object detection and segmentation in
+COCO,1 and for video classification in Kinetics, showing
+that GN can effectively replace the powerful BN in a variety
+of tasks. GN can be easily implemented by a few lines of
+code in modern libraries.
 
->@inproceedings{ge2018fd,
-  title={FD-GAN: Pose-guided Feature Distilling GAN for Robust Person Re-identification},
-  author={Ge, Yixiao and Li, Zhuowan and Zhao, Haiyu and Yin, Guojun and Yi, Shuai and Wang, Xiaogang and others},
-  booktitle={Advances in Neural Information Processing Systems},
-  pages={1230--1241},
-  year={2018}}
+>@article{wu2018group,
+  title={Group normalization},
+  author={Wu, Yuxin and He, Kaiming},
+  journal={arXiv preprint arXiv:1803.08494},
+  year={2018}
+}
+## Towards Faster Training of Global Covariance Pooling Networks by Iterative Matrix Square Root Normalization
+1. CVPR 2018
+2. The source code and network models will be available at http://www.peihuali.org/iSQRT-COV.
+- Global covariance pooling in convolutional neural networks
+has achieved impressive improvement over the classical
+first-order pooling. Recent works have shown matrix
+square root normalization plays a central role in achieving
+state-of-the-art performance. However, existing methods
+depend heavily on eigendecomposition (EIG) or singular
+value decomposition (SVD), suffering from inefficient
+training due to limited support of EIG and SVD on GPU.
+Towards addressing this problem, we propose an iterative
+matrix square root normalization method for fast end-toend
+training of global covariance pooling networks. 
 
-## Cascaded SR-GAN for Scale-Adaptive Low Resolution Person Re-identification
-1. IJCAI 2018
-2. Wang, Zheng and Ye, Mang and Yang, Fan and Bai, Xiang and Shin'ichi Satoh
+    ![normalization](Pictures/Selection_121.png)
 
-- Person re-identification (REID) is an important task in video surveillance and forensics applications.
-Most of previous approaches are based on a key assumption that all person images have uniform
-and sufficiently high resolutions. Actually, various low-resolutions and scale mismatching always
-exist in open world REID. 
+- At the core of our method is a meta-layer designed with loopembedded
+directed graph structure. The meta-layer consists
+of three consecutive nonlinear structured layers, which
+perform pre-normalization, coupled matrix iteration and
+post-compensation, respectively. Our method is much faster
+than EIG or SVD based ones, since it involves only matrix
+multiplications, suitable for parallel implementation on
+GPU. 
 
-    ![reid](Pictures/4.png)
-    
-- We name this kind of problem as Scale-Adaptive Low Resolution Person
-Re-identification (SALR-REID). The most intuitive way to address this problem is to increase
-various low-resolutions (not only low, but also with different scales) to a uniform high-resolution. SRGAN
-is one of the most competitive image super-resolution deep networks, designed with a fixed
-upscaling factor. However, it is still not suitable for SALR-REID task, which requires a network
-not only synthesizing high-resolution images with different upscaling factors, but also extracting
-discriminative image feature for judging person’s identity. 
-    - (1) To promote the ability of
-scale-adaptive upscaling, we cascade multiple SRGANs
-in series. 
+    ![normalization](Pictures/Selection_123.png)
 
-    ![reid](Pictures/5.png)
-    
-    - (2) To supplement the ability of image feature representation, we plug-in a reidentification
-network. With a unified formulation, a Cascaded Super-Resolution GAN (CSRGAN)
-framework is proposed. Extensive evaluations on two simulated datasets and one public
-dataset demonstrate the advantages of our method over related state-of-the-art methods.
-
-    ![reid](Pictures/6.png)
-    
->@inproceedings{wang2018cascaded,
-  title={Cascaded SR-GAN for Scale-Adaptive Low Resolution Person Re-identification.},
-  author={Wang, Zheng and Ye, Mang and Yang, Fan and Bai, Xiang and Shin'ichi Satoh},
-  booktitle={IJCAI},
-  pages={3891--3897},
-  year={2018}}
-
-## Visible Thermal Person Re-Identification via Dual-Constrained Top-Ranking
-1. IJCAI 2018
-2. Ye, Mang and Wang, Zheng and Lan, Xiangyuan and Yuen, Pong C
-
-- **Cross-modality person re-identification** between the thermal and visible domains 
-is extremely important for night-time surveillance applications. 
-Existing works in this filed mainly focus on learning sharable feature representations 
-to handle the cross-modality discrepancies. 
-
-    ![reid](Pictures/7.png)
-    
-- However, besides the cross-modality discrepancy caused by
-different camera spectrums, visible thermal person re-identification also suffers from large cross-modality
-and intra-modality variations caused by different camera views and human poses. 
-
-    ![reid](Pictures/8.png)
-  
-- In this paper, we propose a dual-path network with a novel bi-directional dual-constrained top-ranking loss
-to learn discriminative feature representations. It is advantageous in two aspects: 
-    - 1) end-to-end feature learning directly from the data without extra metric learning steps, 
-  
-    ![reid](Pictures/9.png)
-    
-    - 2) it simultaneously handles the cross-modality and intra-modality variations to
-ensure the discriminability of the learnt representations.
-
-    ![reid](Pictures/10.png)
-    
-- Meanwhile, identity loss is further incorporated
-to model the identity-specific information
-to handle large intra-class variations. 
-
-    ![reid](Pictures/11.png)
-    
-
->@inproceedings{ye2018visible,
-  title={Visible Thermal Person Re-Identification via Dual-Constrained Top-Ranking},
-  author={Ye, Mang and Wang, Zheng and Lan, Xiangyuan and Yuen, Pong C},
-  booktitle={IJCAI},
-  pages={1092--1099},
-  year={2018}}
-
-## Deep View-Aware Metric Learning for Person Re-Identification
-1. IJCAI 2018
-2. Pu Chen, Xinyi Xu and Cheng Deng∗
-
-
-- Person re-identification remains a challenging issue due to the dramatic changes in visual appearance
-caused by the variations in camera views, human pose, and background clutter.
-
-    ![reid](Pictures/12.png)
-    
-- In this paper, we propose a deep view-aware metric learning (DVAML) model, where 
-image pairs with similar and dissimilar
-views are projected into different feature subspaces, which can discover the intrinsic relevance
-between image pairs from different aspects. 
-  
-    ![reid](Pictures/13.png)
-    
-- Additionally, we employ multiple metrics to jointly learn feature subspaces on which the relevance between
-image pairs are explicitly captured and thus greatly promoting the retrieval accuracy. 
-
-    ![reid](Pictures/14.png)
-
-- Extensive experiment results on datasets CUHK01, CUHK03, and PRID2011 demonstrate the superiority of our
-method compared with state-of-the-art approaches.
-
->@inproceedings{chen2018deep,
-  title={Deep View-Aware Metric Learning for Person Re-Identification.},
-  author={Chen, Pu and Xu, Xinyi and Deng, Cheng},
-  booktitle={IJCAI},
-  pages={620--626},
+- Moreover, the proposed network with ResNet architecture
+can converge in much less epochs, further accelerating
+network training. On large-scale ImageNet, we achieve
+competitive performance superior to existing counterparts.
+By finetuning our models pre-trained on ImageNet, we establish
+state-of-the-art results on three challenging finegrained
+benchmarks. 
+>@inproceedings{li2018towards,
+  title={Towards faster training of global covariance pooling networks by iterative matrix square root normalization},
+  author={Li, Peihua and Xie, Jiangtao and Wang, Qilong and Gao, Zilin},
+  booktitle={Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition},
+  pages={947--955},
   year={2018}
 }
 
+## RIEMANNIAN ADAPTIVE OPTIMIZATION METHODS
+1. ICLR 2019 (open review)
+2. unofficial https://github.com/ferrine/geoopt
 
-## SafeNet: Scale-normalization and Anchor-based Feature Extraction Network for Person Re-identification
-1. IJCAI 2018
-2. Yuan, Kun and Zhang, Qian and Huang, Chang and Xiang, Shiming and Pan, Chunhong and Robotics, Horizon
+- Several first order stochastic optimization methods commonly used in the Euclidean
+domain such as stochastic gradient descent (SGD), accelerated gradient descent
+or variance reduced methods have already been adapted to certain Riemannian
+settings. However, some of the most popular of these optimization tools − namely
+ADAM, ADAGRAD and the more recent AMSGRAD − remain to be generalized
+to Riemannian manifolds. We discuss the difficulty of generalizing such adaptive
+schemes to the most agnostic Riemannian setting, and then provide algorithms
+and convergence proofs for geodesically convex objectives in the particular case
+of a product of Riemannian manifolds, in which adaptivity is implemented across
+manifolds in the cartesian product. Our generalization is tight in the sense that
+choosing the Euclidean space as Riemannian manifold yields the same algorithms
+and regret bounds as those that were already known for the standard algorithms.
+
+    ![normalization](Pictures/Selection_118.png)
+
+- Experimentally, we show faster convergence and to a lower train loss value for
+Riemannian adaptive methods over their corresponding baselines on the realistic
+task of embedding the WordNet taxonomy in the Poincare ball.
 
 
-- Person Re-identification (ReID) is a challenging retrieval task that requires matching a person’s image
-across non-overlapping camera views. The quality of fulfilling this task is largely determined on the
-robustness of the features that are used to describe the person. 
-  
-    ![reid](Pictures/17.png)
 
-- In this paper, we show the advantage of jointly utilizing multi-scale abstract information
-to learn powerful features over full body and parts. A scale normalization module is proposed
-to balance different scales through residual-based integration. 
 
-    ![reid](Pictures/16.png)
-    
-- To exploit the information hidden in
-non-rigid body parts, we propose an anchor-based method to capture the local contents by stacking
-convolutions of kernels with various aspect ratios, which focus on different spatial distributions.
-Finally, a well-defined framework is constructed for
-simultaneously learning the representations of both full body and parts. 
-    
-    ![reid](Pictures/15.png)
+## Decorrelated Batch Normalization
+1. CVPR 2018
+2. **Lei Huang**, Xianglong Liu, Bo Lang, Adams Wei Yu, Yongliang Wang, Bo Li
+3. https://github.com/princeton-vl/DecorrelatedBN
 
->@inproceedings{yuan2018safenet,
-  title={SafeNet: Scale-normalization and Anchor-based Feature Extraction Network for Person Re-identification.},
-  author={Yuan, Kun and Zhang, Qian and Huang, Chang and Xiang, Shiming and Pan, Chunhong and Robotics, Horizon},
-  booktitle={IJCAI},
-  pages={1121--1127},
-  year={2018}}
 
-## Cross-Modality Person Re-Identification with Generative Adversarial Training
-1. IJCAI 2018
-2. Dai, Pingyang and Ji, Rongrong and Wang, Haibin and Wu, Qiong and Huang, Yuyu
 
-- Person re-identification (Re-ID) is an important task in video surveillance which automatically
-searches and identifies people across different cameras.
-Despite the extensive Re-ID progress in RGB cameras, few works have studied the Re-ID between
-infrared and RGB images, which is essentially a cross-modality problem and widely encountered
-in real-world scenarios.
+- Batch Normalization (BN) is capable of accelerating the
+training of deep models by centering and scaling activations
+within mini-batches. In this work, we propose Decorre-
+lated Batch Normalization (DBN), which not just centers
+and scales activations but whitens them. 
 
-    ![reid](Pictures/18.png)
+    ![normalization](Pictures/Selection_108.png)
 
-- The key challenge
-lies in two folds, i.e., 
-    - the lack of discriminative information to re-identify the same person between
-RGB and infrared modalities, 
-    - and the difficulty to learn a robust metric for such a large-scale crossmodality
-retrieval. In this paper, we tackle the above two challenges by proposing a novel crossmodality
-generative adversarial network (termed cmGAN). To handle the lack of insufficient discriminative
-information, we design a cutting-edge generative adversarial training based discriminator
-to learn discriminative feature representation from different modalities. 
-- To handle the issue of largescale
-cross-modality metric learning, we integrate both identification loss and cross-modality triplet
-loss, which minimize inter-class ambiguity while maximizing cross-modality similarity among instances.
-The entire cmGAN can be trained in an end-to-end manner by using standard deep neural
-network framework. 
+- We explore multiple
+whitening techniques, and find that PCA whitening causes a
+problem we call stochastic axis swapping, which is detrimen-
+tal to learning. We show that ZCA whitening does not suffer
+from this problem, permitting successful learning. DBN re-
+tains the desirable qualities of BN and further improves BN’s
+optimization efficiency and generalization ability. 
 
-    ![reid](Pictures/19.png)
-    
-- We have quantized the performance of our work in the newly-released SYSU
-RGB-IR Re-ID benchmark, and have reported superior performance, i.e., Cumulative Match Characteristic
-curve (CMC) and Mean Average Precision (MAP), over the state-of-the-art works [Wu et
-al., 2017], at least 12.17% and 11.85% respectively
-  
->@inproceedings{dai2018cross,
-  title={Cross-Modality Person Re-Identification with Generative Adversarial Training.},
-  author={Dai, Pingyang and Ji, Rongrong and Wang, Haibin and Wu, Qiong and Huang, Yuyu},
-  booktitle={IJCAI},
-  pages={677--683},
-  year={2018}
+    ![normalization](Pictures/Selection_109.png)
+   
+- We design
+comprehensive experiments to show that DBN can improve
+the performance of BN on multilayer perceptrons and con-
+volutional neural networks. Furthermore, we consistently
+improve the accuracy of residual networks on CIFAR-10,
+CIFAR-100, and ImageNet.
+
+
+>@misc{1804.08450,
+Author = {Lei Huang and Dawei Yang and Bo Lang and Jia Deng},
+Title = {Decorrelated Batch Normalization},
+Year = {2018},
+Eprint = {arXiv:1804.08450},
 }
-
-## Adversarial Attribute-Image Person Re-identification
-1. IJCAI 2018
-2. Yin, Zhou and Zheng, Wei-Shi and Wu, Ancong and Yu, Hong-Xing and Wan, Hai and Guo, Xiaowei and Huang, Feiyue and Lai, Jianhuang
-
-- While attributes have been widely used for person re-identification (Re-ID) which aims at matching
-the same person images across disjoint camera views, they are used either as extra features or
-for performing multi-task learning to assist the image-image matching task. However, how to
-find a set of person images according to a given attribute description, which is very practical in
-many surveillance applications, remains a rarely investigated cross-modality matching problem
-in person Re-ID. 
-
-    ![reid](Pictures/20.png)
-    
-- In this work, we present this challenge and leverage adversarial learning to formulate
-the attribute-image cross-modality person Re-ID model. By imposing a semantic consistency
-constraint across modalities as a regularization, the adversarial learning enables to generate imageanalogous
-concepts of query attributes for matching the corresponding images at both global level
-and semantic ID level. 
-
-    ![reid](Pictures/21.png)
-    
-    
->@inproceedings{yin2018adversarial,
-  title={Adversarial Attribute-Image Person Re-identification.},
-  author={Yin, Zhou and Zheng, Wei-Shi and Wu, Ancong and Yu, Hong-Xing and Wan, Hai and Guo, Xiaowei and Huang, Feiyue and Lai, Jianhuang},
-  booktitle={IJCAI},
-  pages={1100--1106},
-  year={2018}
-}
-
-
-## Graph Correspondence Transfer for Person Re-identification
+## Orthogonal weight normalization: Solution to optimization over multiple dependent stiefel manifolds in deep neural networks
 1. AAAI 2018
-2. Qin Zhou, Heng Fan, Shibao Zheng, Hang Su, Xinzhe Li, Shuang Wu, Haibin Ling*
+2. **Huang, Lei** and Liu, Xianglong and Lang, Bo and Yu, Adams Wei and Wang, Yongliang and Li, Bo
+3. https://github.com/huangleiBuaa/OthogonalWN
 
-- In this paper, we propose a graph correspondence transfer (GCT) approach for person re-identification. Unlike existing
-methods, the GCT model formulates person re-identification as an off-line graph matching and on-line correspondence
-transferring problem. 
+- Orthogonal matrix has shown advantages in training Recurrent Neural Networks (RNNs), but 
+such matrix is limited to be square for the hidden-to-hidden transformation in RNNs. 
 
-    ![reid](Pictures/22.png)
-    
-- In specific, during training, the GCT
-model aims to learn off-line a set of correspondence templates from positive training pairs with various pose-pair 
-configurations via patch-wise graph matching. 
+    ![normalization](Pictures/Selection_111.png)
+   
+- In this 
+paper, we generalize such square orthogonal matrix to orthogonal rectangular matrix and formulating 
+this problem in feed-forward Neural Networks (FNNs) as Optimization over Multiple Dependent Stiefel 
+Manifolds (OMDSM). 
 
-    ![reid](Pictures/23.png)
-    
-- During testing, for each pair of test samples, we select a few 
-training pairs with the most similar pose-pair configurations as references,
-and transfer the correspondences of these references to test pair for feature distance calculation. The matching score is
-derived by aggregating distances from different references.
+    ![normalization](Pictures/Selection_112.png)
+   
+- We show that the rectangular orthogonal matrix can stabilize the distribution of 
+network activations and regularize FNNs. We also propose a novel orthogonal weight normalization method
+to solve OMDSM. 
 
-    ![reid](Pictures/24.png)
-    
-- For each probe image, the gallery image with the highest matching score is the re-identifying result. Compared to existing algorithms, our GCT can handle spatial misalignment
-caused by large variations in view angles and human poses owing to the benefits of patch-wise graph matching. 
+    ![normalization](Pictures/Selection_114.png)
+    ![normalization](Pictures/Selection_115.png)
+    ![normalization](Pictures/Selection_116.png)
+   
+- Particularly, it constructs orthogonal transformation over proxy parameters to ensure 
+the weight matrix is orthogonal and back-propagates gradient information through the transformation during 
+training. 
 
-    ![reid](Pictures/25.png)
-    
->@article{zhou2018graph,
-  title={Graph Correspondence Transfer for Person Re-identification},
-  author={Zhou, Qin and Fan, Heng and Zheng, Shibao and Su, Hang and Li, Xinzhe and Wu, Shuang and Ling, Haibin},
-  journal={arXiv preprint arXiv:1804.00242},
-  year={2018}
-}
-
-## Hierarchical Discriminative Learning for Visible Thermal Person Re-Identification
-1. AAAI 2018
-2. Mang Ye, Xiangyuan Lan, Jiawei Li, Pong c Yuen*
-
-- Person re-identification is widely studied in visible spectrum,
-where all the person images are captured by visible cameras.
-- However, visible cameras may not capture valid appearance
-information under poor illumination conditions, e.g, at night.
-
-    ![reid](Pictures/26.png)
-    
-In this case, thermal camera is superior since it is less dependent on the lighting by using infrared light to capture the human body. To this end, this paper investigates a cross-modal
-re-identification problem, namely visible-thermal person reidentification (VT-REID). 
-- Existing cross-modal matching methods mainly focus on modeling the cross-modality discrepancy, while VT-REID also suffers from cross-view variations caused by different camera views. Therefore, we propose a hierarchical cross-modality matching model by jointly
-optimizing the modality-specific and modality-shared metrics. The modality-specific metrics transform two heterogenous modalities into a consistent space that modality-shared
-metric can be subsequently learnt. 
-
-    ![reid](Pictures/27.png)
-    
-- Meanwhile, the modalityspecific metric compacts features of the same person within
-each modality to handle the large intra-modality intra-person
-variations (e.g. viewpoints, pose). 
-
-    ![reid](Pictures/28.png)
-    
-- Additionally, an improved
-two-stream CNN network is presented to learn the multimodality sharable feature representations. 
-Identity loss and contrastive loss are integrated to enhance the discriminability
-and modality-invariance with partially shared layer parameters. 
-
->@article{ye2018hierarchical,
-  title={Hierarchical Discriminative Learning for Visible Thermal Person Re-Identification},
-  author={Ye, Mang and Lan, Xiangyuan and Li, Jiawei and Yuen, Pong C},
-  year={2018}
-}
+    ![normalization](Pictures/Selection_117.png)
+   
+- To guarantee stability, we minimize the distortions between proxy parameters and canonical 
+weights over all tractable orthogonal transformations. In addition, we design an orthogonal linear 
+module (OLM) to learn orthogonal filter banks in practice, which can be used as an alternative to 
+standard linear module. Extensive experiments demonstrate that by simply substituting OLM for 
+standard linear module without revising any experimental protocols, our method largely improves 
+the performance of the state-of-the-art networks, including Inception and residual networks on 
+CIFAR and ImageNet datasets.
 
 
-## Learning Coarse-to-fine Structured Feature Embedding for Vehicle Re-identification
-1. AAAI 2018
-2. Haiyun Guo*, Chaoyang Zhao, zhiwei liu, jinqiao wang, hanqing lu
-
-- **Vehicle re-identification** (re-ID) is to identify the same vehicle across different cameras. It’s a significant but challenging
-topic, which has received little attention due to the complex intra-class and inter-class variation of vehicle images and the
-lack of large-scale vehicle re-ID dataset. 
-- Previous methods focus on pulling images from different vehicles apart but neglect the discrimination between vehicles from different vehicle models, which is actually quite important to obtain a correct ranking order for vehicle re-ID. In this paper, we learn a
-structured feature embedding for vehicle re-ID with a novel coarse-to-fine ranking loss to pull images of the same vehicle
-as close as possible and achieve discrimination between images from different vehicles as well as vehicles from different
-vehicle models. 
-
-    ![reid](Pictures/29.png)
-    
-- In the learnt feature space, both intra-class
-compactness and inter-class distinction are well guaranteed
-and the Euclidean distance between features directly reflects
-the semantic similarity of vehicle images. Furthermore, we
-build so far the largest vehicle re-ID dataset “Vehicle-1M”1
-which involves nearly 1 million images captured in various
-surveillance scenarios. Experimental results on “Vehicle-1M”
-and “VehicleID” demonstrate the superiority of our proposed
-approach.
-
-    ![reid](Pictures/30.png)
-    
->@inproceedings{guo2018learning,
-  title={Learning Coarse-to-Fine Structured Feature Embedding for Vehicle Re-Identification},
-  author={Guo, Haiyun and Zhao, Chaoyang and Liu, Zhiwei and Wang, Jinqiao and Lu, Hanqing},
+>@inproceedings{huang2018orthogonal,
+  title={Orthogonal weight normalization: Solution to optimization over multiple dependent stiefel manifolds in deep neural networks},
+  author={Huang, Lei and Liu, Xianglong and Lang, Bo and Yu, Adams Wei and Wang, Yongliang and Li, Bo},
   booktitle={Thirty-Second AAAI Conference on Artificial Intelligence},
   year={2018}
 }
 
 
-## Multi-Channel Pyramid Person Matching Network for Person Re-Identification
-1. AAAI 2018
-2. Chaojie Mao, Yingming Li*, zhongfei Zhang, yaqing Zhang, Xi Li
+In this page, we provide a list of related work which has been used and cited in the ECCV2018 oral talk.
+## List of Related Work: 
+### Normalization Techniques: Motivation:
+1.      Yann LeCun, Ido Kanter, Sara A.Solla. Second order properties of Error Surfaces: Learning time and Generalization. NIPS, 1990
 
-- In this work, we present a Multi-Channel deep convolutional Pyramid Person Matching Network (MC-PPMN) 
+2.      Yann LeCun, Leon Bottou, Genevieve B. Orr,  Klaus-Robert Muller. Efficient BackProp. Neural Networks: tricks of the trade. 1998
 
-    ![reid](Pictures/31.png)
-    
-- which based on the combination of the **semantic-components** 
+3.      Simon Wiesler, Hermann Ney. A Convergence Analysis of Log-Linear Training, NIPS 2011
 
-    ![reid](Pictures/32.png)
-    
-- and the **colortexture distributions** to address the problem of person reidentification. 
+4.      James Martens, Roger Grosse. Optimizing Neural Networks with Kronecker-factored Approximate Curvature. ICML 2015
 
-    ![reid](Pictures/33.png)
-    
-- In particular, we learn separate deep representations for semantic-components and color-texture distributions from two person images and then employ pyramid
-person matching network (PPMN) to obtain correspondence
-representations. 
+## Methods, Analyses and Applications in Computer Vision and Machine Learning:
+### Feature Normalization:
+1.      Guillaume Desjardins, Karen Simonyan, Razvan Pascanu, Koray Kavukcuoglu. Natural Neural Networks. NIPS 2015.
 
-    ![reid](Pictures/34.png)
-    
-- These correspondence representations are fused to perform the re-identification task. 
-Further, the proposed framework is optimized via a unified end-to-end deep
-learning scheme. 
+2.      Grégoire Montavon and Klaus-Robert Müller. Deep Boltzmann Machines and the Centering Trick.  Neural Networks: Tricks of the Trade, 2012
 
->@article{mao2018multi,
-  title={Multi-Channel Pyramid Person Matching Network for Person Re-Identification},
-  author={Mao, Chaojie and Li, Yingming and Zhang, Yaqing and Zhang, Zhongfei and Li, Xi},
-  journal={arXiv preprint arXiv:1803.02558},
-  year={2018}
-}
+3.      Simon Wiesler, Alexander Richard, Ralf Schluter, Hermann Ney. Mean-normalized Stochastic Gradient for Large-scale Deep Learning. ICASSP 2014. 
 
-## Region-based Quality Estimation Network for Large-scale Person Re-identification
-1. AAAI 2018
-2. Guanglu Song, Biao Leng*, Yu Liu, Congrui Hetang, Shaofan Cai
+4.      Jan Melchior, Asja Fischer, Laurenz Wiskott. How to Center Binary Deep Boltzmann Machines. JMLR 2016.
 
-- One of the major restrictions on the performance of videobased person re-id is partial noise caused by occlusion, blur
-and illumination. 
+5.      Sergey Ioffe and Christian Szegedy. Batch normalization accelerating deep network training by reducing internal covariate shift. ICML 2015
 
-    ![reid](Pictures/35.png)
-    
-- Since different spatial regions of a single frame have various quality, and the quality of the 
-same region also varies across frames in a tracklet, a good way to
-address the problem is to effectively aggregate complementary information from 
-all frames in a sequence, using better regions from other frames to compensate the influence of an
-image region with poor quality.
+6.      Jimmy Lei Ba, Jamie Ryan Kiros, Geoffrey E. Hinton. Layer Normalization. Arxiv:1607.06450, 2016
 
-    ![reid](Pictures/36.png)
-     
-- To achieve this, we propose
-a novel Region-based Quality Estimation Network (RQEN),
-in which an ingenious training mechanism enables the effective 
-learning to extract the complementary region-based
-information between different frames. 
+7.      Dmitry Ulyanov and Andrea Vedaldi. Instance Normalization: The Missing Ingredient for Fast Stylization. arXiv:1607.08022, 2016
 
-    ![reid](Pictures/37.png)
-    
-- Compared with other feature extraction methods, we achieved comparable results
-of 92.4%, 76.1% and 77.83% on the PRID 2011, iLIDS-VID
-and MARS, respectively.
+8.      Mengye Ren, Renjie Liao, Raquel Urtasun, Fabian H. Sinz, Richard S. Zemel. Normalizing the normaliziers-comparing and extending network normalization schemes. ICLR 2017
 
-    ![reid](Pictures/38.png)
-    
-- In addition, to alleviate the lack of clean large-scale person
-re-id datasets for the community, this paper also contributes
-a new high-quality dataset, named “Labeled Pedestrian in the Wild (LPW)” which 
-contains 7,694 tracklets with over
-590,000 images. Despite its relatively large scale, the annotations also possess high cleanliness. Moreover, it’s more challenging in the following aspects: the age of characters varies
-from childhood to elderhood; the postures of people are diverse, including running and cycling in addition to the normal
-walking state.
+9.      Yuxin Wu and Kaiming He. Group Normalization.  ECCV 2018
 
->@inproceedings{song2018region,
-  title={Region-based quality estimation network for large-scale person re-identification},
-  author={Song, Guanglu and Leng, Biao and Liu, Yu and Hetang, Congrui and Cai, Shaofan},
-  booktitle={Thirty-Second AAAI Conference on Artificial Intelligence},
-  year={2018}
-}
+10.  Qianli Liao, Kenji Kawaguchi and Tomaso Poggio.  Streaming Normalization: Towards Simpler and More Biologically-plausible Normalizations for Online and Recurrent Learning. arXiv:1610.06160
 
+11.  Sergey Ioffe. Batch Renormalization: Towards Reducing Minibatch Dependence in Batch Normalized Models. NIPS 2017
 
-## Semi-supervised Bayesian Attribute Learning for Person Re-identification
-1. AAAI 2018
-2. Wenhe Liu*, Ling Chen, Xiaojun Chang, Yi Yang
+12.  Guangrun Wang, Jiefeng Peng, Ping Luo, Xinjiang Wang and  Liang Lin. Batch Kalman Normalization: Towards Training Deep Neural Networks with Micro-batches.  arXiv:1802.03133, 2018
 
-- Person re-identification (re-ID) tasks aim to identify the same
-person in multiple images captured from non-overlapping
-camera views. Most previous re-ID studies have attempted
-to solve this problem through either representation learning
-or metric learning, or by combining both techniques. Representation learning relies on the latent factors or attributes of
-the data. In most of these works, the dimensionality of the
-factors/attributes has to be manually determined for each new
-dataset. Thus, this approach is not robust. Metric learning optimizes a metric across the dataset to measure similarity according to distance. However, choosing the optimal method
-for computing these distances is data dependent, and learning the appropriate metric relies on a sufficient number of
-pair-wise labels. 
+13.  Ping Luo, Jiamin Ren and Zhanglin Peng. Differentiable Learning to Normalize via Switchable Normalization. arXiv:1806.10779, 2018 
 
-    ![reid](Pictures/39.png)
+14.  Elad Hoffer, Ron Banner,  Itay Golan and Daniel Soudry. Norm matters: efficient and accurate normalization schemes in deep networks. arXiv:1803.01814, 2018 
 
-- To overcome these limitations, we propose
-a novel algorithm for person re-ID, called semi-supervised
-Bayesian attribute learning. We introduce an Indian Buffet
-Process to identify the priors of the latent attributes. The dimensionality of attributes factors is then automatically determined by nonparametric Bayesian learning. Meanwhile, unlike traditional distance metric learning, we propose a reidentification probability distribution to describe how likely
-it is that a pair of images contains the same person. This technique relies solely on the latent attributes of both images.
-Moreover, pair-wise labels that are not known can be estimated from pair-wise labels that are known, making this a
-robust approach for semi-supervised learning.
+15.  Shuang Wu, Guoqi Li, Lei Deng, Liu Liu, Yuan Xie, and Luping Shi. L1-Norm Batch Normalization for Efficient Training of Deep Neural Networks. arXiv:1802.09769, 2018
 
-    ![reid](Pictures/40.png)
-    
->@inproceedings{liu2018semi,
-  title={Semi-Supervised Bayesian Attribute Learning for Person Re-Identification},
-  author={Liu, Wenhe and Chang, Xiaojun and Chen, Ling and Yang, Yi},
-  booktitle={Thirty-Second AAAI Conference on Artificial Intelligence},
-  year={2018}
-}
+16.  Günter Klambauer, Thomas Unterthiner, Andreas Mayr,  Sepp Hochreiter. Self-Normalizing Neural Networks. NIPS 2017.
 
-## STemporal-Enhanced Convolutional Network for Person Re-identification
-1. AAAI 2018
-2. Yang Wu*, Jie Qiu, Jun Takamatsu, Tsukasa Ogasawara
+17.  Natural Neural Networks, Guillaume Desjardins, Karen Simonyan, Razvan Pascanu, Koray Kavukcuoglu.  NIPS 2015
 
-- We propose a new neural network called Temporal-enhanced
-Convolutional Network (T-CN) for video-based person reidentification. 
+18.  Ping Luo. Learning Deep Architectures via Generalized Whitened Neural Networks. ICML 2017
 
-    ![reid](Pictures/41.png)
-    
-- For each video sequence of a person, a spatial
-convolutional subnet is first applied to each frame for representing appearance information, 
-and then a temporal convolutional subnet links small ranges of continuous frames to
-extract local motion information. Such spatial and temporal
-convolutions together construct our T-CN based representation. 
+19.  Lei Huang, Dawei Yang, Bo Lang, Jia Deng, Decorrelated Batch Normalization. CVPR 2018
 
-    ![reid](Pictures/42.png)
-    
-- Finally, a recurrent network is utilized to further explore
-global dynamics, followed by temporal pooling to generate
-an overall feature vector for the whole sequence. 
+### Weight/Filter/Kernel Normalization
+1.      Devansh Arpit, Yingbo Zhou, Bhargava U. Kota, Venu Govindaraju. Normalization Propagation A Parametric Technique for Removing Internal Covariate Shift in Deep Networks.  ICML 2016.
 
-    ![reid](Pictures/43.png)
-    
-- In the training stage, a Siamese network architecture is adopted to jointly
-optimize all the components with losses covering both identification and verification. 
+2.      Alexander Shekhovtsov and Boris Flach. Normalization of Neural Networks using Analytic Variance Propagation. arXiv:1803.10560, 2018
 
-    ![reid](Pictures/44.png)
-    
-- In the testing stage, our network
-generates an overall discriminative feature representation for
-each input video sequence (whose length may vary a lot) in
-a feed-forward way, and even a simple Euclidean distance
-based matching can generate good re-identification results.
+3.      Wenling Shang, Justion Chiu, Kihyuk Sohn. Exploring Normalization in Deep Residual Networks. AAAI 2017.
 
->@inproceedings{wu2018temporal,
-  title={Temporal-Enhanced Convolutional Network for Person Re-identification},
-  author={Wu, Yang and Qiu, Jie and Takamatsu, Jun and Ogasawara, Tsukasa},
-  booktitle={Thirty-Second AAAI Conference on Artificial Intelligence},
-  year={2018}
-}
+4.      Tim Salimans, Diederik P. Kingma, Weight Normalization A Simple Reparameterization to Accelerate Training of Deep Neural Networks, NIPS 2016
 
+5.      Xavier Glorot and Yoshua Bengio. Understanding the difficulty of training deep feedforward neural networks.  AISTATS, 2010
 
-## Video-based Person Re-identification via Self Paced Weighting
-1. AAAI 2018
-2. Wenjun Huang*, Chao Liang, Yi Yu, Zheng Wang, Weijian Ruan, Ruimin Hu
+6.      Kaiming He, Xiangyu Zhang, Shaoqing Ren, Jian Sun. Delving Deep into Rectifiers: Surpassing Human-Level Performance on ImageNet Classification. ICCV 2015
 
-- Person re-identification (re-id) is a fundamental technique
-to associate various person images, captured by different surveillance cameras, to the same person. 
-- Compared to the single image based person re-id methods, video-based person re-id has 
-attracted widespread attentions **because extra
-space-time information and more appearance cues that can
-be used to greatly improve the matching performance**. 
+7.      Lei Huang, Xianglong Liu, Yang Liu, Bo Lang, Dacheng Tao.  Centered Weight Normalization in Accelerating Training of Deep Neural Networks.  ICCV 2017.
 
-    ![reid](Pictures/45.png)
-    
-- However, most existing video-based person re-id methods equally treat all video frames, ignoring their quality discrepancy
-caused by **object occlusion and motions**, which is a common phenomenon in real surveillance scenario. Based on this
-finding, we propose a novel video-based person re-id method
-via self paced weighting (SPW). 
+8.      Andrew M. Saxe, James L. McClelland, Surya Ganguli.  Exact solutions to the nonlinear dynamics of learning in deep linear neural networks. ICLR 2014
 
-    ![reid](Pictures/46.png)
-    
-- Firstly, we propose a self
-paced outlier detection method to evaluate the noise degree
-of video sub sequences. 
+9.      Dmytro Mishkin and Jiri Matas. All You Need Is a Good Init. ICLR 2016.
 
-    ![reid](Pictures/47.png)
-    
-- Thereafter, a weighted multi-pair distance metric learning approach is adopted to measure the distance of two person image sequences. Experimental results
-on two public datasets demonstrate the superiority of the proposed method over current state-of-the-art work.
+10.  Lei Huang, Xianglong Liu, Bo Lang, Admas Wei Yu, Bo Li. Orthogonal Weight Normalization: Solution to Optimization over Multiple Dependent Stiefel Manifolds in Deep Neural Networks. AAAI 2018. 
 
->@article{huang2018video,
-  title={Video-based Person Re-identification via Self Paced Weighting},
-  author={Huang, Wenjun and Liang, Chao and Yu, Yi and Wang, Zheng and Ruan, Weijian and Hu, Ruimin},
-  year={2018}
-}
+11.  Mete Ozay and Takayuki Okatani. Optimization on Submanifolds of Convolution Kernels in CNNs.  arXiv:1610.07008, 2016
+
+12.  Minhyung Cho and Jaehyung Lee. Riemannian approach to batch normalization. NIPS 2017
+
+13.  Projection Based Weight Normalization for Deep Neural Networks. Lei Huang, Xianglong Liu, Bo Lang, Bo Li. arXiv:1710.02338. 2017
+
+14.  Nathan Srebro and Adi Shraibman. Rank, Trace-Norm and Max-Norm. COLT 2015.
+
+15.  Behnam Neyshabur, Ruslan Salakhutdinov, Nathan Srebro. Path-SGD: Path-Normalized Optimization in Deep Neural Networks. NIPS 2015
+
+16.  Kui Jia, Dacheng Tao, Shenghua Gao, and Xiangmin Xu. Improving training of deep neural networks via singular value bounding CVPR 2017.
+
+17.  Chunjie Luo, Jianfeng Zhan, Lei Wang, Qiang Yang. Cosine Normalization: Using Cosine Similarity Instead of Dot Product in Neural Networks. arXiv:1702.05870, 2017
+
+### Gradient Normalization:
+1.      Ping Luo. EigenNet: Towards Fast and Structural Learning of Deep Neural Networks. IJCAI 2017.
+
+2.      Adams Wei Yu, Lei Huang, Qihang Lin, Ruslan Salakhutdinov, and Jaime G Carbonell. Block-normalized gradient method: An empirical study for training deep neural network. CoRR, abs/1707.04822, 2017.
+
+3.      Zhao Chen, Vijay Badrinarayanan, Chen-Yu Lee, Andrew Rabinovich. GradNorm: Gradient Normalization for Adaptive Loss Balancing in Deep Multitask Networks, ICML 2018.
+
+### Normalization for RNNs:
+1.      Tim Cooijmans, Nicolas Ballas, César Laurent, Çaglar Gulçehre, Aaron Courville. Recurrent Batch Normalization. ICLR,2017
+
+2.      Cesar Laurent, Gabriel Pereyra, Philemon Brakel, Ying Zhang, Yoshua Bengio.   Batch Normalized Recurrent Neural Networks. ICASSP 2016
+
+3.      Martín Arjovsky, Amar Shah, and Yoshua Bengio. Unitary evolution recurrent neural networks. ICML, 2016
+
+4.      Scott Wisdom, Thomas Powers, John Hershey, Jonathan Le Roux, and Les Atlas. Full-capacity unitary recurrent neural networks. NIPS, 2016
+
+5.      Zakaria Mhammedi, Andrew D. Hellicar, Ashfaqur Rahman, and James Bailey. Efficient orthogonal parametrization of recurrent neural networks using householder reflections. ICML, 2017.
+
+### Normalization for Image Style Transfer:
+1.      Dmitry Ulyanov. Instance Normalization: The Missing Ingredient for Fast Stylization.   1607.08022, 2016.
+
+2.      Leon A. Gatys, Alexander S. Ecker, Matthias Bethge. Image Style Transfer Using Convolutional Neural Networks. CVPR 2016.
+
+3.      Justin Johnson, Alexandre Alahi, and Li Fei-Fei. Perceptual Losses for Real-Time Style Transfer and Super-Resolution. ECCV 2016.
+
+4.      Vincent Dumoulin, Jonathon Shlens,  Manjunath Kudlur. A Learned Representation for Artistic Style. ICLR 2017 
+
+5.      Xun Huang and Serge Belongie. Arbitrary Style Transfer in Real-time with Adaptive Instance Normalization. ICCV 2017
+
+6.      Yijun Li, Chen Fang, Jimei Yang Zhaowen Wang, Xin Lu, Ming-Hsuan Yang. Universal Style Transfer via Feature Transforms. NIPS 2017
+
+### Normalization for Training GANs:
+1.    Ian J. Goodfellow, Jean Pouget-Abadie, Mehdi Mirza, Bing Xu, David Warde-Farley, Sherjil Ozair, Aaron Courville, Yoshua Bengio. Generative adversarial networks.  NIPS 2014.
+
+2.    Tim Salimans, Ian Goodfellow, Wojciech Zaremba, Vicki Cheung, Alec Radford, Xi Chen. Improved Techniques for Training GANs. NIPS 2016
+
+3.    Sitao Xiang and Hao Li. On the Effects of Batch and Weight Normalization in Generative Adversarial Networks. arXiv:1704.03971. 2017
+
+4.    Takeru Miyato, Toshiki Kataoka, Masanori Koyama, Yuichi Yoshida. Spectral Normalization for Generative Adversarial Networks. ICLR 2018
+
+5.    Aliaksandr Siarohin, Enver Sangineto, Nicu Sebe. Whitening and Coloring transform for GANs. arXiv:1806.00420, 2018. 
+
+### Normalization for Defending Adversarial Networks:
+1.    Moustapha Cisse, Piotr Bojanowski, Edouard Grave, Yann Dauphin, Nicolas Usunier. Parseval Networks: Improving Robustness to Adversarial Examples. ICML 2017
+
+### Mathematical Foundations,  Theoretical Results and Challenges :
+1.    Adrià Garriga-Alonso, Laurence Aitchison and Carl Edward Rasmussen,  Deep Convolutional Networks as shallow Gaussian Processes, 2018.
+
+2.    Alexander G. de G. Matthews, Mark Rowland, Jiri Hron, Richard E. Turner, Zoubin Ghahramani, Gaussian Process Behaviour in Wide Deep Neural Networks, ICLR, 2018.
+
+3.    Jaehoon Lee, Yasaman Bahri, Roman Novak, Samuel S. Schoenholz, Jeffrey Pennington, Jascha Sohl-Dickstein, Deep Neural Networks as Gaussian Processes, ICLR, 2018.
+
+4.    S. Oymak, ``Learning Compact Neural Networks with Regularization,'' to appear at ICML 2018.
+
+5.    K. Zhong, Z. Song, P. Jain, P. L. Bartlett, I. S. Dhillon, Recovery Guarantees for One-hidden-layer Neural Networks, ICML 2017.
+
+6.    R. Ge, J. D. Lee, T. Ma, Learning One-hidden-layer Neural Networks with Landscape Design, ICLR 2018.
+
+7.    Shibani Santurkar, Dimitris Tsipras, Andrew Ilyas, Aleksander Madry, How Does Batch Normalization Help Optimization? (No, It Is Not About Internal Covariate Shift), CoRR abs/1805.11604, 2018.
+
+8.    Yuxin Wu and Kaiming He, Group Normalization, Arxiv, abs/ 1803.08494, 2018.
+
+9.    B.  Neyshabur, Z. Li, S. Bhojanapalli, Y. LeCun, N. Srebro Towards Understanding the Role of Over-Parametrization in Generalization of Neural Networks, CoRR abs/1805.12076, 2018.
+
+10.   Peter L Bartlett and Shahar Mendelson,  Rademacher and gaussian complexities:  Risk bounds and structural results, Journal of Machine Learning Research, 3(Nov):463–482, 2002.
+
+11.   Peter L Bartlett, Dylan J Foster, and Matus J Telgarsky, Spectrally-normalized margin bounds for neural networks, In Advances in Neural Information Processing Systems, pages 6241–6250, 2017
+
+12.   Noah Golowich, Alexander Rakhlin, and Ohad Shamir, Size-independent sample complexity of neural networks, arXiv preprint arXiv:1712.06541, 2017.
+
+13.   Nick Harvey, Chris Liaw, and Abbas Mehrabian, Nearly-tight vc-dimension bounds for piecewise linear neural networks, arXiv preprint arXiv:1703.02930, 2017.
+
+14.   Behnam Neyshabur, Ryota Tomioka, and Nathan Srebro,  Norm-based capacity control in neural networks.  In Proceeding of the 28th Conference on Learning Theory (COLT), 2015.
+
+15.   Behnam Neyshabur, Srinadh Bhojanapalli, and Nathan Srebro, A PAC-bayesian approach to spectrally-normalized margin bounds for neural networks, In International Conference on Learning Representations, 2018.
+
+16.   Devansh Arpit, Yingbo Zhou, Bhargava U. Kota, Venu Govindaraju, Normalization Propagation: A Parametric Technique for Removing Internal Covariate Shift in Deep Networks, ICML, 2016.
+
+17.   Xavier Glorot, Yoshua Bengio, Understanding the difficulty of training deep feedforward neural networks, AISTATS, 2010.
+
+18.   Mete Ozay and Takayuki Okatani, Training CNNs with Normalized Kernels, AAAI 2018.
+
+19.   Lei Huang, Xianglong Liu, Bo Lang, Admas Wei Yu, Bo Li, Orthogonal Weight Normalization: Solution to Optimization over Multiple Dependent Stiefel Manifolds in Deep Neural Networks, AAAI, 2018.
+
+20.   Lei Huang, Xianglong Liu, Bo Lang, Bo Li, Projection Based Weight Normalization for Deep Neural Networks, ICCV 2017.
+
+21.   Ping Luo and Jiamin Ren and Zhanglin Peng, Differentiable Learning-to-Normalize via Switchable Normalization, arXiv:1806.10779, 2018.
+
+22.   Mete Ozay and Takayuki Okatani, Optimization on Product Submanifolds of Convolution Kernels, Arxiv, 2017.
+
+23.   G. Cybenko, "Approximations by superpositions of sigmoidal functions", Mathematics of Control, Signals, and Systems, 2(4), 303-314, 1989. 
+
+24.   Kurt Hornik, "Approximation Capabilities of Multilayer Feedforward Networks", Neural Networks, 4(2), 251–257, 1991.
+
+25.   S. Liang, R. Srikant, Why Deep Neural Networks for Function Approximation?, ICLR 2017.
+
+26.   H. N. Mhaskar and T. Poggio, Deep vs. shallow networks: An approximation theory perspective, Analysis and Applications, 2016.
+
+27.   Uri Shaham, Alexander Cloninger, Ronald R.Coifman, "Provable approximation properties for deep neural networks2, Applied and Computational Harmonic Analysis, Volume 44, Issue 3, May 2018, Pages 537-557, 2018.
+
+28.   Zhou Lu, Hongming Pu, Feicheng Wang, Zhiqiang Hu, Liwei Wang, "The Expressive Power of Neural Networks: A View from the Width", NIPS 2017.
+
+29.   Maithra Raghu, Ben Poole, Jon Kleinberg, Surya Ganguli, Jascha Sohl Dickstein, "On the Expressive Power of Deep Neural Networks", ICML 2017.
+
+30.   Y. Ollivier, "A visual introduction to Riemannian curvatures and some discrete generalizations", in Analysis and Geometry of Metric Measure Spaces: Lecture Notes of the 50th Séminaire de Mathématiques Supérieures (SMS), Montréal, 2011, Galia Dafni, Robert McCann, Alina Stancu, eds, AMS, 2013.
+
+31.   T. Miyato, T. Kataoka, M. Koyama, Y. Yoshida, Spectral Normalization for Generative Adversarial Networks, ICLR 2018.
+
+32.   K. Jia, D. Tao, S. Gao, and X. Xu, Improving training of deep neural networks via Singular Value Bounding, CVPR 2017.

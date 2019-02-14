@@ -51,51 +51,20 @@ Here is the content of our project.
 
 
 - [2019-01-20](2019/01/20_Sun/Papers.md):  
-    1. FD-GAN: Pose-guided Feature Distilling GAN for Robust Person Re-identification
-        1. NIPS 2018
-
-    2. Cascaded SR-GAN for Scale-Adaptive Low Resolution Person Re-identification
-        1. IJCAI 2018
+    1. Group normalization
+        1. ECCV 2018
  
-    3. Visible Thermal Person Re-Identification via Dual-Constrained Top-Ranking
-        1. IJCAI 2018
- 
-    4. Deep View-Aware Metric Learning for Person Re-Identification
-        1. IJCAI 2018
- 
-    5. SafeNet: Scale-normalization and Anchor-based Feature Extraction Network for Person Re-identification
-        1. IJCAI 2018
- 
-    6. Cross-Modality Person Re-Identification with Generative Adversarial Training
-        1. IJCAI 2018
- 
-    7. Adversarial Attribute-Image Person Re-identification
-        1. IJCAI 2018
- 
-    8. Graph Correspondence Transfer for Person Re-identification
-        1. AAAI 2018
-
-    9. Hierarchical Discriminative Learning for Visible Thermal Person Re-Identification
-        1. AAAI 2018
- 
-    10. Learning Coarse-to-fine Structured Feature Embedding for Vehicle Re-identification
-        1. AAAI 2018
-  
-    11. Multi-Channel Pyramid Person Matching Network for Person Re-Identification
-        1. AAAI 2018
-  
-    12. Region-based Quality Estimation Network for Large-scale Person Re-identification
-        1. AAAI 2018
+    2. Towards Faster Training of Global Covariance Pooling Networks by Iterative Matrix Square Root Normalization
+        1. CVPR 2018
+       
+    3. RIEMANNIAN ADAPTIVE OPTIMIZATION METHODS
+        1. ICLR 2019 (open review)
+      
+    4. Decorrelated Batch Normalization
+        1. CVPR 2018
    
-    13. emi-supervised Bayesian Attribute Learning for Person Re-identification
+    5. Orthogonal weight normalization: Solution to optimization over multiple dependent stiefel manifolds in deep neural networks
         1. AAAI 2018
- 
-    14. STemporal-Enhanced Convolutional Network for Person Re-identification
-        1. AAAI 2018
-  
-    15. Video-based Person Re-identification via Self Paced Weighting
-        1. AAAI 2018
- 
 
 - [2019-01-21](2019/01/21_Mon/Papers.md):  
     1. Dissimilarity Representation Learning for Generalized Zero-Shot Recognition
@@ -240,6 +209,68 @@ Here is the content of our project.
         1. ICML 2016
 
 - [2019-01-31](2019/01/31_Thu/Papers.md): 
+    1. COSONet: Compact Second-Order Network for Video Face Recognition
+        1. ACCV 2018 oral
+        
+- [2019-02-01](2019/02/01_Fri/Papers.md): 
+    
+    
+- [2019-02-02](2019/02/02_Sat/Papers.md): 
+   
+     
+- [2019-02-03](2019/02/03_Sun/Papers.md): 
+  
+          
+- [2019-02-04](2019/02/04_Mon/Papers.md): 
+  
+     
+- [2019-02-05](2019/02/05_Tue/Papers.md):  
+    1. FD-GAN: Pose-guided Feature Distilling GAN for Robust Person Re-identification
+        1. NIPS 2018
+
+    2. Cascaded SR-GAN for Scale-Adaptive Low Resolution Person Re-identification
+        1. IJCAI 2018
+ 
+    3. Visible Thermal Person Re-Identification via Dual-Constrained Top-Ranking
+        1. IJCAI 2018
+ 
+    4. Deep View-Aware Metric Learning for Person Re-Identification
+        1. IJCAI 2018
+ 
+    5. SafeNet: Scale-normalization and Anchor-based Feature Extraction Network for Person Re-identification
+        1. IJCAI 2018
+ 
+    6. Cross-Modality Person Re-Identification with Generative Adversarial Training
+        1. IJCAI 2018
+ 
+    7. Adversarial Attribute-Image Person Re-identification
+        1. IJCAI 2018
+ 
+    8. Graph Correspondence Transfer for Person Re-identification
+        1. AAAI 2018
+
+    9. Hierarchical Discriminative Learning for Visible Thermal Person Re-Identification
+        1. AAAI 2018
+ 
+    10. Learning Coarse-to-fine Structured Feature Embedding for Vehicle Re-identification
+        1. AAAI 2018
+  
+    11. Multi-Channel Pyramid Person Matching Network for Person Re-Identification
+        1. AAAI 2018
+  
+    12. Region-based Quality Estimation Network for Large-scale Person Re-identification
+        1. AAAI 2018
+   
+    13. emi-supervised Bayesian Attribute Learning for Person Re-identification
+        1. AAAI 2018
+ 
+    14. STemporal-Enhanced Convolutional Network for Person Re-identification
+        1. AAAI 2018
+  
+    15. Video-based Person Re-identification via Self Paced Weighting
+        1. AAAI 2018
+        
+- [2019-02-06](2019/02/06_Wed/Papers.md):  
     1. A Unified Generative Adversarial Framework for Image Generation and Person Re-Identification
         1. ACM MM 2018
         
@@ -263,32 +294,3 @@ Here is the content of our project.
         
     8. Video-based Person Re-identification via Self-Paced Learning and Deep Reinforcement Learning Framework
         1. ACM MM 2018
-    
-    9. List of accepted papers in ACM MM
-    
-- [2019-02-01](2019/02/01_Fri/Papers.md): 
-    1. Group normalization
-        1. ECCV 2018
- 
-    2. Towards Faster Training of Global Covariance Pooling Networks by Iterative Matrix Square Root Normalization
-        1. CVPR 2018
-       
-    3. RIEMANNIAN ADAPTIVE OPTIMIZATION METHODS
-        1. ICLR 2019 (open review)
-      
-    4. Decorrelated Batch Normalization
-        1. CVPR 2018
-   
-    5. Orthogonal weight normalization: Solution to optimization over multiple dependent stiefel manifolds in deep neural networks
-        1. AAAI 2018
-    
-- [2019-02-02](2019/02/02_Sat/Papers.md): 
-    1. COSONet: Compact Second-Order Network for Video Face Recognition
-        1. ACCV 2018 oral
-        
-- [2019-02-03](2019/02/03_Sun/Papers.md): 
-    1. Celebrating Spring Festival!
-        
-- [2019-02-04](2019/02/04_Mon/Papers.md): 
-    1. Celebrating Spring Festival!
-     

@@ -214,7 +214,7 @@ Here is the content of our project.
         
 ---
         
-- [2019-02-01](2019/02/01_Fri/Papers.md): 
+- [2019-02-01](2019/02/01_Fri/Papers.md): _Reid <CVPR(2018)>_
     
     
 - [2019-02-02](2019/02/02_Sat/Papers.md): 

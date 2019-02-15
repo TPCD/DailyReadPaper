@@ -527,6 +527,7 @@ methods.
 ## Multi-Level Factorisation Net for Person Re-Identification
 1. CVPR 2018 Poster
 2. Xiaobin Chang, Queen Mary Univ. of London; Timothy Hospedales, University of Edinburgh; Tao Xiang, Queen Mary University of London
+3. 190201(13)Multi-Level Factorisation Net for Person Re-Identification.pdf
 
 - Key to effective person re-identification (Re-ID) is modelling
 discriminative and view-invariant factors of person
@@ -1155,5 +1156,173 @@ ability of our proposed approach.
   author={Shen, Yantao and Xiao, Tong and Li, Hongsheng and Yi, Shuai and Wang, Xiaogang},
   booktitle={Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition},
   pages={6886--6895},
+  year={2018}
+}
+
+## Deep Spatial Feature Reconstruction for Partial Person Re-identification
+1. CVPR 2018 Poster
+2. Lingxiao He, Institute of AutomationChines; Jian Liang, CASIA; Haiqing Li, ; Zhenan Sun, CRIPAC
+3. 190201(27)He_Deep_Spatial_Feature_CVPR_2018_paper.pdf
+
+- Partial person re-identification (re-id) is a challenging
+problem, where only several partial observations (images)
+of people are available for matching. However, few studies
+have provided flexible solutions to identifying a person
+in an image containing arbitrary part of the body. 
+- In this paper, we propose a fast and accurate matching method to
+address this problem. The proposed method leverages Fully
+Convolutional Network (FCN) to generate fix-sized spatial
+feature maps such that pixel-level features are consistent.
+
+    ![reid](Pictures/Selection_212.png)
+
+- To match a pair of person images of different sizes, a novel
+method called Deep Spatial feature Reconstruction (DSR)
+is further developed to avoid explicit alignment. Specifically,
+DSR exploits the reconstructing error from popular
+dictionary learning models to calculate the similarity between
+different spatial feature maps. In that way, we expect
+that the proposed FCN can decrease the similarity of coupled
+images from different persons and increase that from
+the same person. 
+
+    ![reid](Pictures/Selection_213.png)
+
+- Experimental results on two partial person
+datasets demonstrate the efficiency and effectiveness of
+the proposed method in comparison with several state-ofthe-art
+partial person re-id approaches. Additionally, DSR
+achieves competitive results on a benchmark person dataset
+Market1501 with 83.58% Rank-1 accuracy.
+
+
+>@inproceedings{he2018deep,
+  title={Deep Spatial Feature Reconstruction for Partial Person Re-identification: Alignment-Free Approach},
+  author={He, Lingxiao and Liang, Jian and Li, Haiqing and Sun, Zhenan},
+  booktitle={Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition},
+  pages={7073--7082},
+  year={2018}
+}
+
+
+## Unsupervised Cross-dataset Person Re-identification by Transfer Learning of Spatio-temporal Patterns
+1. CVPR 2018 Poster
+2. Jianming Lv, South China University of Technology; Weihang Chen, South China University of Technology; Qing Li, City University of Hong Kong; Can Yang, South China University of Technology
+3. 190201(28)Lv_Unsupervised_Cross-Dataset_Person_CVPR_2018_paper.pdf
+
+
+- Most of the proposed person re-identification algorithms
+conduct supervised training and testing on single labeled
+datasets with small size, so directly deploying these trained
+models to a large-scale real-world camera network may lead
+to poor performance due to underfitting. 
+
+    ![reid](Pictures/Selection_214.png)
+
+- It is challenging
+to incrementally optimize the models by using the abundant
+unlabeled data collected from the target domain. To address
+this challenge, we propose an unsupervised incremental
+learning algorithm, TFusion, which is aided by the transfer
+learning of the pedestrians’ spatio-temporal patterns in the
+target domain. 
+
+    ![reid](Pictures/Selection_215.png)
+
+- Specifically, the algorithm firstly transfers the
+visual classifier trained from small labeled source dataset
+to the unlabeled target dataset so as to learn the pedestrians’
+spatial-temporal patterns. Secondly, a Bayesian fusion
+model is proposed to combine the learned spatio-temporal
+patterns with visual features to achieve a significantly improved
+classifier. 
+
+    ![reid](Pictures/Selection_216.png)
+
+- Finally, we propose a learning-to-rank
+based mutual promotion procedure to incrementally optimize
+the classifiers based on the unlabeled data in the target
+domain. Comprehensive experiments based on multiple real
+surveillance datasets are conducted, and the results show
+that our algorithm gains significant improvement compared
+with the state-of-art cross-dataset unsupervised person reidentification
+algorithms.
+
+>@inproceedings{lv2018unsupervised,
+  title={Unsupervised Cross-dataset Person Re-identification by Transfer Learning of Spatial-Temporal Patterns},
+  author={Lv, Jianming and Chen, Weihang and Li, Qing and Yang, Can},
+  booktitle={Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition},
+  pages={7948--7956},
+  year={2018}
+}
+
+## Multi-shot Pedestrian Re-identification via Sequential Decision Making
+1. CVPR 2018 Poster
+2. Jianfu Zhang, Shanghai Jiaotong University; Naiyan Wang, tusimple; Liqing Zhang, Shanghai Jiaotong University
+3. 190201(29)Zhang_Multi-Shot_Pedestrian_Re-Identification_CVPR_2018_paper.pdf
+
+- Multi-shot pedestrian re-identification problem is at the
+core of surveillance video analysis. It matches two tracks of
+pedestrians from different cameras. In contrary to existing
+works that aggregate single frames features by time series
+model such as recurrent neural network, in this paper, we
+propose an interpretable reinforcement learning based approach
+to this problem. 
+
+    ![reid](Pictures/Selection_217.png)
+
+- Particularly, we train an agent to
+verify a pair of images at each time. The agent could choose
+to output the result (same or different) or request another
+pair of images to verify (unsure). By this way, our model
+implicitly learns the difficulty of image pairs, and postpone
+the decision when the model does not accumulate enough
+evidence. Moreover, by adjusting the reward for unsure
+action, we can easily trade off between speed and accuracy.
+In three open benchmarks, our method are competitive with
+the state-of-the-art methods while only using 3% to 6% images.
+These promising results demonstrate that our method
+is favorable in both efficiency and performance.
+
+>@inproceedings{zhang2018multi,
+  title={Multi-shot pedestrian re-identification via sequential decision making},
+  author={Zhang, Jianfu and Wang, Naiyan and Zhang, Liqing},
+  booktitle={Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition},
+  pages={6781--6789},
+  year={2018}
+}
+
+## Deep Mutual Learning 
+1. CVPR 2018 Poster
+2. Ying Zhang, QMUL; Tao Xiang, Queen Mary University of London; Timothy Hospedales, University of Edinburgh; Huchuan Lu, Dalian University of Technology
+3. 190201(30)Zhang_Deep_Mutual_Learning_CVPR_2018_paper.pdf
+
+- Model distillation is an effective and widely used technique
+to transfer knowledge from a teacher to a student network.
+The typical application is to transfer from a powerful
+large network or ensemble to a small network, in order
+to meet the low-memory or fast execution requirements. 
+
+    ![reid](Pictures/Selection_218.png)
+
+- In
+this paper, we present a deep mutual learning (DML) strategy.
+Different from the one-way transfer between a static
+pre-defined teacher and a student in model distillation, with
+DML, an ensemble of students learn collaboratively and
+teach each other throughout the training process. Our experiments
+show that a variety of network architectures benefit
+from mutual learning and achieve compelling results
+on both category and instance recognition tasks. Surprisingly,
+it is revealed that no prior powerful teacher network
+is necessary – mutual learning of a collection of simple student
+networks works, and moreover outperforms distillation
+from a more powerful yet static teacher.
+
+>@inproceedings{zhang2018deep,
+  title={Deep mutual learning},
+  author={Zhang, Ying and Xiang, Tao and Hospedales, Timothy M and Lu, Huchuan},
+  booktitle={Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition},
+  pages={4320--4328},
   year={2018}
 }

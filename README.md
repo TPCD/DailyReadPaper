@@ -215,7 +215,97 @@ Here is the content of our project.
 ---
         
 - [2019-02-01](2019/02/01_Fri/Papers.md): _Reid <CVPR(2018)>_
-    
+  
+    1. Group Consistent Similarity Learning via Deep CRFs for Person Re-Identification 
+        1. CVPR 2018 oral
+
+    2. Person Transfer GAN to Bridge Domain Gap for Person Re-Identification
+        1. CVPR 2018 Spotlight
+
+    3. Disentangled person image generation
+        1. CVPR 2018 Spotlight
+        
+    4. Unsupervised Person Image Synthesis in Arbitrary Poses
+        1. CVPR 2018 Spotlight
+
+    5. Good Appearance Features for Multi-Target Multi-Camera Tracking
+        1. CVPR 2018 Spotlight
+
+    6. Diversity Regularized Spatiotemporal Attention for Video-based Person Re-identification
+        1. CVPR 2018 Poster
+
+    7. A Pose-Sensitive Embedding for Person Re-Identification with Expanded Cross Neighborhood Re-Ranking
+        1. CVPR 2018 Poster
+
+    8. Image-Image Domain Adaptation with Preserved Self-Similarity and Domain-Dissimilarity for Person Re-identification
+        1. CVPR 2018 Poster
+
+    9. Human Semantic Parsing for Person Re-identification
+        1. CVPR 2018 Poster
+
+    10. Video Person Re-identification with Competitive Snippet-similarity Aggregation and Co-attentive Snippet Embedding
+        1. CVPR 2018 Poster
+
+    11. Mask-guided Contrastive Attention Model for Person Re-Identification
+        1. CVPR 2018 Poster
+
+    12. Person Re-identification with Cascaded Pairwise Convolutions
+        1. CVPR 2018 Poster
+
+    13. Multi-Level Factorisation Net for Person Re-Identification
+        1. CVPR 2018 Poster
+
+    14. Attention-Aware Compositional Network for Person Re-identification
+        1. CVPR 2018 Poster
+
+    15. Deep Group-shuffling Random Walk for Person Re-identification
+        1. CVPR 2018 Poster
+
+    16. Transferable Joint Attribute-Identity Deep Learning for Unsupervised Person Re-Identification
+        1. CVPR 2018 Poster
+
+    17. Harmonious Attention Network for Person Re-Identification
+        1. CVPR 2018 Poster
+
+    18. Efficient and Deep Person Re-Identification using Multi-Level Similarity
+        1. CVPR 2018 Poster
+
+    19. Pose Transferrable Person Re-Identification
+        1. CVPR 2018 Poster
+
+    20. Adversarially Occluded Samples for Person Re-identification
+        1. CVPR 2018 Poster
+
+    21. Camera Style Adaptation for Person Re-identification
+        1. CVPR 2018 Poster
+
+    22. Exploit the Unknown Gradually:~ One-Shot Video-Based Person Re-Identification by Stepwise Learning
+        1. CVPR 2018 Poster
+
+    23. Dual Attention Matching Network for Context-Aware Feature Sequence based Person Re-Identification
+        1. CVPR 2018 Poster
+
+    24. Easy Identification from Better Constraints: Multi-Shot Person Re-Identification from Reference Constraints
+        1. CVPR 2018 Poster
+
+    25. Eliminating Background-bias for Robust Person Re-identification
+        1. CVPR 2018 Poster
+
+    26. End-to-End Deep Kronecker-Product Matching for Person Re-identification
+        1. CVPR 2018 Poster
+
+    27. Deep Spatial Feature Reconstruction for Partial Person Re-identification
+        1. CVPR 2018 Poster
+
+    28. Unsupervised Cross-dataset Person Re-identification by Transfer Learning of Spatio-temporal Patterns
+        1. CVPR 2018 Poster
+
+    29. Multi-shot Pedestrian Re-identification via Sequential Decision Making
+        1. CVPR 2018 Poster
+
+    30. Deep Mutual Learning 
+        1. CVPR 2018 Poster
+
     
 - [2019-02-02](2019/02/02_Sat/Papers.md): 
    

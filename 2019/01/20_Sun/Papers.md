@@ -199,6 +199,45 @@ CIFAR and ImageNet datasets.
   year={2018}
 }
 
+## Two at Once: Enhancing Learning and Generalization Capacities via IBN-Net
+1. ECCV 2018
+2. Pan, Xingang and Luo, Ping and Shi, Jianping and Tang, Xiaoou
+3. https://github.com/XingangPan/IBN-Net
+
+- Convolutional neural networks (CNNs) have achieved great
+successes in many computer vision problems. Unlike existing works that
+designed CNN architectures to improve performance on a single task
+of a single domain and not generalizable, we present IBN-Net, a novel
+convolutional architecture, which remarkably enhances a CNN’s modeling
+ability on one domain (e.g. Cityscapes) as well as its generalization
+capacity on another domain (e.g. GTA5) without finetuning. IBN-Net
+carefully integrates Instance Normalization (IN) and Batch Normalization
+(BN) as building blocks, and can be wrapped into many advanced
+deep networks to improve their performances. 
+
+    ![normalization](Pictures/Selection_219.png)
+   
+- This work has three key
+contributions. (1) By delving into IN and BN, we disclose that IN learns
+features that are invariant to appearance changes, such as colors, styles,
+and virtuality/reality, while BN is essential for preserving content related
+information. (2) IBN-Net can be applied to many advanced deep architectures,
+such as DenseNet, ResNet, ResNeXt, and SENet, and consistently
+improve their performance without increasing computational cost. 1
+(3)
+When applying the trained networks to new domains, e.g. from GTA5
+to Cityscapes, IBN-Net achieves comparable improvements as domain
+adaptation methods, even without using data from the target domain.
+With IBN-Net, we won the 1st place on the WAD 2018 Challenge Drivable
+Area track, with an mIoU of 86.18%.
+>@inproceedings{pan2018two,
+  title={Two at once: Enhancing learning and generalization capacities via ibn-net},
+  author={Pan, Xingang and Luo, Ping and Shi, Jianping and Tang, Xiaoou},
+  booktitle={Proceedings of the European Conference on Computer Vision (ECCV)},
+  pages={464--479},
+  year={2018}
+}
+
 
 In this page, we provide a list of related work which has been used and cited in the ECCV2018 oral talk.
 ## List of Related Work: 

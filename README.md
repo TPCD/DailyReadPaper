@@ -65,6 +65,9 @@ Here is the content of our project.
    
     5. Orthogonal weight normalization: Solution to optimization over multiple dependent stiefel manifolds in deep neural networks
         1. AAAI 2018
+    
+    6. Two at Once: Enhancing Learning and Generalization Capacities via IBN-Net
+        1. ECCV 2018
 
 - [2019-01-21](2019/01/21_Mon/Papers.md):  
     1. Dissimilarity Representation Learning for Generalized Zero-Shot Recognition

@@ -287,7 +287,22 @@ Here is the content of our project.
 
           
 - [2019-02-04](2019/02/04_Mon/Papers.md): _Reid <CVPR(2017)>_
-  
+    1. Learning Deep Context-Aware Features Over Body and Latent Parts for Person Re-Identification
+        1. CVPR 2017
+    2. Beyond Triplet Loss: A Deep Quadruplet Network for Person Re-Identification
+        1. CVPR 2017
+    3. Person Re-Identification in the Wild
+        1. CVPR 2017
+    4. One-Shot Metric Learning for Person Re-Identification
+        1. CVPR 2017
+    5. Joint Detection and Identification Feature Learning for Person Search
+        1. CVPR 2017
+    6. Point to Set Similarity Based Deep Feature Learning for Person Re-Identification
+        1. CVPR 2017
+    7. See the Forest for the Trees: Joint Spatial and Temporal Recurrent Neural Networks for Video-Based Person Re-Identification},
+        1. CVPR 2017
+    8. Consistent-Aware Deep Learning for Person Re-Identification in a Camera Network
+        1. CVPR 2017
 
 - [2019-02-05](2019/02/05_Tue/Papers.md): _Reid <NIPS(2018) + IJCAI(2018) + AAAI(2018)>_
     1. FD-GAN: Pose-guided Feature Distilling GAN for Robust Person Re-identification

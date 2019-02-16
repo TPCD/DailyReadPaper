@@ -3,7 +3,6 @@
 Academic Alchemy Furnace, beginning from 18th Jan 2019.
 ___
 Here is the content of our project.
-
 - [2019-01-18](2019/01/18_Fri/Papers.md):  
     1. Salient Object Detection via High-to-Low Hierarchical Context Aggregation
         1. arXiv:1812.10956 (Submitted on 28 Dec 2018)
@@ -163,8 +162,7 @@ Here is the content of our project.
     1. COSONet: Compact Second-Order Network for Video Face Recognition
         1. ACCV 2018 oral
         
----
-        
+---  
 - [2019-02-01](2019/02/01_Fri/Papers.md): _Reid <CVPR(2018)>_
     1. Group Consistent Similarity Learning via Deep CRFs for Person Re-Identification 
         1. CVPR 2018 oral
@@ -226,7 +224,6 @@ Here is the content of our project.
         1. CVPR 2018 Poster
     30. Deep Mutual Learning 
         1. CVPR 2018 Poster
-
     
 - [2019-02-02](2019/02/02_Sat/Papers.md): _Reid <ECCV(2018)>_
     1. Group Consistent Similarity Learning via Deep CRFs for Person Re-Identification 
@@ -266,7 +263,6 @@ Here is the content of our project.
     18. Beyond Part Models: Person Retrieval with Refined Part Pooling (and A Strong Convolutional Baseline)
         1. ECCV 2018 (market rank1 == 93.8)
 
-     
 - [2019-02-03](2019/02/03_Sun/Papers.md): _Reid <ICCV(2017)>_
     1. A Two Stream Siamese Convolutional Neural Network for Person Re-Identification
         1. ICCV 2017

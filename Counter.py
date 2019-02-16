@@ -20,7 +20,7 @@ def write_num(file = 'README.md'):
     with open(file, 'a', encoding='UTF-8') as f:
         num_reference = Counter(file)
         run_time = time.strftime("%Y-%m-%d-%H-%M-%S", time.localtime())
-        str1 = 'I have already read ' + str(num_reference) + 'references so far (' + run_time + ').'
+        str1 = 'I have already read ' + str(num_reference) + ' references so far (' + run_time + ').'
         f.write('\n')
         f.write(str1)
         f.write('\n')

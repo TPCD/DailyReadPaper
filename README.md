@@ -3,7 +3,7 @@
 Academic Alchemy Furnace, beginning from 18th Jan 2019.
 ___
 Here is the content of our project.
-- [2019-01-18](2019/01/18_Fri/Papers.md):  
+- [2019-01-18](2019/01/18_Fri/Papers.md):{9}
     1. Salient Object Detection via High-to-Low Hierarchical Context Aggregation
         1. arXiv:1812.10956 (Submitted on 28 Dec 2018)
     2. \[16]Deeply Supervised Salient Object Detection with Short Connections 
@@ -23,7 +23,7 @@ Here is the content of our project.
     9. \[51]Learning to Promote Saliency Detectors
         1. CVPR 2018
 
-- [2019-01-19](2019/01/19_Sat/Papers.md):  
+- [2019-01-19](2019/01/19_Sat/Papers.md):{4}
     1. Optimal Fine Grained Retrieval via Decorrelated Centralized Loss with Normalize-Scale layer
         1. AAAI 2019  
     2. Hypergraph Neural Networks
@@ -34,7 +34,7 @@ Here is the content of our project.
         1. AAAI 2017        
         2. This is a reference in \[3], namely Learning Neural Bag-of-Matrix-Summarization with Riemannian Network.
 
-- [2019-01-20](2019/01/20_Sun/Papers.md):  
+- [2019-01-20](2019/01/20_Sun/Papers.md):{6}
     1. Group normalization
         1. ECCV 2018
      2. Towards Faster Training of Global Covariance Pooling Networks by Iterative Matrix Square Root Normalization
@@ -48,7 +48,7 @@ Here is the content of our project.
     6. Two at Once: Enhancing Learning and Generalization Capacities via IBN-Net
         1. ECCV 2018
 
-- [2019-01-21](2019/01/21_Mon/Papers.md):  
+- [2019-01-21](2019/01/21_Mon/Papers.md):{7}
     1. Dissimilarity Representation Learning for Generalized Zero-Shot Recognition
         1. ACM MM 2018  
     2. A rethink about A Riemannian Network for SPD Matrix Learning
@@ -65,7 +65,7 @@ Here is the content of our project.
     7. Deep Learning on Lie Groups for Skeleton-based Action Recognition
         1. CVPR 2017 spotlight
         
-- [2019-01-22](2019/01/22_Tue/Papers.md):  
+- [2019-01-22](2019/01/22_Tue/Papers.md):{3}
     1. BAM: Convolutional Block Attention Module
         1. ECCV 2018
     2. Learning with rethinking: Recurrently improving convolutional neural networks through feedback
@@ -73,13 +73,13 @@ Here is the content of our project.
     3. Look closer to see better: Recurrent attention convolutional neural network for fine-grained image recognition
         1. CVPR 2017
         
-- [2019-01-23](2019/01/23_Wed/Papers.md): 
+- [2019-01-23](2019/01/23_Wed/Papers.md):{2}
     1. A rethink for Learning Neural Bag-of-Matrix-Summarization with Riemannian Network
     
     2. Stochastic neighbor compression
         1. ICML 2014
         
-- [2019-01-24](2019/01/24_Thu/Papers.md): 
+- [2019-01-24](2019/01/24_Thu/Papers.md):{6}
     1. Towards Optimal Fine Grained Retrieval via Decorrelated Centralized Loss with Normalize-Scale layer
         1. AAAI 2019      
     2. Person re-identification by deep joint learning of multi-loss classification
@@ -93,7 +93,7 @@ Here is the content of our project.
     6. Deep feature embedding learning for person re-identification using lifted structured loss
         1. ICASSP 2018
    
-- [2019-01-25](2019/01/25_Fri/Papers.md): 
+- [2019-01-25](2019/01/25_Fri/Papers.md):{3}
     1. Global Second-order Pooling Convolutional Networks
         1. Arxiv 2018 
     2. Is second-order information helpful for large-scale visual recognition},
@@ -101,13 +101,13 @@ Here is the content of our project.
     3. Statistically Motivated Second Order Pooling
         1. ECCV 2018
                
-- [2019-01-26](2019/01/26_Sat/Papers.md): 
+- [2019-01-26](2019/01/26_Sat/Papers.md):{2}
     1. Grad-cam: Visual explanations from deep networks via gradient-based localization
         1. ICCV 2017   
     2. PAYING MORE ATTENTION TO ATTENTION： IMPROVING THE PERFORMANCE OF CONVOLUTIONAL NEURAL NETWORKS VIA ATTENTION TRANSFER
         1. ICLR 2017
         
-- [2019-01-27](2019/01/27_Sun/Papers.md): 
+- [2019-01-27](2019/01/27_Sun/Papers.md):{7}
     1. Pedestrian Attribute Recognition: A Survey
         1. Arxiv 2019        
     2. Anomaly Detection in Road Traffic Using Visual Surveillance: A Survey
@@ -123,7 +123,7 @@ Here is the content of our project.
     7. A Comprehensive Survey on Graph Neural Networks
         1. Arxiv 2019
         
-- [2019-01-28](2019/01/28_Mon/Papers.md): 
+- [2019-01-28](2019/01/28_Mon/Papers.md):{4}
     1. Revisiting Self-Supervised Visual Representation Learning
         1. Arxiv 2019
         2. **Google Brain**        
@@ -138,17 +138,17 @@ Here is the content of our project.
         1. Arxiv 2019
         2. **Honda Research**
 
-- [2019-01-29](2019/01/29_Tue/Papers.md): 
+- [2019-01-29](2019/01/29_Tue/Papers.md):{4}
     1. SVDNet for Pedestrian Retrieval
         1. ICCV 2017
-        2. Reducing overfitting in deep networks by decorrelating representations
+    2. Reducing overfitting in deep networks by decorrelating representations
         1. ICLR 2016        
     3. All you need is beyond a good init: Exploring better solution for training extremely deep convolutional neural networks with orthonormality and modulation
         1. CVPR 2017        
     4. Learning deep architectures via generalized whitened neural networks
         1. ICML 2017
 
-- [2019-01-30](2019/01/30_Wed/Papers.md): 
+- [2019-01-30](2019/01/30_Wed/Papers.md):{4}
     1. A rethink about All you need is beyond a good init: Exploring better solution for training extremely deep convolutional neural networks with orthonormality and modulation
         1. http://www.erogol.com/need-good-init/
     2. \[30]Exact solutions to the nonlinear dynamics of learning in deep linear neural networks
@@ -158,12 +158,12 @@ Here is the content of our project.
     4. \[32]Understanding and improving convolutional neural networks via concatenated rectified linear units
         1. ICML 2016
 
-- [2019-01-31](2019/01/31_Thu/Papers.md): 
+- [2019-01-31](2019/01/31_Thu/Papers.md):{1}
     1. COSONet: Compact Second-Order Network for Video Face Recognition
         1. ACCV 2018 oral
         
 ---  
-- [2019-02-01](2019/02/01_Fri/Papers.md): _Reid <CVPR(2018)>_
+- [2019-02-01](2019/02/01_Fri/Papers.md):{30}_Reid <CVPR(2018)>_
     1. Group Consistent Similarity Learning via Deep CRFs for Person Re-Identification 
         1. CVPR 2018 oral
     2. Person Transfer GAN to Bridge Domain Gap for Person Re-Identification
@@ -225,7 +225,7 @@ Here is the content of our project.
     30. Deep Mutual Learning 
         1. CVPR 2018 Poster
     
-- [2019-02-02](2019/02/02_Sat/Papers.md): _Reid <ECCV(2018)>_
+- [2019-02-02](2019/02/02_Sat/Papers.md):{18}_Reid <ECCV(2018)>_
     1. Group Consistent Similarity Learning via Deep CRFs for Person Re-Identification 
         1. ECCV 2018
     2. RCAA: Relational Context-Aware Agents for Person Search
@@ -263,7 +263,7 @@ Here is the content of our project.
     18. Beyond Part Models: Person Retrieval with Refined Part Pooling (and A Strong Convolutional Baseline)
         1. ECCV 2018 (market rank1 == 93.8)
 
-- [2019-02-03](2019/02/03_Sun/Papers.md): _Reid <ICCV(2017)>_
+- [2019-02-03](2019/02/03_Sun/Papers.md):{8}_Reid <ICCV(2017)>_
     1. A Two Stream Siamese Convolutional Neural Network for Person Re-Identification
         1. ICCV 2017
     2. Learning View-Invariant Features for Person Identification in Temporally Synchronized Videos Taken by Wearable Cameras
@@ -282,7 +282,7 @@ Here is the content of our project.
         1. ICCV 2017
 
           
-- [2019-02-04](2019/02/04_Mon/Papers.md): _Reid <CVPR(2017)>_
+- [2019-02-04](2019/02/04_Mon/Papers.md):{8}_Reid <CVPR(2017)>_
     1. Learning Deep Context-Aware Features Over Body and Latent Parts for Person Re-Identification
         1. CVPR 2017
     2. Beyond Triplet Loss: A Deep Quadruplet Network for Person Re-Identification
@@ -300,7 +300,7 @@ Here is the content of our project.
     8. Consistent-Aware Deep Learning for Person Re-Identification in a Camera Network
         1. CVPR 2017
 
-- [2019-02-05](2019/02/05_Tue/Papers.md): _Reid <NIPS(2018) + IJCAI(2018) + AAAI(2018)>_
+- [2019-02-05](2019/02/05_Tue/Papers.md):{15}_Reid <NIPS(2018) + IJCAI(2018) + AAAI(2018)>_
     1. FD-GAN: Pose-guided Feature Distilling GAN for Robust Person Re-identification
         1. NIPS 2018
     2. Cascaded SR-GAN for Scale-Adaptive Low Resolution Person Re-identification
@@ -332,7 +332,7 @@ Here is the content of our project.
     15. Video-based Person Re-identification via Self Paced Weighting
         1. AAAI 2018
         
-- [2019-02-06](2019/02/06_Wed/Papers.md): _Reid <ACM MM(2018)>_
+- [2019-02-06](2019/02/06_Wed/Papers.md):{8}_Reid <ACM MM(2018)>_
     1. A Unified Generative Adversarial Framework for Image Generation and Person Re-Identification
         1. ACM MM 2018        
     2. CA3Net: Contextual-Attentional Attribute-Appearance Network for Re-Identification

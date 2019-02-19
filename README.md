@@ -338,7 +338,7 @@ Here is the content of our project.
     2. CA3Net: Contextual-Attentional Attribute-Appearance Network for Re-Identification
         1. ACM MM 2018        
     3. Learning Discriminative Features with Multiple Granularities for Re-Identification
-        1. ACM MM 2018    Market 95.7    
+        1. ACM MM 2018  (Market 95.7)  
     4. Local Convolutional Neural Networks for Person Re-Identification
         1. ACM MM 2018        
     5. Online Inter-Camera Trajectory Association Exploiting Person Re-Identification and Camera Topology

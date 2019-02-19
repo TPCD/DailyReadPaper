@@ -78,7 +78,7 @@ bridge the domain gap. Comprehensive experiments show
 that the domain gap could be substantially narrowed-down
 by the PTGAN.
 
->@@inproceedings{wei2018person,
+>@inproceedings{wei2018person,
   title={Person transfer gan to bridge domain gap for person re-identification},
   author={Wei, Longhui and Zhang, Shiliang and Gao, Wen and Tian, Qi},
   booktitle={Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition},

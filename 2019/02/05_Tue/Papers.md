@@ -37,7 +37,8 @@ robust **feature distilling** capability of the proposed FD-GAN.
   author={Ge, Yixiao and Li, Zhuowan and Zhao, Haiyu and Yin, Guojun and Yi, Shuai and Wang, Xiaogang and others},
   booktitle={Advances in Neural Information Processing Systems},
   pages={1230--1241},
-  year={2018}}
+  year={2018}
+}
 
 ## Cascaded SR-GAN for Scale-Adaptive Low Resolution Person Re-identification
 1. IJCAI 2018
@@ -75,7 +76,8 @@ dataset demonstrate the advantages of our method over related state-of-the-art m
   author={Wang, Zheng and Ye, Mang and Yang, Fan and Bai, Xiang and Shin'ichi Satoh},
   booktitle={IJCAI},
   pages={3891--3897},
-  year={2018}}
+  year={2018}
+}
 
 ## Visible Thermal Person Re-Identification via Dual-Constrained Top-Ranking
 1. IJCAI 2018
@@ -117,7 +119,8 @@ to handle large intra-class variations.
   author={Ye, Mang and Wang, Zheng and Lan, Xiangyuan and Yuen, Pong C},
   booktitle={IJCAI},
   pages={1092--1099},
-  year={2018}}
+  year={2018}
+}
 
 ## Deep View-Aware Metric Learning for Person Re-Identification
 1. IJCAI 2018
@@ -183,7 +186,8 @@ simultaneously learning the representations of both full body and parts.
   author={Yuan, Kun and Zhang, Qian and Huang, Chang and Xiang, Shiming and Pan, Chunhong and Robotics, Horizon},
   booktitle={IJCAI},
   pages={1121--1127},
-  year={2018}}
+  year={2018}
+}
 
 ## Cross-Modality Person Re-Identification with Generative Adversarial Training
 1. IJCAI 2018

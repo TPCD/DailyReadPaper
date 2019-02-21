@@ -384,5 +384,16 @@ Here is the content of our project.
     16. Hierarchical bilinear pooling for fine-grained visual recognition
         1. ECCV 2018
     
-- [2019-02-08](2019/02/08_Fri/Papers.md)
+- [2019-02-08](2019/02/08_Fri/Papers.md):{5} _Normalization_
+    1. Decorrelated batch normalization
+        1. CVPR 2018
+    2. Projection based weight normalization for deep neural networks
+        1. arXiv preprint arXiv:1710.02338
+    3. Orthogonal weight normalization: Solution to optimization over multiple dependent stiefel manifolds in deep neural networks
+        1. AAAI 2018
+    4. Block-normalized gradient method: An empirical study for training deep neural network
+        1. Arxiv 2017
+    5. Centered Weight Normalization in Accelerating Training of Deep Neural Networks
+        1. ICCV 2017
+
 I have already read 165 references so far (2019-02-21-17-33-02).

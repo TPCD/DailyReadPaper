@@ -350,5 +350,39 @@ Here is the content of our project.
     8. Video-based Person Re-identification via Self-Paced Learning and Deep Reinforcement Learning Framework
         1. ACM MM 2018
         
+- [2019-02-07](2019/02/07_Thu/Papers.md):{16}_Bilinear_
+    1. Bilinear convolutional neural networks for fine-grained visual recognition
+        1. TPAMI 2018
+    2. Improved bilinear pooling with cnns
+        1. Arxiv 2017
+    3. Learning Discriminative Features with Multiple Granularities for Re-Identification
+        1. ECCV 2018 
+    4. Towards faster training of global covariance pooling networks by iterative matrix square root normalization
+        1. CVPR 2018
+    5. Is second-order information helpful for large-scale visual recognition?
+        1. ICCV 2017
+    6. Grassmann pooling as compact homogeneous bilinear pooling for fine-grained visual classification
+        1. ECCV 2018
+    7. G2DeNet: Global Gaussian distribution embedding network and its application to visual recognition},
+        1. CVPR 2017
+    8. Monet: Moments embedding network
+        1. CVPR 2018
+    9. Attentional pooling for action recognition
+        1. NIPS 2017
+    10. Kernel pooling for convolutional neural networks
+        1. CVPR 2017
+    11. Compact generalized non-local network
+        1. NIPS 2018
+    12. Low-rank bilinear pooling for fine-grained classification
+        1. CVPR 2017
+    13. Factorized bilinear models for image recognition
+        1. ICCV 2017
+    14. Higher-order integration of hierarchical convolutional activations for fine-grained visual categorization},
+        1. ICCV 2017
+    15. Statistically-motivated second-order pooling},
+        1. ECCV 2018
+    16. Hierarchical bilinear pooling for fine-grained visual recognition
+        1. ECCV 2018
+    
         
-I have already read 149 references so far (2019-02-17-00-50-42).
+I have already read 165 references so far (2019-02-21-17-33-02).

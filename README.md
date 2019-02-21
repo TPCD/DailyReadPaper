@@ -384,5 +384,5 @@ Here is the content of our project.
     16. Hierarchical bilinear pooling for fine-grained visual recognition
         1. ECCV 2018
     
-        
+- [2019-02-08](2019/02/08_Fri/Papers.md)
 I have already read 165 references so far (2019-02-21-17-33-02).

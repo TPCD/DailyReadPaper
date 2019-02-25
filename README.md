@@ -398,4 +398,4 @@ Here is the content of our project.
     5. Centered Weight Normalization in Accelerating Training of Deep Neural Networks
         1. ICCV 2017
 
-I have already read 165 references so far (2019-02-21-17-33-02).
+I have already read 171 references so far (2019-02-25-17-15-47).

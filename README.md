@@ -350,7 +350,7 @@ Here is the content of our project.
     8. Video-based Person Re-identification via Self-Paced Learning and Deep Reinforcement Learning Framework
         1. ACM MM 2018
         
-- [2019-02-07](2019/02/07_Thu/Papers.md):{16}_Bilinear_
+- [2019-02-07](2019/02/07_Thu/Papers.md):{17}_Bilinear_
     1. Bilinear convolutional neural networks for fine-grained visual recognition
         1. TPAMI 2018
     2. Improved bilinear pooling with cnns
@@ -383,6 +383,8 @@ Here is the content of our project.
         1. ECCV 2018
     16. Hierarchical bilinear pooling for fine-grained visual recognition
         1. ECCV 2018
+    17. Second-order Convolutional Neural Networks
+        1. Arxiv 2017
     
 - [2019-02-08](2019/02/08_Fri/Papers.md):{5} _Normalization_
     1. Decorrelated batch normalization

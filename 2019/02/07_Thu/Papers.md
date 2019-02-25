@@ -678,3 +678,47 @@ widely used fine-grained recognition datasets.
   pages={574--589},
   year={2018}
 }
+
+
+## Second-order Convolutional Neural Networks
+1. Arxiv 2017
+2. Kaicheng Yu and Mathieu Salzmann
+3. 190207(17)Second-order Convolutional Neural Networks.pdf
+
+- Convolutional Neural Networks (CNNs) have been successfully
+applied to many computer vision tasks, such as
+image classification.
+
+    ![reid](Pictures/Selection_307.png)
+
+- By performing linear combinations
+and element-wise nonlinear operations, these networks can
+be thought of as extracting solely first-order information
+from an input image. In the past, however, second-order
+statistics computed from handcrafted features, e.g., covariances,
+have proven highly effective in diverse recognition
+tasks.
+
+    ![reid](Pictures/Selection_308.png)
+
+- In this paper, we introduce a novel class of CNNs
+that exploit second-order statistics. To this end, we design
+a series of new layers that (i) extract a covariance
+matrix from convolutional activations, (ii) compute a parametric,
+second-order transformation of a matrix, and (iii)
+perform a parametric vectorization of a matrix. These operations
+can be assembled to form a Covariance Descriptor
+Unit (CDU), which replaces the fully-connected layers
+of standard CNNs.
+
+    ![reid](Pictures/Selection_309.png)
+
+- Our experiments demonstrate the benefits
+of our new architecture, which outperform the first-order
+CNNs, while relying on up to 90% fewer parameters.
+>@misc{1703.06817,
+Author = {Kaicheng Yu and Mathieu Salzmann},
+Title = {Second-order Convolutional Neural Networks},
+Year = {2017},
+Eprint = {arXiv:1703.06817},
+}

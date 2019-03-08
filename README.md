@@ -402,7 +402,7 @@ Here is the content of our project.
     7. Learning a smooth kernel regularizer for convolutional neural networks
         1. Arxiv 2017
 
-- [2019-02-09](2019/02/09_Sat/Papers.md):{5} _AttributeRe-ID_
+- [2019-02-09](2019/02/09_Sat/Papers.md):{10} _AttributeRe-ID_
     1. Improving person re-identification by attribute and identity learning
         1. ICCV 2017
     2. Multi-Task Learning with Low Rank Attribute Embedding for Multi-Camera Person Re-Identification
@@ -419,6 +419,11 @@ Here is the content of our project.
         1. Pattern Recognition 2018
     8. Enhancing Person Retrieval with Joint Person Detection, Attribute Learning, and Identification
         1. PCM 2018
+    9. Deep attributes driven multi-camera person re-identification
+        1. ECCV 2016
+    10. Person re-identification using cnn features learned from combination of attributes
+        1. ICPR 2016
 
 
-I have already read 176 references so far (2019-03-08-15-36-40).
+
+I have already read 181 references so far (2019-03-08-15-58-17).

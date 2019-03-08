@@ -334,3 +334,81 @@ approach.
   year={2018},
   organization={Springer}
 }
+
+## Deep attributes driven multi-camera person re-identification
+1. ECCV 2016
+2. Su, Chi and Zhang, Shiliang and Xing, Junliang and Gao, Wen and Tian, Qi
+3. 190209(9)ECCV_2016_Deep Attributes Driven Multi-Camera Person.pdf
+- The visual appearance of a person is easily affected by many
+factors like pose variations, viewpoint changes and camera parameter
+differences. This makes person Re-Identification (ReID) among multiple
+cameras a very challenging task. This work is motivated to learn
+mid-level human attributes which are robust to such visual appearance
+variations.
+
+    ![reid](Pictures/Selection_331.png)
+
+- And we propose a semi-supervised attribute learning framework
+which progressively boosts the accuracy of attributes only using a
+limited number of labeled data. Specifically, this framework involves a
+three-stage training. A deep Convolutional Neural Network (dCNN) is
+first trained on an independent dataset labeled with attributes. Then it is
+fine-tuned on another dataset only labeled with person IDs using our defined
+triplet loss. Finally, the updated dCNN predicts attribute labels for
+the target dataset, which is combined with the independent dataset for
+the final round of fine-tuning. The predicted attributes, namely deep attributes
+exhibit superior generalization ability across different datasets.
+By directly using the deep attributes with simple Cosine distance, we
+have obtained surprisingly good accuracy on four person ReID datasets.
+Experiments also show that a simple distance metric learning modular
+further boosts our method, making it significantly outperform many recent
+works.
+
+>@inproceedings{su2016deep,
+  title={Deep attributes driven multi-camera person re-identification},
+  author={Su, Chi and Zhang, Shiliang and Xing, Junliang and Gao, Wen and Tian, Qi},
+  booktitle={European conference on computer vision},
+  pages={475--491},
+  year={2016},
+  organization={Springer}
+}
+
+## Person re-identification using cnn features learned from combination of attributes
+1. ICPR 2016
+2. Matsukawa, Tetsu and Suzuki, Einoshi
+3. 190209(10)icpr2016_Person Re-Identification Using CNN Features.pdf
+
+- Abstract—This paper presents fine-tuned CNN features for
+person re-identification. Recently, features extracted from top
+layers of pre-trained Convolutional Neural Network (CNN) on
+a large annotated dataset, e.g., ImageNet, have been proven
+to be strong off-the-shelf descriptors for various recognition
+tasks. However, large disparity among the pre-trained task, i.e.,
+ImageNet classification, and the target task, i.e., person image
+matching, limits performances of the CNN features for person
+re-identification.
+
+    ![reid](Pictures/Selection_332.png)
+
+- In this paper, we improve the CNN features
+by conducting a fine-tuning on a pedestrian attribute dataset. In
+addition to the classification loss for multiple pedestrian attribute
+labels, we propose new labels by combining different attribute
+labels and use them for an additional classification loss function.
+The combination attribute loss forces CNN to distinguish more
+person specific information, yielding more discriminative features.
+After extracting features from the learned CNN, we apply
+conventional metric learning on a target re-identification dataset
+for further increasing discriminative power. Experimental results
+on four challenging person re-identification datasets (VIPeR,
+CUHK, PRID450S and GRID) demonstrate the effectiveness of
+the proposed features.
+
+>@inproceedings{matsukawa2016person,
+  title={Person re-identification using cnn features learned from combination of attributes},
+  author={Matsukawa, Tetsu and Suzuki, Einoshin},
+  booktitle={2016 23rd International Conference on Pattern Recognition (ICPR)},
+  pages={2428--2433},
+  year={2016},
+  organization={IEEE}
+}

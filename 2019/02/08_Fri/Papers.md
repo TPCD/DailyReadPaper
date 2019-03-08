@@ -162,3 +162,62 @@ datasets.
   booktitle = {IEEE ICCV},
   year      = {2017},
 }
+
+
+## Weight Normalization: A Simple Reparameterization to Accelerate Training of Deep Neural Networks
+1. NIPS 2016
+2. Salimans, Tim and Kingma, Durk P
+3. 190208(6)6114-weight-normalization-a-simple-reparameterization-to-accelerate-training-of-deep-neural-networks.pdf
+- We present weight normalization: a reparameterization of the weight vectors
+in a neural network that decouples the length of those weight vectors from their
+direction. By reparameterizing the weights in this way we improve the conditioning
+of the optimization problem and we speed up convergence of stochastic gradient
+descent. Our reparameterization is inspired by batch normalization but does not
+introduce any dependencies between the examples in a minibatch. This means
+that our method can also be applied successfully to recurrent models such as
+LSTMs and to noise-sensitive applications such as deep reinforcement learning
+or generative models, for which batch normalization is less well suited. Although
+our method is much simpler, it still provides much of the speed-up of full batch
+normalization. In addition, the computational overhead of our method is lower,
+permitting more optimization steps to be taken in the same amount of time. We
+demonstrate the usefulness of our method on applications in supervised image
+recognition, generative modelling, and deep reinforcement learning.
+>@inproceedings{salimans2016weight,
+  title={Weight normalization: A simple reparameterization to accelerate training of deep neural networks},
+  author={Salimans, Tim and Kingma, Durk P},
+  booktitle={Advances in Neural Information Processing Systems},
+  pages={901--909},
+  year={2016}
+}
+
+## Learning a smooth kernel regularizer for convolutional neural networks
+1. Arxiv 5th March 2019
+2. Reuben Feinman (reuben.feinman@nyu.edu) Center for Neural Science New York University
+3. 190208(7)Learning a smooth kernel regularizer for convolutional neural networks.pdf
+
+- Modern deep neural networks require a tremendous amount
+of data to train, often needing hundreds or thousands of labeled
+examples to learn an effective representation. For these
+networks to work with less data, more structure must be built
+into their architectures or learned from previous experience.
+The learned weights of convolutional neural networks (CNNs)
+trained on large datasets for object recognition contain a substantial
+amount of structure. These representations have parallels
+to simple cells in the primary visual cortex, where receptive
+fields are smooth and contain many regularities. Incorporating
+smoothness constraints over the kernel weights
+of modern CNN architectures is a promising way to improve
+their sample complexity. We propose a smooth kernel regularizer
+that encourages spatial correlations in convolution kernel
+weights. The correlation parameters of this regularizer are
+learned from previous experience, yielding a method with a
+hierarchical Bayesian interpretation. We show that our correlated
+regularizer can help constrain models for visual recognition,
+improving over an L2 regularization baseline.
+
+>@misc{1903.01882,
+Author = {Reuben Feinman and Brenden M. Lake},
+Title = {Learning a smooth kernel regularizer for convolutional neural networks},
+Year = {2019},
+Eprint = {arXiv:1903.01882},
+}

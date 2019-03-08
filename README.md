@@ -396,6 +396,10 @@ Here is the content of our project.
     4. Block-normalized gradient method: An empirical study for training deep neural network
         1. Arxiv 2017
     5. Centered Weight Normalization in Accelerating Training of Deep Neural Networks
-        1. ICCV 2017
+        1. ICCV 2017 
+    6. Weight Normalization: A Simple Reparameterization to Accelerate Training of Deep Neural Networks
+        1. NIPS 2016
+    7. Learning a smooth kernel regularizer for convolutional neural networks
+        1. Arxiv 2017
 
 I have already read 171 references so far (2019-02-25-17-15-47).

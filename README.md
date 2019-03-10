@@ -1,8 +1,14 @@
 # DailyReadPaper
 
 Academic Alchemy Furnace, beginning from 18th Jan 2019.
+
+**2019** : Nan Pu's reading paper. Major: Computer Vision and Deep Learning.
+
+**lczhang-MIPA**: Lichun Zhang's reading paper. Major: Medical Image Processing and Analysis, Machine Learning.
+
 ___
 Here is the content of our project.
+
 - [2019-01-18](2019/01/18_Fri/Papers.md):{9}
     1. Salient Object Detection via High-to-Low Hierarchical Context Aggregation
         1. arXiv:1812.10956 (Submitted on 28 Dec 2018)
@@ -64,7 +70,7 @@ Here is the content of our project.
         1. AAAI 2018        
     7. Deep Learning on Lie Groups for Skeleton-based Action Recognition
         1. CVPR 2017 spotlight
-        
+    
 - [2019-01-22](2019/01/22_Tue/Papers.md):{3}
     1. BAM: Convolutional Block Attention Module
         1. ECCV 2018
@@ -72,13 +78,13 @@ Here is the content of our project.
         1. PR 2018        
     3. Look closer to see better: Recurrent attention convolutional neural network for fine-grained image recognition
         1. CVPR 2017
-        
+    
 - [2019-01-23](2019/01/23_Wed/Papers.md):{2}
     1. A rethink for Learning Neural Bag-of-Matrix-Summarization with Riemannian Network
     
     2. Stochastic neighbor compression
         1. ICML 2014
-        
+    
 - [2019-01-24](2019/01/24_Thu/Papers.md):{6}
     1. Towards Optimal Fine Grained Retrieval via Decorrelated Centralized Loss with Normalize-Scale layer
         1. AAAI 2019      
@@ -100,13 +106,13 @@ Here is the content of our project.
         1. ICCV 2017  
     3. Statistically Motivated Second Order Pooling
         1. ECCV 2018
-               
+    
 - [2019-01-26](2019/01/26_Sat/Papers.md):{2}
     1. Grad-cam: Visual explanations from deep networks via gradient-based localization
         1. ICCV 2017   
     2. PAYING MORE ATTENTION TO ATTENTION： IMPROVING THE PERFORMANCE OF CONVOLUTIONAL NEURAL NETWORKS VIA ATTENTION TRANSFER
         1. ICLR 2017
-        
+    
 - [2019-01-27](2019/01/27_Sun/Papers.md):{7}
     1. Pedestrian Attribute Recognition: A Survey
         1. Arxiv 2019        
@@ -122,7 +128,7 @@ Here is the content of our project.
         1. Arxiv 2019        
     7. A Comprehensive Survey on Graph Neural Networks
         1. Arxiv 2019
-        
+    
 - [2019-01-28](2019/01/28_Mon/Papers.md):{4}
     1. Revisiting Self-Supervised Visual Representation Learning
         1. Arxiv 2019
@@ -162,7 +168,7 @@ Here is the content of our project.
     1. COSONet: Compact Second-Order Network for Video Face Recognition
         1. ACCV 2018 oral
         
----  
+---
 - [2019-02-01](2019/02/01_Fri/Papers.md):{30}_Reid <CVPR(2018)>_
     1. Group Consistent Similarity Learning via Deep CRFs for Person Re-Identification 
         1. CVPR 2018 oral
@@ -281,7 +287,6 @@ Here is the content of our project.
     8. Multi-Scale Deep Learning Architectures for Person Re-Identification
         1. ICCV 2017
 
-          
 - [2019-02-04](2019/02/04_Mon/Papers.md):{8}_Reid <CVPR(2017)>_
     1. Learning Deep Context-Aware Features Over Body and Latent Parts for Person Re-Identification
         1. CVPR 2017
@@ -331,7 +336,7 @@ Here is the content of our project.
         1. AAAI 2018  
     15. Video-based Person Re-identification via Self Paced Weighting
         1. AAAI 2018
-        
+    
 - [2019-02-06](2019/02/06_Wed/Papers.md):{8}_Reid <ACM MM(2018)>_
     1. A Unified Generative Adversarial Framework for Image Generation and Person Re-Identification
         1. ACM MM 2018        
@@ -349,7 +354,7 @@ Here is the content of our project.
         1. ACM MM 2018        
     8. Video-based Person Re-identification via Self-Paced Learning and Deep Reinforcement Learning Framework
         1. ACM MM 2018
-        
+    
 - [2019-02-07](2019/02/07_Thu/Papers.md):{17}_Bilinear_
     1. Bilinear convolutional neural networks for fine-grained visual recognition
         1. TPAMI 2018

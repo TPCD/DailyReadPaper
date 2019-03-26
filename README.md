@@ -325,7 +325,7 @@ Here is the content of our project.
         1. AAAI 2018  
     12. Region-based Quality Estimation Network for Large-scale Person Re-identification
         1. AAAI 2018   
-    13. emi-supervised Bayesian Attribute Learning for Person Re-identification
+    13. semi-supervised Bayesian Attribute Learning for Person Re-identification
         1. AAAI 2018 
     14. STemporal-Enhanced Convolutional Network for Person Re-identification
         1. AAAI 2018  
@@ -425,5 +425,26 @@ Here is the content of our project.
         1. ICPR 2016
 
 
+- [2019-02-10](2019/02/10_Sun/Papers.md):{4} _AAAI2019-ID_
+    1. A Bottom-Up Clustering Approach to Unsupervised Person Re-identification
+        1. AAAI 2019
+    2. Backbone Can Not be Trained at Once: Rolling Back to Pre-trained Network for Person Re-Identification
+        1. AAAI 2019
+    3. SphereReID: Deep Hypersphere Manifold Embedding for Person Re-Identification
+        1. AAAI 2019
+    4. Learning Incremental Triplet Margin for Person Re-identification
+        1. AAAI 2019
 
-I have already read 181 references so far (2019-03-08-15-58-17).
+
+
+- [2019-02-11](2019/02/11_Mon/Papers.md):{4} _Loss_
+    1. SphereReID: Deep Hypersphere Manifold Embedding for Person Re-Identification
+        1. AAAI 2019
+    2. Cosface: Large margin cosine loss for deep face recognition
+        1. CVPR 2018
+    3. In Defense of the Triplet Loss for Visual Recognition
+        1. Arxiv 2019
+    4. Support Vector Guided Softmax Loss for Face Recognition
+        1. Arxiv 2019
+
+I have already read 189 references so far (2019-03-26-11-36-13).

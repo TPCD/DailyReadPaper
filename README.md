@@ -447,4 +447,29 @@ Here is the content of our project.
     4. Support Vector Guided Softmax Loss for Face Recognition
         1. Arxiv 2019
 
-I have already read 189 references so far (2019-03-26-11-36-13).
+- [2019-04-11](2019/04/11_Mon/Papers.md):{4} _Loss_
+
+
+
+
+- [2019-04-25](2019/04/25_Thu/Papers.md):{10} _CVPR2019-Reid_
+    1. Joint Discriminative and Generative Learning for Person Re-identification
+        1. CVPR 2019 Oral
+    2. Unsupervised Person Re-identification by Soft Multilabel Learning
+        1. CVPR 2019 Oral
+    3. Learning Context Graph for Person Search
+        1. CVPR 2019 Oral
+    4. Progressive Pose Attention Transfer for Person Image Generation
+        1. CVPR 2019 Oral
+    5. Patch-based Discriminative Feature Learning for Unsupervised Person Re-identification
+        1. CVPR 2019 Spotlint
+    6. Generalizable Person Re-identification by Domain-Invariant Mapping Network
+        1. CVPR 2019 
+    7. Weakly Supervised Person Re-Identification
+        1. CVPR 2019
+    8. Invariance Matters: Exemplar Memory for Domain Adaptive Person Re-identification
+        1. cvpr 2019
+    9. Densely Semantically Aligned Person Re-Identification
+        1. CVPR 2019
+    10. CapProNet: Deep Feature Learning via Orthogonal Projections onto Capsule Subspaces
+        1. NIPS 2018

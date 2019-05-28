@@ -447,10 +447,6 @@ Here is the content of our project.
     4. Support Vector Guided Softmax Loss for Face Recognition
         1. Arxiv 2019
 
-- [2019-04-11](2019/04/11_Mon/Papers.md):{4} _Loss_
-
-
-
 
 - [2019-04-25](2019/04/25_Thu/Papers.md):{10} _CVPR2019-Reid_
     1. Joint Discriminative and Generative Learning for Person Re-identification
@@ -473,3 +469,7 @@ Here is the content of our project.
         1. CVPR 2019
     10. CapProNet: Deep Feature Learning via Orthogonal Projections onto Capsule Subspaces
         1. NIPS 2018
+        
+- [2019-05-28](2019/05/28_Tue/Papers.md):{10} _Graph Convolutional Neural Network_
+
+I have already read 209 references so far (2019-05-28-16-43-05).

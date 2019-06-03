@@ -471,5 +471,29 @@ Here is the content of our project.
         1. NIPS 2018
         
 - [2019-05-28](2019/05/28_Tue/Papers.md):{10} _Graph Convolutional Neural Network_
+    1. Deep Learning on Graphs: A Survey
+        1. Arxiv 2019
+    
+    2. Geometric deep learning: going beyond euclidean data},
+        1. IEEE Signal Processing Magazine 2017
+    
+    3. Relational inductive biases, deep learning, and graph networks
+        1. Arxiv 2019
+    
+    4. Attention models in graphs: A survey
+        1. Arxiv 2019
+    
+    5. Graph embedding and extensions: A general framework for dimensionality reduction
+        1. TPAMI 2007
+    
+    6. Representation learning on graphs: Methods and applications
+        1. CVPR 2019 
+    
+    7. A survey on network embedding
+        1. TKDE 2018
+        
+    8. Relational inductive biases, deep learning, and graph networks
+        1. Arxiv 2018
+
 
 I have already read 209 references so far (2019-05-28-16-43-05).

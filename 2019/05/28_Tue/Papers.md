@@ -234,130 +234,39 @@ effective system and point out some potential future directions.
 }
 
 
-## Invariance Matters: Exemplar Memory for Domain Adaptive Person Re-identification
-1. CVPR 2019
-2. Zhun Zhong1,2, Liang Zheng3, Zhiming Luo5, Shaozi Li1∗, Yi Yang2,4
-3. 190425(8)Invariance Matters: Exemplar Memory for Domain Adaptive.pdf
+## Relational inductive biases, deep learning, and graph networks
+1. Arxiv 2018
+2. Battaglia, Peter W and Hamrick, Jessica B and Bapst, Victor and Sanchez-Gonzalez, Alvaro and Zambaldi, Vinicius and Malinowski, Mateusz and Tacchetti, Andrea and Raposo, David and Santoro, Adam and Faulkner, Ryan and others
+3. 190528(8)RelationalInductiveBiasesDeepLearningAndGraphNetworks.pdf
 
-- This paper considers the domain adaptive person reidentification
-(re-ID) problem: learning a re-ID model from
-a labeled source domain and an unlabeled target domain.
-Conventional methods are mainly to reduce feature distribution
-gap between the source and target domains. However,
-these studies largely neglect the intra-domain variations
-in the target domain, which contain critical factors
-influencing the testing performance on the target domain.
-In this work, we comprehensively investigate into
-the intra-domain variations of the target domain and propose
-to generalize the re-ID model w.r.t three types of the
-underlying invariance, i.e., exemplar-invariance, camerainvariance
-and neighborhood-invariance.
+- Artificial intelligence (AI) has undergone a renaissance recently, making major progress in
+key domains such as vision, language, control, and decision-making. This has been due, in
+part, to cheap data and cheap compute resources, which have fit the natural strengths of deep
+learning. However, many defining characteristics of human intelligence, which developed under
+much different pressures, remain out of reach for current approaches. In particular, generalizing
+beyond one’s experiences—a hallmark of human intelligence from infancy—remains a formidable
+challenge for modern AI.
 
-    ![reid](Pictures/Selection_374.png)
-
-- To achieve this
-goal, an exemplar memory is introduced to store features
-of the target domain and accommodate the three invariance
-properties. The memory allows us to enforce the invariance
-constraints over global training batch without significantly
-increasing computation cost.
-
-    ![reid](Pictures/Selection_375.png)
-
-- Experiment demonstrates
-that the three invariance properties and the proposed
-memory are indispensable towards an effective domain
-adaptation system. Results on three re-ID domains
-show that our domain adaptation accuracy outperforms the
-state of the art by a large margin. Code is available at:
-https://github.com/zhunzhong07/ECN
-
->@inproceedings{zhong2019invariance,
-  title={Invariance Matters: Exemplar Memory for Domain Adaptive Person Re-identiﬁcation},
-  author={Zhong, Zhun and Zheng, Liang and Luo, Zhiming and Li, Shaozi and Yang, Yi},
-  booktitle={Proceedings of IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
-  year={2019},
-}
-
-## Densely Semantically Aligned Person Re-Identification
-1. CVPR 2019
-2. Zhizheng Zhang1∗ Cuiling Lan2† Wenjun Zeng2 Zhibo Chen1†
-3. 190425(9)Densely Semantically Aligned Person Re-Identification.pdf
-
-- We propose a densely semantically aligned person reidentification
-framework. It fundamentally addresses the
-body misalignment problem caused by pose/viewpoint variations,
-imperfect person detection, occlusion, etc. By leveraging
-the estimation of the dense semantics of a person image,
-we construct a set of densely semantically aligned part
-images (DSAP-images), where the same spatial positions
-have the same semantics across different images. We design
-a two-stream network that consists of a main full image
-stream (MF-Stream) and a densely semantically-aligned
-guiding stream (DSAG-Stream).
-
-    ![reid](Pictures/Selection_376.png)
-
-- The DSAG-Stream, with
-the DSAP-images as input, acts as a regulator to guide
-the MF-Stream to learn densely semantically aligned features
-from the original image. In the inference, the DSAGStream
-is discarded and only the MF-Stream is needed,
-which makes the inference system computationally efficient
-and robust.
-
-    ![reid](Pictures/Selection_377.png)
-
-- To the best of our knowledge, we are the first
-to make use of fine grained semantics to address the misalignment
-problems for re-ID. Our method achieves rank-1
-accuracy of 78.9% (new protocol) on the CUHK03 dataset,
-90.4% on the CUHK01 dataset, and 95.7% on the Market1501
-dataset, outperforming state-of-the-art methods.
-
->@article{zhang2019densely,
-  title={Densely Semantically Aligned Person Re-Identification},
-  author={Zhang, Zhizheng and Lan, Cuiling and Zeng, Wenjun and Chen, Zhibo},
-  journal={arXiv preprint arXiv:1812.08967},
-  year={2019}
-}
-
-## CapProNet: Deep Feature Learning via Orthogonal Projections onto Capsule Subspaces
-1. NIPS 2018
-2. Zhang, Liheng and Edraki, Marzieh and Qi, Guo-Jun
-3. 190425(10)CapProNet.pdf
-- In this paper, we formalize the idea behind capsule nets of using a capsule vector
-rather than a neuron activation to predict the label of samples. To this end, we
-propose to learn a group of capsule subspaces onto which an input feature vector is
-projected. Then the lengths of resultant capsules are used to score the probability
-of belonging to different classes. We train such a Capsule Projection Network
-(CapProNet) by learning an orthogonal projection matrix for each capsule subspace,
-and show that each capsule subspace is updated until it contains input feature
-vectors corresponding to the associated class.
-
-    ![reid](Pictures/Selection_379.png)
-
-- We will also show that the capsule
-projection can be viewed as normalizing the multiple columns of the weight matrix
-simultaneously to form an orthogonal basis, which makes it more effective in
-incorporating novel components of input features to update capsule representations.
-In other words, the capsule projection can be viewed as a multi-dimensional weight
-normalization in capsule subspaces, where the conventional weight normalization
-is simply a special case of the capsule projection onto 1D lines. Only a small
-negligible computing overhead is incurred to train the network in low-dimensional
-capsule subspaces or through an alternative hyper-power iteration to estimate the
-normalization matrix. Experiment results on image datasets show the presented
-model can greatly improve the performance of the state-of-the-art ResNet backbones
-by 10 − 20% and that of the Densenet by 5 − 7% respectively at the same
-level of computing and memory expenses. The CapProNet establishes the competitive
-state-of-the-art performance for the family of capsule nets by significantly
-reducing test errors on the benchmark datasets.
-
-
->@inproceedings{zhang2018cappronet,
-  title={CapProNet: Deep feature learning via orthogonal projections onto capsule subspaces},
-  author={Zhang, Liheng and Edraki, Marzieh and Qi, Guo-Jun},
-  booktitle={Advances in Neural Information Processing Systems},
-  pages={5814--5823},
+    ![GCN](Pictures/Selection_385.png)
+   
+- The following is part position paper, part review, and part unification. We argue that
+combinatorial generalization must be a top priority for AI to achieve human-like abilities, and that
+structured representations and computations are key to realizing this objective. Just as biology
+uses nature and nurture cooperatively, we reject the false choice between “hand-engineering”
+and “end-to-end” learning, and instead advocate for an approach which benefits from their
+complementary strengths. We explore how using relational inductive biases within deep learning
+architectures can facilitate learning about entities, relations, and rules for composing them. We
+present a new building block for the AI toolkit with a strong relational inductive bias—the graph
+network—which generalizes and extends various approaches for neural networks that operate
+on graphs, and provides a straightforward interface for manipulating structured knowledge and
+producing structured behaviors. We discuss how graph networks can support relational reasoning
+and combinatorial generalization, laying the foundation for more sophisticated, interpretable,
+and flexible patterns of reasoning. As a companion to this paper, we have also released an
+open-source software library for building graph networks, with demonstrations of how to use
+them in practice
+>@article{battaglia2018relational,
+  title={Relational inductive biases, deep learning, and graph networks},
+  author={Battaglia, Peter W and Hamrick, Jessica B and Bapst, Victor and Sanchez-Gonzalez, Alvaro and Zambaldi, Vinicius and Malinowski, Mateusz and Tacchetti, Andrea and Raposo, David and Santoro, Adam and Faulkner, Ryan and others},
+  journal={arXiv preprint arXiv:1806.01261},
   year={2018}
 }

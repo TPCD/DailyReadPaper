@@ -194,7 +194,6 @@ reduction.
 
     ![GCN](Pictures/005.png)
    
-
 - Here we provide a conceptual review of key advancements in this area of representation
 learning on graphs, including matrix factorization-based methods, random-walk based algorithms, and
 graph neural networks. We review methods to embed individual nodes as well as approaches to embed
@@ -208,49 +207,30 @@ and we highlight a number of important applications and directions for future wo
   year={2017}
 }
 
-## Weakly Supervised Person Re-Identification
-1. CVPR 2019
-2. Jingke Meng, Sheng Wu, Wei-Shi Zheng
-3. 190425(7)Weakly_Supervised_person_reid.pdf
+## A survey on network embedding
+1. TKDE 2018
+2. Cui, Peng and Wang, Xiao and Pei, Jian and Zhu, Wenwu
+3. 190528(7)ASurveyOnNetworkEmbedding.pdf
+- Network embedding assigns nodes in a network to low-dimensional representations and effectively preserves the network
+structure. Recently, a significant amount of progresses have been made toward this emerging network analysis paradigm. In this
+survey, we focus on categorizing and then reviewing the current development on network embedding methods, and point out its future
+research directions. We first summarize the motivation of network embedding. We discuss the classical graph embedding algorithms
+and their relationship with network embedding.
 
-- In the conventional person re-id setting, it is assumed
-that the labeled images are the person images within the
-bounding box for each individual; this labeling across mul-
-tiple nonoverlapping camera views from raw video surveil-
-lance is costly and time-consuming. To overcome this diffi-
-culty, we consider weakly supervised person re-id modeling.
-The weak setting refers to matching a target person with an
-untrimmed gallery video where we only know that the iden-
-tity appears in the video without the requirement of anno-
-tating the identity in any frame of the video during the train-
-ing procedure.
-
-    ![reid](Pictures/Selection_372.png)
-
-- Hence, for a video, there could be multiple
-video-level labels. We cast this weakly supervised person
-re-id challenge into a multi-instance multi-label learning
-(MIML) problem. In particular, we develop a Cross-View
-MIML (CV-MIML) method that is able to explore potential
-intraclass person images from all the camera views by in-
-corporating the intra-bag alignment and the cross-view bag
-alignment.
-
-    ![reid](Pictures/Selection_373.png)
-
-- Finally, the CV-MIML method is embedded into
-an existing deep neural network for developing the Deep
-Cross-View MIML (Deep CV-MIML) model. We have per-
-formed extensive experiments to show the feasibility of the
-proposed weakly supervised setting and verify the effective-
-ness of our method compared to related methods on four
-weakly labeled datasets.
-
->@inproceedings{meng2019weakly,
-title={Weakly Supervised Person Re-Identification},
-author={Jingke Meng, Sheng Wu, Wei-Shi Zheng.},
-booktitle={Proceedings of the IEEE International Conference on Computer Vision and Pattern Recognition},
-year={2019}
+    ![GCN](Pictures/Selection_384.png)
+   
+- Afterwards and primarily, we provide a comprehensive overview of a large number of
+network embedding methods in a systematic manner, covering the structure- and property-preserving network embedding methods,
+the network embedding methods with side information, and the advanced information preserving network embedding methods.
+Moreover, several evaluation approaches for network embedding and some useful online resources, including the network data sets
+and softwares, are reviewed, too. Finally, we discuss the framework of exploiting these network embedding methods to build an
+effective system and point out some potential future directions.
+>@article{cui2018survey,
+  title={A survey on network embedding},
+  author={Cui, Peng and Wang, Xiao and Pei, Jian and Zhu, Wenwu},
+  journal={IEEE Transactions on Knowledge and Data Engineering},
+  year={2018},
+  publisher={IEEE}
 }
 
 

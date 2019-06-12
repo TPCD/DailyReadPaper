@@ -470,7 +470,7 @@ Here is the content of our project.
     10. CapProNet: Deep Feature Learning via Orthogonal Projections onto Capsule Subspaces
         1. NIPS 2018
         
-- [2019-05-28](2019/05/28_Tue/Papers.md):{10} _Graph Convolutional Neural Network_
+- [2019-05-28](2019/05/28_Tue/Papers.md):{8} _Graph Convolutional Neural Network_
     1. Deep Learning on Graphs: A Survey
         1. Arxiv 2019
     
@@ -495,5 +495,68 @@ Here is the content of our project.
     8. Relational inductive biases, deep learning, and graph networks
         1. Arxiv 2018
 
+        
+- [2019-05-29](2019/05/29_Wed/Papers.md):{4} _CVPR2019 Spotlight_
+    1. Partial Order Pruning: for Best Speed/Accuracy Trade-off in Neural Architecture Search
+        1. CVPR 2019
+        
+    2. Self-Supervised Convolutional Subspace Clustering Network
+        1. CVPR 2019
+        
+    3. Perceive Where to Focus: Learning Visibility-aware Part-level Features for Partial Person Re-identification
+        1. CVPR 2019
+        
+    4. Linkage Based Face Clustering via Graph Convolution Network
+        1. CVPR 2019
 
-I have already read 209 references so far (2019-05-28-16-43-05).
+
+- [2019-06-12](2019/06/12_Wed/Papers.md):{5} _Cross-modal Graph Embedding_
+    1. Heterogeneous information network embedding for meta path based proximity
+        1. Arxiv 2017
+        
+    2. Pathsim: Meta path-based top-k similarity search in heterogeneous information networks
+        1. VLDB Endowment 2011
+        
+    3. Embedding of embedding (eoe): Joint embedding for coupled heterogeneous networks
+        1. WSDM 2017
+        
+    4. Heterogeneous metric learning with joint graph regularization for cross-media retrieval
+        1. AAAI 2013
+        
+    5. Hetero-manifold regularisation for cross-modal hashing
+        1. TPAMI 2016
+        
+- [2019-06-13](2019/06/13_Thu/Papers.md):{11} _Cross-modal Graph Embedding Related_
+    1. Structure-Aware Convolutional Neural Networks
+        1. NIPS 2018
+    
+    2. Unsupervised Image-to-Image Translation Networks
+        1. NIPS 2017
+        
+    3. Multimodal Unsupervised Image-to-Image Translation
+        1. ECCV 2018
+        
+    4. Multi-Label Image Recognition with Graph Convolutional Networks
+        1. arXiv 2019
+        
+    5. Learning to Reduce Dual-level Discrepancy for Infrared-Visible Person Re-identification
+        1. CVPR 2019
+        
+    6. A^2-Nets: Double Attention Networks
+        1. NIPS 2018
+        
+    7. Understanding Batch Normalization
+        1. NIPS 2018
+        
+    8. FD-GAN: Pose-guided Feature Distilling GAN for Robust Person Re-identification
+        1. NIPS 2018
+        
+    9. Graph convolutional neural networks for web-scale recommender systems
+        1. KDD 2018 (oral)
+        
+    10. Beyond Intra-modality Discrepancy: A Comprehensive Survey of Heterogeneous Person Re-identification},
+        1. Arxiv 2019
+        
+    11. Joint discriminative and generative learning for person re-identification
+        1. CVPR 2019
+I have already read 227 references so far (2019-06-12-14-26-51).

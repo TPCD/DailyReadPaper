@@ -559,4 +559,7 @@ Here is the content of our project.
         
     11. Joint discriminative and generative learning for person re-identification
         1. CVPR 2019
+        
+        
+- [2019-09-04](2019/09/04_Wed/Papers.md):{11} _Cross-modal Graph Embedding Related_  
 I have already read 227 references so far (2019-06-12-14-26-51).

@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../DG-Net/.idea/DG-Net.iml" filepath="$PROJECT_DIR$/../DG-Net/.idea/DG-Net.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/DailyReadPaper.iml" filepath="$PROJECT_DIR$/.idea/DailyReadPaper.iml" />
     </modules>
   </component>

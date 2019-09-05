@@ -355,3 +355,70 @@ and richness of attention knowledge in an explicit manner.
 superiority of our MHN for person ReID over a wide variety
 of state-of-the-art methods on three large-scale datasets, including Market-1501, DukeMTMC-ReID and CUHK03-NP.
 Code is available at http://www.bhchen.cn/
+
+## Learning to Adapt Invariance in Memory for Person Re-identification
+1. TPAMI2019
+2. Zhun Zhong, Liang Zheng, Zhiming Luo, Shaozi Li, Yi Yang
+
+- This work considers the problem of unsupervised domain adaptation in person re-identification (re-ID), which aims to
+transfer knowledge from the source domain to the target domain. Existing methods are primary to reduce the inter-domain shift
+between the domains, which however usually overlook the relations among target samples. This paper investigates into the
+intra-domain variations of the target domain and proposes a novel adaptation framework w.r.t three types of underlying invariance, i.e.,
+Exemplar-Invariance, Camera-Invariance, and Neighborhood-Invariance.
+   ![Arxiv](Pictures/22.png)
+- Specifically, an exemplar memory is introduced to store
+features of samples, which can effectively and efficiently enforce the invariance constraints over the global dataset. We further present
+the Graph-based Positive Prediction (GPP) method to explore reliable neighbors for the target domain, which is built upon the memory
+and is trained on the source samples. Experiments demonstrate that 1) the three invariance properties are indispensable for effective
+domain adaptation, 2) the memory plays a key role in implementing invariance learning and improves the performance with limited
+extra computation cost, 3) GPP could facilitate the invariance learning and thus significantly improves the results, and 4) our approach
+produces new state-of-the-art adaptation accuracy on three re-ID large-scale benchmarks
+
+
+## Person Re-identification with Deep Similarity-Guided Graph Neural Network
+1. ECCV 2018
+2. Yantao Shen1, Hongsheng Li1?, Shuai Yi2,Dapeng Chen1, and Xiaogang Wang1
+- The person re-identification task requires to robustly estimate visual similarities between person images. However, existing person re-identification models mostly estimate the similarities of different
+image pairs of probe and gallery images independently while ignores the relationship information between different probe-gallery pairs.
+   ![Arxiv](Pictures/23.png)
+- As a result, the similarity estimation of some hard samples might not be accurate. In this paper, we propose a novel deep learning framework, named
+Similarity-Guided Graph Neural Network (SGGNN) to overcome such limitations. Given a probe image and several gallery images, SGGNN
+creates a graph to represent the pairwise relationships between probegallery pairs (nodes) and utilizes such relationships to update the probegallery relation features in an end-to-end man
+
+## Learning Resolution-Invariant Deep Representations for Person Re-Identification
+1. ARXIV 2019
+2. Yun-Chun Chen1∗, Yu-Jhe Li1,2∗, Xiaofei Du3, and Yu-Chiang Frank Wang1,
+
+- Person re-identification (re-ID) solves the task of matching images across cameras and is among the research topics in vision community. Since query images in real-world
+scenarios might suffer from resolution loss, how to solve
+the resolution mismatch problem during person re-ID becomes a practical problem.
+   ![Arxiv](Pictures/24.png)
+- Instead of applying separate image super-resolution models, we propose a novel network architecture of Resolution Adaptation and re-Identification Network (RAIN) to solve cross-resolution person re-ID. Advancing the strategy of adversarial learning, we aim at extracting
+resolution-invariant representations for re-ID, while the proposed model is learned in an end-to-end training fashion. Our
+experiments confirm that the use of our model can recognize
+low-resolution query images, even if the resolution is not seen
+during training. Moreover, the extension of our model for
+semi-supervised re-ID further confirms the scalability of our
+proposed method for real-world scenarios and applications
+
+
+## Interaction-and-Aggregation Network for Person Re-identification
+1. ICCV2019
+2. Ruibing Hou1;2, Bingpeng Ma2, Hong Chang1;2, Xinqian Gu1;2, Shiguang Shan1;2;3, Xilin Chen1;2
+
+- Person re-identification (reID) benefits greatly from deep
+convolutional neural networks (CNNs) which learn robust
+feature embeddings. However, CNNs are inherently limited in modeling the large variations in person pose and
+scale due to their fixed geometric structures.
+   ![Arxiv](Pictures/25.png)
+- In this paper, we propose a novel network structure, Interaction-andAggregation (IA), to enhance the feature representation capability of CNNs. Firstly, Spatial IA (SIA) module is introduced. It models the interdependencies between spatial
+features and then aggregates the correlated features corresponding to the same body parts. Unlike CNNs which
+extract features from fixed rectangle regions, SIA can adaptively determine the receptive fields according to the input
+person pose and scale.
+   ![Arxiv](Pictures/26.png)
+- Secondly, we introduce Channel IA
+(CIA) module which selectively aggregates channel features
+to enhance the feature representation, especially for smallscale visual cues. Further, IA network can be constructed by
+inserting IA blocks into CNNs at any depth. We validate the
+effectiveness of our model for person reID by demonstrating
+its superiority over state-of-the-art methods on three benchmark datasets

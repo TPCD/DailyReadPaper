@@ -17,6 +17,7 @@ def counter(file = 'README.md'):
             num += int(re.findall(p1, line)[0])
 
     return num
+
 def write_num(file = 'README.md'):
     with open(file, 'a', encoding='UTF-8') as f:
         num_reference = counter(file)
